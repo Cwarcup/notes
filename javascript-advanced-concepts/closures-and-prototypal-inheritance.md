@@ -242,14 +242,13 @@ b() () //'bye'
 ```
 
 Functions as a method - function inside an object
-``
+
+```
 const obj = {
 two: function() {
 return 2;
 }
 }
 obj.two //will run the function
-
-```
 
 ```
