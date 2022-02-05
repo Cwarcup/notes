@@ -25,7 +25,7 @@ call stack is first in last out.
 **Synchronous programming** refers to each line being executed at a time. If you have one function that takes up a lot of time, you'll have to wait a long time. No other functions can be run until the previous function finishes.
 
 **Asynchronous programming:** allows you to have functions running at the same time. Certain functions can be sent to the Web API and be completed there. When the Web API is done with the function, it gets sent to the callback queue. THe event loop keeps checking if the callstack is empty. When it is, then the callback queue can send the callback function.
-![JS Run-time environment](/.../images/js-runtime-environment.png)
+![JS Run-time environment](/images/js-runtime-environment.png)
 
 ## Promises
 
