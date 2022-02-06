@@ -369,40 +369,205 @@ const getData2 = async function () {
 }
 ```
 
+The `for await of` allows you to loop through the promises. Takes each item from an array of promises and returns us the responses in the correct order.
+
 ## Job Queue
+
+Is basically a queue for promises. Similar to the callback queue, but has a higher priority. The event loop will.
+
+```
+//Callback Queue - Task queue
+//lower priority
+setTimeout(()=>{console.log('1', 'callback queue priority')}, 0)
+setTimeout(()=>{console.log('2', 'lowest priority')}, 10)
+
+//2 Job Queue -Mircotask Queue
+//higher priority
+Promise.resolve('2nd highest priority').then((data)=> console.log('2', data))
+
+//3
+//highest priority, logged first because not async
+console.log('3', 'highest priority')
+```
+
+returns:
+
+```
+3 highest priority
+2 2nd highest priority
+1 callback queue priority
+2 lowest priority
+```
+
+![Job Queue](/images/job-queue.png)
 
 ## Parallel, Sequence and Race
 
+Have Three ways of executing promises:
+Parallel - execute all the promises all at the same time
+Sequencial - run the first, then second, then third. Depend on each other.
+Race - do whichever promise comes back first.
+
+Here we have three promises `a(), b(), c()`, each differing in a delay duration. They all use the setTimeout function to set the delay.
+
+```
+const promisify = (item, delay) =>
+  new Promise((resolve) =>
+    setTimeout(() =>
+      resolve(item), delay));
+
+const a = () => promisify('a', 100);
+const b = () => promisify('b', 5000);
+const c = () => promisify('c', 3000);
+```
+
+**Parallel** version:
+Create an async function `parallel`, which have promises `[a(), b(), c()]`. It uses `Promise.all()` to run all these promises at the same time.
+
+```
+async function parallel() {
+  const promises = [a(), b(), c()];
+  const [output1, output2, output3] = await Promise.all(promises);
+  return `prallel is done: ${output1} ${output2} ${output3}`
+}
+
+parallel().then(console.log) //prallel is done: a b c
+// returned all at once.
+```
+
+**Race** version:
+Whichever promise returns first will be returned. All the other promises will be ignored. Uses the `.race()` method.
+
+```
+async function race() {
+  const promises = [a(), b(), c()];
+  const output1 = await Promise.race(promises);
+  return `race is done: ${output1}`;
+}
+
+race().then(console.log) // race is done: a
+```
+
+`promise a` gets returned first because the delay was the lowest, thus the fastest to complete.
+
+**Sequence** version:
+Runs `a()`, then `b()`, then `c()`. Need to make sure we have some sort of order. We use `async await` to make sure the promises are run sequentially.
+
+```
+async function sequence() {
+  const output1 = await a();
+  const output2 = await b();
+  const output3 = await c();
+  return `sequence is done ${output1} ${output2} ${output3}`
+}
+
+sequence().then(console.log) //sequence is done a b c
+```
+
+Difference here is we run `output1 = await a();` and pause for 100ms, then run `const output2 = await b();` and pause for 5000ms, then run `const output3 = await c();` and pause for 3000ms. Then the return statement is delivered.
+
+How does each compare?
+
+```
+sequence().then(console.log)
+parallel().then(console.log)
+race().then(console.log)
+```
+
+```
+race is done: a           // first
+prallel is done: a b c    // second
+sequence is done a b c    // last
+```
+
+When you have async code, you need to think about what is the most optimum way to do things.
+
 ## ES2020: allSettled()
+
+Previously learnt that `Promise.all()` only resolves if all promises resolve.
+
+```
+const promiseOne = new Promise((resolve, reject) => setTimeout(resolve, 3000))
+
+const promiseTwo = new Promise((resolve, reject) => setTimeout(reject, 3000))
+
+Promise.all([promiseOne, promiseTwo]).then(data => console.log(data));
+
+// Uncaught (in promise) undefined
+```
+
+Get this error because we have `promiseOne` returning a resolve, and `promiseTwo` returning a **reject**. To resolve this, we could use a `catch` statement.
+
+```
+Promise.all([promiseOne, promiseTwo]).then(data => console.log(data))
+  .catch((error) => console.log('something failed', error))
+
+  //something failed undefined
+```
+
+Still get this because `Promise.all()` needs each promise to be **resolved**.
+
+But now we have **`Promise.allSettled()`**
+
+```
+const promiseOne = new Promise((resolve, reject) => setTimeout(resolve, 3000))
+
+const promiseTwo = new Promise((resolve, reject) => setTimeout(reject, 3000))
+
+Promise.allSettled([promiseOne, promiseTwo]).then(data => console.log(data))
+  .catch((error) => console.log('something failed', error))
+
+//[{ status: 'fulfilled', value: undefined }, { status: 'rejected', reason: undefined }]
+```
+
+Now we get one fulfilled, and one rejected. `Promise.allSettled()` runs regardless if a promise is rejected or not.
 
 ## ES2021: any()
 
+`Promise.any()` resolves if any of the supplied promises is resolved. Below we have 3 promises, which resolves at random times.
+
+```
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("A"), Math.floor(Math.random() * 1000));
+});
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("B"), Math.floor(Math.random() * 1000));
+});
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("C"), Math.floor(Math.random() * 1000));
+});
+```
+
+Out of `p1`, `p2` and `p3`, whichever resolves first is taken by `Promise.any()`.
+
+```
+(async function () {
+  const result = await Promise.any([p1, p2, p3]);
+  console.log(result); // Prints "A", "B" or "C"
+})();
+```
+
+If I had only one promise that resolved, `Promise.any()` will always resolve that one. For exmaple.
+
+```
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("A"), Math.floor(Math.random() * 1000));
+});
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => reject("B"), Math.floor(Math.random() * 1000));
+});
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => reject("C"), Math.floor(Math.random() * 1000));
+});
+
+(async function () {
+  const result = await Promise.any([p1, p2, p3]);
+  console.log(result);
+})();
+
+// always returns A, because it's the only promise that is resolved.
+```
+
 ## Threads, Concurrency and Parallelism
 
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
+We have multple **worker threads** working in the background. They can run on a different thread, in parallel to our main thread.
