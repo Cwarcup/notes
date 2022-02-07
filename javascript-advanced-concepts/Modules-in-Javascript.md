@@ -50,7 +50,7 @@ export default function fight(char1, char2) {
 </script>
 ```
 
-Need to define the script as `type="module"` to tell the browser it is not a regular script. Make sure you are running this from a server or it will not work. Can use ![live-server](https://www.npmjs.com/package/live-server) to do this.
+Need to define the script as `type="module"` to tell the browser it is not a regular script. Make sure you are running this from a server or it will not work. Can use [live-server](https://www.npmjs.com/package/live-server) to do this.
 
 ```
 <script type='module'>
@@ -58,6 +58,6 @@ Need to define the script as `type="module"` to tell the browser it is not a reg
 </script>
 ```
 
-Ways of **importing** modules: ![import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+Ways of **importing** modules: [import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 
-ways of **exporting** modules: ![export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+ways of **exporting** modules: [export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
