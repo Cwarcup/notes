@@ -125,3 +125,78 @@ console.log(newArray) // MyArray { length: 3, data: { '0': 'hi', '1': 'you', '2'
 newArray.pop();
 console.log(newArray) // MyArray { length: 2, data: { '0': 'hi', '1': 'you' } }
 ```
+
+`Delete()` Method: Deletes a specific item using a specific index. Will need to change the index number of the remaining items.
+
+```
+delete(index) {
+    const item = this.data[index];
+    // now we need to create a function to shift the index of all the other data types by one.
+    this.shiftItems(index)
+  }
+
+  shiftItems(index) {
+    for (let i = index; i < this.length -1; i++) { //here we are saying, start at the index we start the delete from and iterate through it until the for loop ends.
+      this.data[i] = this.data[i+1]
+      // take the previous index and add 1 to the index.
+    }
+    delete this.data[this.length-1]; // to delete the last item in the array.
+    this.length--; //shorten the array length.
+  }
+
+console.log(myArray) // MyArray { length: 3, data: { '0': 'hi', '1': 'you', '2': '!' } }
+newArray.delete(1) // MyArray { length: 2, data: { '0': 'hi', '1': '!' } }
+
+```
+
+## Exercise: Create a function that reverses a string.
+
+1. check of the input. Need to make sure it's actually a string.
+
+```
+function reverse(str) {
+  if(!str || str.length <2 || typeof str != 'string') {
+    return 'hmm...this is not good.'
+  };
+
+  const backwards = [];
+  const totalItems = str.length - 1;
+  for(let i = totalItems; i >= 0; i--) {
+    backwards.push(str[i])
+    // here we are pushing index's, starting at the str.length -1.
+  }
+  return backwards.join('');
+}
+
+console.log(reverse("Curtis is cool")) //looc si sitruC
+```
+
+You can also do this using built in methods:
+
+```
+function reverse2(str) {
+  return str.split('').reverse().join('');
+}
+
+console.log(reverse2("Dog barks")) //skrab goD
+```
+
+## Merge Sorted Arrays
+
+`mergeSortedArrays([0,3,4,31], [3,4,6,30]);`
+
+```
+arr1 = [0,3,4,31];
+arr2 = [3,4,6,30];
+
+function mergeSortedArrays(arr1, arr2) {
+
+
+  return arr1.concat(arr2).sort(function compareFn(a,b) {
+    return a - b;
+  })
+}
+
+console.log(mergeSortedArrays([0,3,4,31], [3,4,6,30]))
+//[0, 3,  3,  4, 4, 6, 30, 31]
+```
