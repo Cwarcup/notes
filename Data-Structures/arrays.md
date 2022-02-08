@@ -3,6 +3,20 @@
 Sometimes called lists and orders data sequentially. If you need to iterate over some data, one by one, arrays are the best choice.
 ![Arrays](/images/arrays.png)
 
+# When to use an array
+
+Pros:
+
+- fast loop ups: good if you know which index you want to look up
+- fast push/pop: adding/removing to/from the end of array
+- ordered
+
+Cons:
+
+- slow inserts: have to shift the array
+- slow deleted
+- fixed size (if using static arrays)
+
 ```
 const string = ['a', 'b', 'c', 'd'];
 //4*4 = 16 bytes of storage.
