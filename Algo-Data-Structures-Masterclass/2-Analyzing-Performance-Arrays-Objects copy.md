@@ -29,10 +29,10 @@ Accessing refers to finding the key, which is much faster.
 
 #### Big O of Object Methods
 
-Object.keys - O(N)
-Object.values - O(N)
-Object.entries - O(N)
-hasOwnProperty - O(1)
+- Object.keys - O(N)
+- Object.values - O(N)
+- Object.entries - O(N)
+- hasOwnProperty - O(1)
 
 `console.log(Object.keys(instructor)); // [ 'firstName', 'isInstructor', 'favoriteNumbers' ]`
 This is O(n) time because we have to add another key to the array for every key we have.
@@ -78,12 +78,12 @@ Access - O(1)
 
 ### Big O of Array Operations
 
-push - O(1), constant. No reindex
-pop - O(1)
-shift - O(N)
-unshift - O(N)
-concat - O(N)
-slice - O(N)
-splice - O(N)
-sort - O(N \* log N). Is larger than just O(n).
-forEach/map/filter/reduce/etc. - O(N)
+- push - O(1), constant. No reindex
+- pop - O(1)
+- shift - O(N)
+- shift - O(N)
+- concat - O(N)
+- slice - O(N)
+- splice - O(N)
+- sort - O(N \* log N). Is larger than just O(n).
+- forEach/map/filter/reduce/etc. - O(N)
