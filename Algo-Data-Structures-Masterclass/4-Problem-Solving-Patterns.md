@@ -270,8 +270,172 @@ maxSubarraySum([4,2,1,6,2],4) // 13
 maxSubarraySum([],4) // null
 ```
 
+Naive solution
+
+```
+function maxSubarraySum(arr, num) {
+  if ( num > arr.length){
+    return null;
+  }
+  var max = -Infinity;
+  for (let i = 0; i < arr.length - num + 1; i ++){
+    temp = 0;
+    for (let j = 0; j < num; j++){
+      temp += arr[i + j];
+    }
+    if (temp > max) {
+      max = temp;
+    }
+  }
+  return max;
+}
+```
+
+`if ( num > arr.length)` makes sure the number is smaller than the length of the array.
+
+`var max = -Infinity;` We don't want to start at zero because if we start at negative numbers, it doesn't help. We are just using this to compare to our `temp` value.
+
+Create a loop `for (let i = 0; i < arr.length - num + 1; i ++)`. It runs ALMOST until the end of the array length.
+
+`maxSubarraySum([1,2,5,2,8,1,5],4)`
+You since you are looking for the sum of 4 numbers, you only want to sum until the **3rd index** of this array (`2,8,1,5`). Any further does not permit 4 numbers being summed.
+
+Make a variable to store temporary sums `temp = 0;` each time through the loop. This will get compared to `max`.
+
+```
+for (let j = 0; j < num; j++){
+      temp += arr[i + j];
+```
+
+Have a nested loop which uses `j` as the second number, and adds this to the first number, `i`.
+
+`if (temp > max)` updates `temp` when it is larger than `max`. On the first loop, max will be updated no matter what beacuse its value is `-Infinity`.
+
+```
+function maxSubarraySum(arr, num) {
+  if ( num > arr.length){
+    return null;
+  }
+  var max = -Infinity;
+  for (let i = 0; i < arr.length - num + 1; i ++){
+    temp = 0;
+    for (let j = 0; j < num; j++){
+      temp += arr[i + j];
+    }
+    if (temp > max) {
+      max = temp;
+    }
+    console.log(temp, max) //can see what is going on.
+  }
+  return max;
+}
+
+maxSubarraySum([1,2,5,2,8,1,5],2)
+```
+
+| Temp            | Max |
+| --------------- | --- |
+| 3               | 3   |
+| 3               | 3   |
+| 7               | 7   |
+| 10              | 10  |
+| 9               | 10  |
+| 6               | 10  |
+| --              | --- |
+| final result 10 |
+
+Refactored Solution:
+
+```
+function maxSubarraySum(arr, num){
+  let maxSum = 0;
+  let tempSum = 0;
+  if (arr.length < num) return null;
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
+  }
+  tempSum = maxSum;
+  for (let i = num; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - num] + arr[i];
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
+}
+```
+
+Time complexity O(n).
+
+for: `maxSubarraySum([1,2,5,2,8,1,5],2)`
+
+This approach takes the sum of `1,2`, stores that in `maxSum`. Then subtracts arr[0] and adds arr[2], getting the sum of `2,5`.
+
+`tempSum - arr[i - num]` subtracts the number from the previous index from the tempSum.
+Then `+ arr[i]` adds the number from the next index.
+
+![sliding window](/images/slidingWindow.png)
+
 ## Divide and Conquer Pattern
 
-```
+This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data.
+
+This pattern can tremendously **decrease time complexity**.
+
+Example: Given a **sorted** array of integers, write a function called search, that accepts a value and returns the index where the value passed to the function is located. If the value is not found, return -1
 
 ```
+search([1,2,3,4,5,6],4) // 3
+search([1,2,3,4,5,6],6) // 5
+search([1,2,3,4,5,6],11) // -1
+```
+
+Naive Solution:
+
+```
+function search(arr, val){
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] === val){
+            return i;
+        }
+    }
+    return -1;
+}
+```
+
+This is called **linear search**
+Time Complexity O(N)
+
+Refactored:
+
+```
+function search(array, val) {
+
+  let min = 0;
+  let max = array.length - 1;
+
+  while (min <= max) {
+      let middle = Math.floor((min + max) / 2);
+      let currentElement = array[middle];
+
+      if (array[middle] < val) {
+          min = middle + 1;
+      }
+      else if (array[middle] > val) {
+          max = middle - 1;
+      }
+      else {
+          return middle;
+      }
+  }
+
+  return -1;
+}
+```
+
+Time Complexity - Log(N) - Binary Search!
+
+`search([1,2,3,4,5,6],4)`
+middle = 2 in this case.
+This takes the middle index `array[middle]` and compares that number to our desired value `val`.
+array[2] = 3
+
+If the middle index `array[middle]` is **lower** than desired value `val`, it ignores ALL the lower values. This works because the array is ordered.

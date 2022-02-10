@@ -197,4 +197,146 @@ function maxSubarraySum(arr, num) {
   return max;
 }
 
+//refactored 
+
+function maxSubarraySum(arr, num){
+  let maxSum = 0;
+  let tempSum = 0;
+  if (arr.length < num) return null;
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
+  }
+  tempSum = maxSum;
+  for (let i = num; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - num] + arr[i];
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
+}
+
 // Divide and Conquer Pattern
+
+// Example: Given a **sorted** array of integers, write a function called search, that accepts a value and returns the index where the value passed to the function is located. If the value is not found, return -1
+
+
+// Naive Solution:
+
+function search(arr, val){
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] === val){
+      return i;
+    }
+  }
+  return -1;
+}
+
+search([1,2,3,4,5,6],4) // 3
+search([1,2,3,4,5,6],6) // 5
+search([1,2,3,4,5,6],11) // -1
+
+
+// Refactored
+
+function search(array, val) {
+ 
+  let min = 0;
+  let max = array.length - 1;
+
+  while (min <= max) {
+      let middle = Math.floor((min + max) / 2);
+      let currentElement = array[middle];
+
+      if (array[middle] < val) {
+          min = middle + 1;
+      }
+      else if (array[middle] > val) {
+          max = middle - 1;
+      }
+      else {
+          return middle;
+      }
+  }
+
+  return -1;
+}
+
+
+// Optional Challanges
+
+// Frequency Counter - sameFrequancy
+// Given two postitive integers, find out if the two numbers have the same frequency of digits. 
+
+function sameFrequency(num1, num2){
+  let strNum1 = num1.toString();
+  let strNum2 = num2.toString();
+  if(strNum1.length !== strNum2.length) return false;
+  
+  let countNum1 = {};
+  let countNum2 = {};
+  
+  for(let i = 0; i < strNum1.length; i++){
+    countNum1[strNum1[i]] = (countNum1[strNum1[i]] || 0) + 1
+  }
+  
+  for(let j = 0; j < strNum1.length; j++){
+    countNum2[strNum2[j]] = (countNum2[strNum2[j]] || 0) + 1
+  }
+  
+  for(let key in countNum1){
+    if(countNum1[key] !== countNum2[key]) return false;
+  }
+ 
+  return true;
+}
+
+
+// Frequency Counter - areThereDuplicates
+
+function areThereDuplicates() {
+  let obj = {};
+
+    for(let i = 0; i < arguments.length; i++) {
+        let value = arguments[i];
+        if(obj[value]) {
+            return true
+        } else {
+            obj[value] = 1;
+        }
+    }
+    console.log(obj)
+    return false;
+}
+
+areThereDuplicates(1,2,4,5,6,7,8,9, 9)
+
+
+//Multiple Pointers - averagePair
+
+function averagePair(arr, target) {
+  let start = 0;
+  let end = arr.length - 1;
+
+    while (start < end) {
+        let avg = (arr[start]+arr[end]) / 2;
+        if(avg === target) return true;
+        else if (avg < target) {
+            start++;
+        } else {
+            end--
+        }
+    }
+    return false;
+    
+    
+}
+
+averagePair([1,3,3,5,6,7,10,12,19],8)
+
+// Multiple Pointers - isSubsequence
+
+// Sliding Window - maxSubArraySum
+
+// Sliding Window - minSubArraySum
+
+// Sliding Window - findLongestSubstring
+
