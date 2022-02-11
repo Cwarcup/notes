@@ -260,3 +260,77 @@ collectOddValues([1,2,3,4,5])
 - For **arrays**, use methods like **slice**, the **spread** operator, and **concat** that make copies of arrays so you do not mutate them
 - Remember that strings are immutable so you will need to use methods like **slice**, **substr**, or **substring** to make **copies** of strings
 - To make copies of **objects** use **Object.assign**, or the **spread** operator
+
+---
+
+## Problem Set
+
+1. Power: Write a function called power() which accepts a base and an exponeent. The function should return the power of the base to the exponenet. This function should minic the functionality of Math.pow().
+
+```
+function power(base, exp) {
+  if(exp === 0) return 1;
+  return base * power(base, exp - 1)
+}
+
+power(2,4) //16
+```
+
+2. Factorial: Write a function that accepts a number and returns the factorial of that number.
+
+```
+function factorial(num) {
+  if (num === 0) return 1
+  return num * factorial(num - 1)
+}
+
+factorial(7)
+```
+
+3. Function takes in an array of numbers and returns the product of them all.
+
+```
+function productOfArray(arr) {
+  console.log('arr', arr)
+  if (arr.length === 0){
+    return 1;
+  }
+  console.log(arr[0])
+  return arr[0] * productOfArray(arr.slice(1))
+}
+
+productOfArray([1,2,3])
+```
+
+4. recursiveRange: accepts a number and adds up all the numbers from 0 to the number passed in the function.
+   // recursiveRange(6) // 21
+   // recursiveRange(10) // 55
+
+```
+function recursiveRange(num) {
+  if(num === 0) {
+    return 0;
+  }
+  return num + recursiveRange(num - 1)
+
+}
+
+recursiveRange(10)
+```
+
+5. Write a function called fib which accepts a number and returns the nth number in the Fibonacci sequence. Recall that the Fibonacci sequence is the sequence of whole numbers 1,1,2,3,5,8 ... which starts with 1 and 1, and every number thereafter is equal to the sum of the previous two numbers.
+
+// fib(4) // 3
+// fib(10) // 55
+// fib(28) // 317811
+// fib(35) // 9227465
+
+```
+function fib(num){
+  if (num <= 2) return 1;
+  console.log(num)
+  return fib(num - 1) + fib(num - 2)
+}
+
+fib(5)
+```
