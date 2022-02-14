@@ -20,7 +20,7 @@ Linear seach is moving at a **set interval** checking every element, **one at a 
 Linear Seach Pseudocode:
 
 - This function accepts an array and a value
-- Loop through the array and check if the current array - element is equal to the value
+- Loop through the array and check if the current array element is equal to the value
 - If it is, return the index at which the element is found If the value is never found, return -1
 
 ```
@@ -50,9 +50,10 @@ function linearSearch(arr, val) {
 - You can eliminate **half** of the remaining elements at a time.
 - only works on **sorted arrays**
 
-![Binary Search](https://blog.penjee.com/wp-content/uploads/2015/04/binary-and-linear-search-animations.gif)
+## ![Binary Search](https://blog.penjee.com/wp-content/uploads/2015/04/binary-and-linear-search-animations.gif)
 
-**Divide and Conquer**
+## **Divide and Conquer**
+
 ![binary1](/images/binary1.png)
 ![binary2](/images/binary2.png)
 ![binary3](/images/binary3.png)
@@ -110,32 +111,85 @@ binarySearch([2,5,6,9,13,15,28,30], 15)
 Issue: if out desired value `n` is not in our array, it will go on infinitly.
 
 ```
-function binarySearch(arr,n) {
+function binarySearch(arr, val) {
+    // index of each position
     let start = 0;
     let end = arr.length - 1;
     let middle = Math.floor((start + end) / 2)
+            console.log(start, middle, end)
 
-    while(arr[middle] !== n && start <= end) {
-        console.log(start, middle, end)
-        if (n < arr[middle]) {
-            end = middle - 1;
-        } else {
+    while (arr[middle] !== val && start <= end) {
+        if(arr[middle] < val) {
             start = middle + 1;
+        } else {
+            end = middle - 1;
         }
-        // now need to recalcualte middle value
-        middle = Math.floor((start + end) / 2)
+        middle = Math.floor((start + end) / 2);
     }
-    console.log(start, middle, end)
-    if (arr[middle] === n) {
+    if (arr[middle] === val) {
         return middle;
     } else {
-        return -1
+        return -1;
     }
+
 }
 
 binarySearch([2,5,6,9,13,15,28,30], 150) // -1
 ```
 
+---
+
 ### Binary Search BIG O
 
+| O(1) | O(log n) | O(log n) |
+| ---- | -------- | -------- |
+| best | average  | Worst    |
+
+![Big O Graph](https://cdn-media-1.freecodecamp.org/images/1*KfZYFUT2OKfjekJlCeYvuQ.jpeg)
+
+---
+
 ## Naive String Search
+
+Most basic solution.
+
+- Suppose you want to count the number of times a smaller string appears in a longer string
+- A straightforward approach involves checking pairs of characters individually
+
+### PseudoCode String Search
+
+- define a function that takes a string and a pattern you're looking for
+- Loop over the longer string
+- Loop over the shorter string
+- If the characters don't match, break out of the inner loop
+- If the characters do match, keep going
+- If you complete the inner loop and find a match, increment - the count of matches
+- Return the count
+
+```
+function searchString(str, pattern) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < pattern.length; j++) {
+      console.log(pattern[j], str[i]);
+      if (pattern[j] !== str[i + j]) {
+        break; //anytime there is not a match, break.
+      }
+        if(j === pattern.length -1) {
+            console.log('found one!')
+            count++;
+        }
+    }
+  }
+    return count;
+}
+
+searchString('lorie loled', 'lol'); // 1
+searchString('lorie loled', 'l');
+```
+
+cleaned up:
+
+```
+
+```

@@ -1,6 +1,5 @@
 // Searching Algorithms
 
-
 // Linear Seach Pseudocode:
 
 // - This function accepts an array and a value
@@ -13,34 +12,51 @@ function linearSearch(arr, val) {
       return i;
     }
   }
-  return -1
+  return -1;
 }
 
-linearSearch([34,51,1,2,3,45,56,687], 100)
+linearSearch([34, 51, 1, 2, 3, 45, 56, 687], 100);
 
-// Binary Search 
+// Binary Search
 
-function binarySearch(arr,n) {
+function binarySearch(arr, val) {
+  // index of each position
   let start = 0;
   let end = arr.length - 1;
   let middle = Math.floor((start + end) / 2)
+          console.log(start, middle, end)
 
-  while(arr[middle] !== n) {
-      console.log(start, middle, end)
-      if (n < arr[middle]) {
-          end = middle - 1;
-      } else {
+  while (arr[middle] !== val && start <= end) {
+      if(arr[middle] < val) {
           start = middle + 1;
+      } else {
+          end = middle - 1;
       }
-      // now need to recalcualte middle value
-      middle = Math.floor((start + end) / 2)
+      middle = Math.floor((start + end) / 2);
   }
-  console.log(start, middle, end)
-  return middle;
+  if (arr[middle] === val) {
+      return middle;
+  } else {
+      return -1;
+  }
+  
 }
 
-binarySearch([2,5,6,9,13,15,28,30], 15)
-
-// Binary Search BIG O
+binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 15);
 
 // Naive String Search
+
+function searchString(str, pattern) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    for (let j = 0; j < pattern.length; j++) {
+      if (pattern[j] !== str[i + j]) break; 
+      if(j === pattern.length -1) count++;
+    }
+  }
+  return count;
+}
+
+console.log(searchString('lorie loled', 'lol')); // 1
+searchString('lorie loled', 'l');
+
