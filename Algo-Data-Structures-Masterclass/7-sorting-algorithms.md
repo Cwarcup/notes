@@ -131,6 +131,8 @@ Both are fine.
 
 ---
 
+## Bubble Sort Implementation
+
 ```
 function bubbleSort(arr){
   for(var i = arr.length; i > 0; i--){
@@ -143,22 +145,145 @@ function bubbleSort(arr){
         arr[j+1] = temp;
       }
     }
+    console.log("ONE PASS COMPLETE")
   }
   return arr;
 }
 
 bubbleSort([37,45,29,8]);
 
-
 [37, 45, 29, 8] 37 45
 [37, 45, 29, 8] 45 29
 [37, 29, 45, 8] 45 8
+ONE PASS COMPLETE
 [37, 29, 8, 45] 37 29
 [29, 37, 8, 45] 37 8
+ONE PASS COMPLETE
 [29, 8, 37, 45] 29 8
+ONE PASS COMPLETE
 [8, 29, 37, 45]
+
 ```
 
-## Bubble Sort Implementation
+---
+
+ES2015 Version:
+
+```
+function bubbleSort(arr) {
+  const swap = (arr, idx1, idx2) => {
+    [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+  };
+
+  for (let i = arr.length; i > 0; i--) {
+    for (let j = 0; j < i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        swap(arr, j, j + 1);
+      }
+    }
+  }
+  return arr;
+}
+
+bubbleSort([8,1,2,3,4,5,6,7]);
+```
 
 ## Bubble Sort Optimization
+
+If you have an array that is almost sorted, the function will continue and check every value. We can short circuit this by checking if the last time through the array, no swaps were done, then you can just return.
+
+Non-optimized
+
+```
+function bubbleSort(arr) {
+  const swap = (arr, idx1, idx2) => {
+    [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+  };
+
+  for (let i = arr.length; i > 0; i--) {
+    for (let j = 0; j < i - 1; j++) {
+        console.log(arr, arr[j], arr[j + 1]);
+      if (arr[j] > arr[j + 1]) {
+        swap(arr, j, j + 1);
+      }
+    }
+  }
+  return arr;
+}
+
+
+bubbleSort([8,1,2,3,4,5,6,7]);
+// array only has ONE number that is not in order.
+
+[8, 1, 2, 3, 4, 5, 6, 7] 8 1
+[1, 8, 2, 3, 4, 5, 6, 7] 8 2
+[1, 2, 8, 3, 4, 5, 6, 7] 8 3
+[1, 2, 3, 8, 4, 5, 6, 7] 8 4
+[1, 2, 3, 4, 8, 5, 6, 7] 8 5
+[1, 2, 3, 4, 5, 8, 6, 7] 8 6
+[1, 2, 3, 4, 5, 6, 8, 7] 8 7
+[1, 2, 3, 4, 5, 6, 7, 8] 1 2
+[1, 2, 3, 4, 5, 6, 7, 8] 2 3
+[1, 2, 3, 4, 5, 6, 7, 8] 3 4
+[1, 2, 3, 4, 5, 6, 7, 8] 4 5
+[1, 2, 3, 4, 5, 6, 7, 8] 5 6
+[1, 2, 3, 4, 5, 6, 7, 8] 6 7
+[1, 2, 3, 4, 5, 6, 7, 8] 1 2
+[1, 2, 3, 4, 5, 6, 7, 8] 2 3
+[1, 2, 3, 4, 5, 6, 7, 8] 3 4
+[1, 2, 3, 4, 5, 6, 7, 8] 4 5
+[1, 2, 3, 4, 5, 6, 7, 8] 5 6
+[1, 2, 3, 4, 5, 6, 7, 8] 1 2
+[1, 2, 3, 4, 5, 6, 7, 8] 2 3
+[1, 2, 3, 4, 5, 6, 7, 8] 3 4
+[1, 2, 3, 4, 5, 6, 7, 8] 4 5
+[1, 2, 3, 4, 5, 6, 7, 8] 1 2
+[1, 2, 3, 4, 5, 6, 7, 8] 2 3
+[1, 2, 3, 4, 5, 6, 7, 8] 3 4
+[1, 2, 3, 4, 5, 6, 7, 8] 1 2
+[1, 2, 3, 4, 5, 6, 7, 8] 2 3
+[1, 2, 3, 4, 5, 6, 7, 8] 1 2
+[1, 2, 3, 4, 5, 6, 7, 8]
+```
+
+The function still makes every comparison, without making any swap.
+
+**Solution**: Make a variable called `noSwapps`, and if it's true it will break out of the loop.
+
+```
+// Optimized BubbleSort with noSwaps
+function bubbleSort(arr){
+  var noSwaps; // create a variable for noSwaps
+  for(var i = arr.length; i > 0; i--){
+    noSwaps = true;
+    for(var j = 0; j < i - 1; j++){
+        console.log( arr, arr[j], arr[j+1])
+      if(arr[j] > arr[j+1]){
+        var temp = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = temp;
+        noSwaps = false; // remain false because swap occured
+      }
+    }
+    if(noSwaps) break; //only break out when no swaps were done.
+  }
+  return arr;
+}
+
+bubbleSort([8,1,2,3,4,5,6,7]
+
+[8, 1, 2, 3, 4, 5, 6, 7] 8 1
+[1, 8, 2, 3, 4, 5, 6, 7] 8 2
+[1, 2, 8, 3, 4, 5, 6, 7] 8 3
+[1, 2, 3, 8, 4, 5, 6, 7] 8 4
+[1, 2, 3, 4, 8, 5, 6, 7] 8 5
+[1, 2, 3, 4, 5, 8, 6, 7] 8 6
+[1, 2, 3, 4, 5, 6, 8, 7] 8 7
+[1, 2, 3, 4, 5, 6, 7, 8] 1 2
+[1, 2, 3, 4, 5, 6, 7, 8] 2 3
+[1, 2, 3, 4, 5, 6, 7, 8] 3 4
+[1, 2, 3, 4, 5, 6, 7, 8] 4 5
+[1, 2, 3, 4, 5, 6, 7, 8] 5 6
+[1, 2, 3, 4, 5, 6, 7, 8] 6 7
+[1, 2, 3, 4, 5, 6, 7, 8]
+```
