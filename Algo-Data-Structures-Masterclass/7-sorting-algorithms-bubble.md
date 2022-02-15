@@ -79,11 +79,13 @@ return str1.length - str2.length;
 
 This is how we can use the built in `sort()` method for our particular needs.
 
-## Bubble Sort
+---
 
-Generally isn't very efficient, but is a god problem to learn.
+# Bubble Sort
 
-Goal here is to have largest valuest at the end, bubble to the top.
+Generally isn't very efficient, but is a good problem to learn.
+
+Goal here is to have **largest valuest at the end**, bubble to the top.
 
 ![Bubble](https://www.resultswebdev.com/wp-content/themes/results-website-design/uploads/bubble-sort-animation2.gif)
 
@@ -186,6 +188,49 @@ function bubbleSort(arr) {
 }
 
 bubbleSort([8,1,2,3,4,5,6,7]);
+```
+
+---
+
+**Simple Version**
+
+```
+function bubbleSort(arr) {
+
+    for(let i = 0; i < arr.length; i++) {
+        for(let j = 0; j < arr.length; j++) {
+            if (arr[j] > arr[j+1]) {
+                let temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+
+            }
+        }
+    }
+    return arr;
+}
+
+bubbleSort([2,4,1,15,20])
+```
+
+Or
+
+```
+function bubbleSort(arr) {
+
+    const swap = (arr, idx1, idx2) => {
+    [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+  };
+
+    for(let i = 0; i < arr.length; i++) {
+        for(let j = 0; j < arr.length; j++) {
+            if (arr[j] > arr[j+1]) { //swap
+                swap(arr, j, j + 1);
+            }
+        }
+    }
+    return arr;
+}
 ```
 
 ## Bubble Sort Optimization

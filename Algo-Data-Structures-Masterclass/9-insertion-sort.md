@@ -48,4 +48,8 @@ function insertionSort(arr) {
 insertionSort([2,1,9,76,4])
 ```
 
-A Different Method:
+## Big O Complexity
+
+Is good at partially sorted data. But if completely unsorted, it can take a very long time.
+
+Is also good if you are inserting new data that comes in live.
