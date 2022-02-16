@@ -120,3 +120,82 @@ function merge(arr1, arr2) {
 merge([1,10,50], [2,14,99,100])
 //[1, 2, 10, 14, 50, 99, 100]
 ```
+
+---
+
+## Writting Merge Sort
+
+- Use `slice()` to break up the array into halves until you have arrays that are empty or have one element, keep going **resursively** until the basecase (till **arr.length = 1 or 0**)
+- Once you have smaller sorted arrays, merge those arrays with other sorted arrays until you are back at the full length of the array
+- Once the array has been merged back together, return the merged (and sorted!) array
+
+```
+function merge(arr1, arr2) {
+
+    let results = [];
+    let i = 0;
+    let j = 0;
+
+    while (i < arr1.length && j < arr2.length) {
+        if(arr2[j] > arr1[i]) { //if arr1 smaller
+            results.push(arr1[i]);
+            i++;
+        } else {
+            results.push(arr2[j]); // case for arr2 is smaller
+            j++
+        }
+    }
+    //for when we hit the end of one of the arrays. Push the remaining values in the array.
+    //in example, arr1 has hit the end. But arr2 still has values to push to results.
+    while (i < arr1.length) {
+        results.push(arr1[i])
+        i++;
+    }
+    while (j < arr2.length) {
+        results.push(arr2[j])
+        j++;
+    }
+
+    return results;
+}
+
+
+
+function mergeSort(arr) {
+    if(arr.length <= 1) return arr;
+
+    let mid = Math.floor(arr.length / 2); // get the middle of the array
+    let left = mergeSort(arr.slice(0, mid)); // slice the array to form the left array
+    let right = mergeSort(arr.slice(mid));
+    return merge(left, right); //run the previously created merge function to sort the individual arrays.
+}
+
+mergeSort([10,24,76,72])
+```
+
+So we take our large array...
+is the length of the array <= 1? `if(arr.length <= 1) return arr;` NO, then we go and take the middle point.
+We then call `mergeSort([10,24])` which returns `10`, the right value.
+Now we deal with the left value.
+
+![mergeSort](/images/mergeSort.png)
+
+Now we call `merge` on these values. `merge([10], [24])` to produce an ordered array [10,24].
+
+![merge](/images/merge1.png)
+
+Now we need to do the right side.
+
+![merge](/images/mergeRight.png)
+
+Then we move on to `return merge(left, right)`
+
+![merge left](/images/mergeRight2.png)
+
+Now we merge the last two.
+
+![merge left](/images/mergeFinal.png)
+
+---
+
+![Big O mergeSort](/images/BigOMergeSort.png)
