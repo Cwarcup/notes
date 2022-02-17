@@ -160,12 +160,10 @@ radixSort([123,345,2,4,66,8,6786])
 
 ## Big O
 
-|Time Complexity (Best) |Time Complexity (Average) |Time Complexity (Worst)| Space Complexity |
-
-|--|--|--|--|
-
-| O(nk)                         | O(nk) | O(nk) | O(n + k) |
-| ----------------------------- | ----- | ----- | -------- |
+| Time Complexity (Best)        | Time Complexity (Average) | Time Complexity (Worst) | Space Complexity |
+| ----------------------------- | ------------------------- | ----------------------- | ---------------- |
+| O(nk)                         | O(nk)                     | O(nk)                   | O(n + k)         |
+| ----------------------------- | -----                     | -----                   | --------         |
 | n - length of array           |
 | --                            |
 | k - number of digits(average) |
