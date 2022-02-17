@@ -199,3 +199,4 @@ Now we merge the last two.
 ---
 
 ![Big O mergeSort](/images/BigOMergeSort.png)
+
