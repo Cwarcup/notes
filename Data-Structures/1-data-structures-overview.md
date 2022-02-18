@@ -201,8 +201,8 @@ let Rectangle = class Rectangle2 {
 console.log(Rectangle.name);
 // output: "Rectangle2"
 ```
-
 ## Recap
+
 - Classes are blueprints that when created make objects known as instances
 - Classes are created with the new keyword
 - The constructor function is a special function that gets run when the class is instantiated
