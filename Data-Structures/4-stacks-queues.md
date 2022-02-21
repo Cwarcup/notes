@@ -6,7 +6,7 @@ If an abstract data structure. Has two principal operations:
 
 **LIFO** (last in, first out). Last thing added in is the first thing removed. 
 
-[stack](https://camo.githubusercontent.com/7163784baed9e988949a1dfbf1e749eac91ea38cd1f738ec5094469f22242675/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f622f62342f4c69666f5f737461636b2e706e67)
+![stack](https://camo.githubusercontent.com/7163784baed9e988949a1dfbf1e749eac91ea38cd1f738ec5094469f22242675/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f622f62342f4c69666f5f737461636b2e706e67)
 
 Think about a stack of plates, or a stack of markers, or a stack of....anything.
 
@@ -114,7 +114,7 @@ Are an abstract data type in which the entities are kept in order. Addition of e
 **First-In-First-Out (FIFO)**
 - first one added will be the first one removed. 
 
-[fifo](https://camo.githubusercontent.com/a98486bae83b4a5c7efcc361d1b1440d471c4d0f874b014aab59a7374b0fddf9/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f352f35322f446174615f51756575652e737667)
+![fifo](https://camo.githubusercontent.com/a98486bae83b4a5c7efcc361d1b1440d471c4d0f874b014aab59a7374b0fddf9/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f352f35322f446174615f51756575652e737667)
 
 ---
 
@@ -159,4 +159,3 @@ class Queue {
     }
 }
 ```
-var
