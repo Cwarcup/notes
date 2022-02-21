@@ -20,6 +20,8 @@ DFS-PostOrder
 
 ## Breath First Search - BFS
 
+![bfs](https://camo.githubusercontent.com/73761db9068bf4c9de4a23209da587a29e8cc672558534d4ff40ac0480854047/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f352f35642f427265616474682d46697273742d5365617263682d416c676f726974686d2e676966)
+
 We scan through the tree level by level, following the order of height, from top to bottom. The nodes on higher level would be visited before the ones with lower levels.
 
 Steps - Iteratively
@@ -127,4 +129,48 @@ console.log(tree.BFS());
 
 // [ 10, 6, 15, 3, 8, 20 ]
 ```
+
+## Depth-first Search Traversal
+One starts at the root (selecting some arbitrary node as the root in the case of a graph) and explores as far as possible along each branch before backtracking.
+
+**DFS - PreOrder**
+
+![dfs](https://camo.githubusercontent.com/307023a33368ed02198844a9b3d9b8b7b470f67bbcc0e88574da939b76775c89/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f372f37662f44657074682d46697273742d5365617263682e676966)
+
+Steps - Recursively
+- Create a variable to store the values of nodes visited 
+- Store the root of the BST in a variable called current 
+- Write a helper function which accepts a node 
+- If the node has a left property, call the helper function with the left property on the node 
+- Push the value of the node to the variable that stores the values 
+- If the node has a right property, call the helper function with the right property on the node 
+- Invoke the helper function with the current variable 
+- Return the array of values 
+
+```
+  DFSPreOrder() {
+    let visited = [];
+    function helper(node) {
+      visited.push(node.value);
+      if (node.left) helper(node.left);
+      if (node.right) helper(node.right);
+    }
+    helper(this.root);
+    return visited;
+  }
+
+  var tree = new BinarySearchTree();
+tree.insert(10);
+tree.insert(6);
+tree.insert(15);
+tree.insert(3);
+tree.insert(8);
+tree.insert(20);
+console.log(tree.DFS());
+
+// [ 10, 6, 3, 8, 15, 20 ]
+```
+--- 
+
+**DFS - PostOrder**
 
