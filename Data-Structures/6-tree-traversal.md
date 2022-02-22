@@ -137,14 +137,16 @@ One starts at the root (selecting some arbitrary node as the root in the case of
 
 ![dfs](https://camo.githubusercontent.com/307023a33368ed02198844a9b3d9b8b7b470f67bbcc0e88574da939b76775c89/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f372f37662f44657074682d46697273742d5365617263682e676966)
 
+- you visit the root, then look at the left and right. 
+
 Steps - Recursively
-- Create a variable to store the values of nodes visited 
-- Store the root of the BST in a variable called current 
-- Write a helper function which accepts a node 
-- If the node has a left property, call the helper function with the left property on the node 
-- Push the value of the node to the variable that stores the values 
-- If the node has a right property, call the helper function with the right property on the node 
-- Invoke the helper function with the current variable 
+- Create a variable to store the values of nodes visited
+- Store the root of the BST in a variable called current
+- Write a helper function which accepts a node
+- Push the value of the node to the variable that stores the values
+- If the node has a left property, call the helper function with the left property on the node
+- If the node has a right property, call the helper function with the right property on the node
+- Invoke the helper function with the current variable
 - Return the array of values 
 
 ```
@@ -173,4 +175,133 @@ console.log(tree.DFS());
 --- 
 
 **DFS - PostOrder**
+
+- root is the last thing visited. 
+- all children are visited before the root. 
+  
+
+- Create a variable to store the values of nodes visited 
+- Store the root of the BST in a variable called current 
+- Write a helper function which accepts a node 
+- If the node has a left property, call the helper function with the left property on the node 
+- If the node has a right property, call the helper function with the right property on the node 
+- Push the value of the node to the variable that stores the values 
+- Invoke the helper function with the current variable 
+- Return the array of values 
+
+```
+  DFSPostOrder() {
+    let visited = [];
+    let current = this.root;
+    function helper(node) {
+      if (node.left) {
+        helper(node.left);
+      }
+      if (node.right) {
+        helper(node.right);
+      }
+      visited.push(node.value);
+    }
+    helper(this.root);
+    return visited;
+  }
+
+var tree = new BinarySearchTree();
+tree.insert(10);
+tree.insert(6);
+tree.insert(15);
+tree.insert(3);
+tree.insert(8);
+tree.insert(20);
+console.log(tree.DFSPreOrder());
+// PreOrder [ 10, 6, 3, 8, 15, 20 ]
+console.log(tree.DFSPostOrder());
+// PostOrder [ 3, 8, 6, 20, 15, 10 ]
+```
+
+## DFS - InOrder
+
+- traverse the entire right side, visit the node
+- then traverse the entire left side, then visit the node. 
+
+![inorder](https://upload.wikimedia.org/wikipedia/commons/4/48/Inorder-traversal.gif?20200610133752)
+
+- Create a variable to store the values of nodes visited
+- Store the root of the BST in a variable called current
+Write a helper function which accepts a node
+- If the node has a left property, call the helper function with the left property on the node
+- Push the value of the node to the variable that stores the values
+- If the node has a right property, call the helper function with the right property on the node
+- Invoke the helper function with the current variable
+- Return the array of values
+
+```
+  DFSInOrder(){
+    var visited = [];
+    function helper(node){
+        if(node.left) helper(node.left);
+        visited.push(node.value);
+        if(node.right) helper(node.right);
+    }
+    helper(this.root);
+    return visited;
+  }
+
+var tree = new BinarySearchTree();
+tree.insert(10);
+tree.insert(6);
+tree.insert(15);
+tree.insert(3);
+tree.insert(8);
+tree.insert(20);
+
+console.log(tree.DFSInOrder());
+// [ 3, 6, 8, 10, 15, 20 ]
+```
+
+# Which one should you use?
+
+## Breath First (BFS) vs Depth First (BFS)
+
+Depends on the tree. If you have **losts of nodes to keep track of**, i.e., your tree is very side...
+
+BFS will have to store a ton of data in memory. 
+
+**DFS** is not storing all the nodes across a tree. Only keeping track of a given branch. Will therefore use **less space**
+
+![when to use DFS](/images/whentoDFS.png)
+
+If you have **few branches**, better to use **BFS**.
+
+![when to use BFS](/images/whentouseBFS.png)
+
+however, you do not see trees like this very often. 
+
+---
+
+## Uses for DFS InOrder, PostOrder, and PreOrder
+
+#### DFS InOrder
+Used commonly with BST's
+
+Notice we get all nodes in the tree in **their underlying order**
+
+`[ 3, 6, 8, 10, 15, 20 ]` Lowest to highest
+
+#### DFS PreOrder
+
+Can be used to "export" a tree structure so that it is easily reconstructed or copied.
+
+Want to recreate it.
+
+`[ 10, 6, 3, 8, 15, 20 ]`
+
+You know the root is 10, 6 is the left...
+
+## Recap
+
+- **Trees** are **non-linear** data structures that contain a root and child nodes
+- **Binary** Trees can have values of any type, but at **most** **two** children for each **parent**
+- **Binary** **Search** Trees are a more specific version of binary trees where every node to the **left** of a **parent** is **less** than it's value and every node to the **right** is **greater**
+- We can search through Trees using **BFS** and **DFS**
 
