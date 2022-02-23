@@ -18,7 +18,7 @@ DFS-PostOrder
 
 ---
 
-## Breath First Search - BFS
+## Breadth First Search - BFS
 
 ![bfs](https://camo.githubusercontent.com/73761db9068bf4c9de4a23209da587a29e8cc672558534d4ff40ac0480854047/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f352f35642f427265616474682d46697273742d5365617263682d416c676f726974686d2e676966)
 
@@ -261,7 +261,7 @@ console.log(tree.DFSInOrder());
 
 # Which one should you use?
 
-## Breath First (BFS) vs Depth First (BFS)
+##  First (BFS) vs Depth First (BFS)
 
 Depends on the tree. If you have **losts of nodes to keep track of**, i.e., your tree is very side...
 
