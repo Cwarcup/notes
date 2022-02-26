@@ -18,6 +18,7 @@
 ### Algorithms
 
 - [Dijkstras Algorithm (shortest distance)](https://github.com/Cwarcup/code-notes/blob/4f2efbacbbcdc5647096099caeeb5fd5d596ed97/javascript-advanced-concepts)
+- [JS Algorithms GitHub](https://github.com/trekhleb/javascript-algorithms)
  
 
 ### Misc
