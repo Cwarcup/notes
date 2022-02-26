@@ -6,6 +6,7 @@
 
 ### Programming
 - [JavaScript Advanced Concepts](https://github.com/Cwarcup/code-notes/blob/4f2efbacbbcdc5647096099caeeb5fd5d596ed97/javascript-advanced-concepts)
+- [Typescript ](https://github.com/Cwarcup/code-notes/blob/7acc138be1e93232fb8a040125d41163be14d6c4/root/typescript)
 
 ### Frameworks
 
