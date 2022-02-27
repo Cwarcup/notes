@@ -53,9 +53,9 @@ const multiply = function(a: number, b: number): number {
   return a * b;
 }
 ```
-> always following this structure
+**Always following this structure**
 | param annotation	| return val annotation |
-| ------------- | ------------- |
+| ----------------- | --------------------- |
 | (a: number, b: number)	| : number	|
 
 ### Void and Never
@@ -75,3 +75,42 @@ const throwError = (message: string): never => {
 - use `never` to say we are never going to actually reach the end of this function. We will eventually hit the error and exit the function. This is a pretty rare case. 
 
 ## Destructuring with Annotations
+
+```typescript
+const todaysWeather = {
+  date: new Date(),
+  weather: 'sunny' 
+}
+
+// destructuring with an annotation
+const logWeather = ({ date, weather}: { date: Date, weather: string }): void => {
+  console.log(date);
+  console.log(weather);
+};
+```
+
+first do the destructuring `{ date, weather}:`, then do the annotations `{ date: Date, weather: string })`
+
+
+# Annotations around Objects
+
+- have to label the type of every property within our object. 
+```typescript
+const profile = {
+  name: 'Alex',
+  age: 20,
+  coords: {
+    lat: 0,
+    lng: 15
+  },
+  setAge(age: number): void { 
+    this.age = age;
+  }
+};
+
+//destructuring setAge
+const { age }: {age: number} = profile;
+
+//destructuring lat and lng
+const { coords: { lat, lng } }: { coords: { lat: number; lng: number}} = profile;
+```

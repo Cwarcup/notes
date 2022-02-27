@@ -22,11 +22,17 @@ const throwError = (message: string): never => {
   throw new Error(message);
 }
 
-const forecast = {
+const todaysWeather = {
   date: new Date(),
   weather: 'sunny' 
 }
 
-const logWeather = (forecast: { date: Date, weather: string }): void => {
-  
+// destructuring with an annotation
+const logWeather = ({ date, weather}: { date: Date, weather: string }): void => {
+  console.log(date);
+  console.log(weather);
 }
+
+console.log(logWeather(todaysWeather));
+
+//
