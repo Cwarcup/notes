@@ -1,4 +1,4 @@
-mport faker from '@faker-js/faker';
+import faker from '@faker-js/faker';
 import { Mappable } from './CustomMap';
 
 
