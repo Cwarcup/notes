@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.7",
     "parcel": "^2.3.2"
   }
 }
