@@ -120,3 +120,32 @@ export default 'red';
 //index.ts file
 import red from './User';
 ```
+
+## Add Google Maps API Support
+
+1. Go to [Google Dev Console](https://console.developers.google.com/)
+2. Create a new project and Enable Google Maps support inside the project
+   1. Select Maps JavaScript API.
+3. Generate API key by going to "API & Services" > "Credentials".
+4. Add Google Maps script tag to the HTML file
+   1. `<script
+      type="module"
+      src="https://maps.googleapis.com/maps/api/js?key= <API_KEY> "
+    ></script>`
+
+## Google Integration 
+
+Required Update for New @types Library:
+The @types/googlemaps library that is installed in the next video has been deprecated. Instead, we need to install a different library:
+
+`npm i -D @types/google.maps`
+
+Also, you will still see a TS error in your code editor:
+
+`Cannot find name 'google'.ts(2304)`
+
+As the very first line in the index.ts file, you will need to add a triple slash directive:
+
+`/// <reference types="@types/google.maps" />`
+
+You can read about this in the official docs [here](https://developers.google.com/maps/documentation/javascript/using-typescript#Module_Import).
