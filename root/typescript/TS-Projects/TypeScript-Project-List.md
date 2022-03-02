@@ -1,0 +1,1 @@
+- [Simple Map](https://github.com/Cwarcup/notes/blob/6b9eef46dad952e3d3fed4801f3427154c6bf93b/root/typescript/TS-Projects/maps)

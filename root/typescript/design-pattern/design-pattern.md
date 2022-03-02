@@ -432,3 +432,22 @@ So if we had an error, TS gives us more information:
 This is not required, but if we fail to implement an interface, TS can tell us where the error is. 
 ---
 You can read about this in the official docs [here](https://developers.google.com/maps/documentation/javascript/using-typescript#Module_Import).
+
+## Summary
+
+1. Wanted to restrict the amount of API function. Only allow specific things we allowed in our application. 
+   1. someone else can ONLY create a company and reference the company name and location. 
+   2. wanted to restrict access to `googleMap` by adding on the **private modifier**, meaning we can only access it inside the `customMap`. 
+2. Interface in `customMap`
+   1. initial approad was to allow `addmarker` to accept different types (User.ts, Company.ts..)
+      1. bad thing was this set up a dependancie between `CustomMap` and all the classes.
+   2. Better approach was to define an **interface**
+      1. `CustomMap` will ONLY accept classes that have a location, markerContent() method, and a color.
+      2. then added **implements** to each class.
+      3. wanted `CustomMap` to tell our classes what we want.
+
+### Typical Typescript File:
+
+![typical typescript file](/root/typescript/images/Section2/typicalTSFile.png)
+
+We're going to have a number of **interface definitions**. And those **definitions** are going to describe what you have to do to work with the **class**. So our **class definition** will have a couple of methods, and if a given method has to receive some other object to work correctly, rather than specifying that other object type, we're going to instead **specify an interface**. So other objects inside of application can choose to implement that interface so they can work with this class definition.
