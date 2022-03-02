@@ -24,3 +24,25 @@ tsc -w
 ```
 > -w flag is used to "watch" the files in side the files in the rootDir (src for us). This means we will not constantly need to run `tsc`. It allows us to **continuously compile code**. 
 
+6. run JavaScript files, but needs to be done manmually.
+```
+node build/index.js
+```
+7. run file with [Nodemon](https://www.npmjs.com/package/nodemon) and [Concurrently](https://www.npmjs.com/package/concurrently)
+```
+npm init -y
+
+npm install nodemon
+
+npm i concurrently
+```
+
+8. in `package.json`, change text under "scripts"
+```json
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+```
+> "start": "concurrently npm:start:*" tells concurrently to run anything that starts with "start". 
