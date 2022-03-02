@@ -6,3 +6,4 @@
 - [Type Guard](https://github.com/Cwarcup/TS-Node-Sort-App/app-notes.md#TypeGuards)
 - [instanceof narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#instanceof-narrowing)
 - [Getter/Setter](https://www.typescriptlang.org/docs/handbook/2/classes.html#getters--setters)
+- [Abstract Classes](https://github.com/Cwarcup/TS-Node-Sort-App/app-notes.md#abstractclasses)
