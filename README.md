@@ -33,6 +33,7 @@
 - [Problem Solving Technique](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/3-Problem-Solving.md)
 - [Dijkstras Algorithm (shortest distance)](https://github.com/Cwarcup/code-notes/blob/4f2efbacbbcdc5647096099caeeb5fd5d596ed97/javascript-advanced-concepts)
 - [JS Algorithms GitHub](https://github.com/trekhleb/javascript-algorithms)
+- [TypeScript Algorithms GitHub](https://github.com/sb-js/typescript-algorithms)
 - [Types of Patterns](https://github.com/Cwarcup/notes/blob/b9050fa0b0e0c58d873db958083a637ec2e80d1a/root/Algorithms-Masterclass/4-Problem-Solving-Patterns.md#L1)
 - [Big O](https://github.com/Cwarcup/notes/blob/b9050fa0b0e0c58d873db958083a637ec2e80d1a/root/Algorithms-Masterclass/1-BigO.md)
 - [Analyzing Performance](https://github.com/Cwarcup/notes/blob/064366b7fbd796d35bbe140b94810fd1cb796e4a/root/Algorithms-Masterclass/2-Analyzing-Performance-Arrays-Objects.md)
