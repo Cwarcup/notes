@@ -8,7 +8,7 @@
 
 ### Programming
 - [JavaScript Advanced Concepts](https://github.com/Cwarcup/code-notes/blob/4f2efbacbbcdc5647096099caeeb5fd5d596ed97/javascript-advanced-concepts)
-- [Typescript ](https://github.com/Cwarcup/notes/root/typescript/README.md)
+- [Typescript ](https://github.com/Cwarcup/notes/tree/main/root/typescript)
 
 ### Frameworks
 
