@@ -8,7 +8,7 @@
 
 ### Programming
 - [JavaScript Advanced Concepts](https://github.com/Cwarcup/code-notes/blob/4f2efbacbbcdc5647096099caeeb5fd5d596ed97/javascript-advanced-concepts)
-- [Typescript ](https://github.com/Cwarcup/notes/tree/main/root/typescript)
+- [Typescript ](https://github.com/Cwarcup/notes/root/typescript/README.md)
 
 ### Frameworks
 
@@ -51,3 +51,4 @@
 
 ### Misc
 - [Huge list of Algorithms in JS](https://github.com/trekhleb/javascript-algorithms)
+- [Installing Faker-JS](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
