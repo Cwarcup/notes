@@ -7,3 +7,4 @@
 - [instanceof narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#instanceof-narrowing)
 - [Getter/Setter](https://www.typescriptlang.org/docs/handbook/2/classes.html#getters--setters)
 - [Abstract Classes](https://github.com/Cwarcup/TS-Node-Sort-App/blob/main/app-notes.md#abstract-classes)
+- [Interfaces vs Abstract Classes](https://github.com/Cwarcup/TS-Node-Sort-App/blob/main/app-notes.md#interfaces-vs-abstract-classes)
