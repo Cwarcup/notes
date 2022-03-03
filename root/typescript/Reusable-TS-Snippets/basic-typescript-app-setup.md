@@ -1,6 +1,6 @@
 # Basic TypeScript App Setup
 
-Get starting files here:
+Get starting files [here:](https://github.com/Cwarcup/notes/blob/fd14a4f548214aefcc5525b32b3e08f8f27ba204/root/typescript/Reusable-TS-Snippets/new-TS-project-template)
 
 ```
 mkdir <appName>
@@ -61,3 +61,9 @@ Test and run in Terminal
 npm start
 ```
 > May get an error on the first run. This is because the TypeScript Compiler has not yet generated the index.js file. If this occurs, stop nodemon (control + C) and run app again (`npm start`).
+
+## Node JS
+- Will need to add type definition files
+```
+npm install @types/node
+```
