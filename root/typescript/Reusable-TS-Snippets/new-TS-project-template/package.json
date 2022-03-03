@@ -1,26 +1,14 @@
 {
-  "name": "ts-node-sort-app",
+  "name": "typescript-csv-reader",
   "version": "1.0.0",
-  "description": "Second  design patterns application from Typescript: The Complete Developer's Guide",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start:build": "tsc -w",
     "start:run": "nodemon build/index.js",
     "start": "concurrently npm:start:*"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Cwarcup/TS-Node-Sort-App.git"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Cwarcup/TS-Node-Sort-App/issues"
-  },
-  "homepage": "https://github.com/Cwarcup/TS-Node-Sort-App#readme",
-  "dependencies": {
-    "concurrently": "^7.0.0",
-    "nodemon": "^2.0.15"
-  }
+  "license": "ISC"
 }
