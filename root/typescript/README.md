@@ -9,10 +9,13 @@
 - [instanceof narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#instanceof-narrowing)
 - [Getter/Setter](https://www.typescriptlang.org/docs/handbook/2/classes.html#getters--setters)
 - [Abstract Classes](https://github.com/Cwarcup/TS-Node-Sort-App/blob/main/app-notes.md#abstract-classes)
+- Interfaces
 - [Interfaces vs Abstract Classes](https://github.com/Cwarcup/TS-Node-Sort-App/blob/main/app-notes.md#interfaces-vs-abstract-classes)
 - [Design Pattern](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
 - [Export Statements](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#export-statements)
 - [Tuples](https://github.com/Cwarcup/notes/blob/main/root/typescript/Tuples/tuples.md#tuples)
 - [enums](https://www.typescriptlang.org/docs/handbook/enums.html)
-- generics
+- [generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
+- generics personal notes
 - composition and inheritance
+- [static methods](https://www.typescriptlang.org/docs/handbook/2/classes.html#static-members)
