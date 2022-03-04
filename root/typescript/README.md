@@ -14,4 +14,5 @@
 - [Export Statements](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#export-statements)
 - [Tuples](https://github.com/Cwarcup/notes/blob/main/root/typescript/Tuples/tuples.md#tuples)
 - [enums](https://www.typescriptlang.org/docs/handbook/enums.html)
-- 
+- generics
+- composition and inheritance
