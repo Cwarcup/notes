@@ -52,3 +52,4 @@
 ### Misc
 - [Huge list of Algorithms in JS](https://github.com/trekhleb/javascript-algorithms)
 - [Installing Faker-JS](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
+- REST conventions
