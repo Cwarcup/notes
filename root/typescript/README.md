@@ -20,3 +20,4 @@
 - [generics personal notes](https://github.com/Cwarcup/notes/blob/main/root/typescript/topics/generics.md)
 - composition and inheritance
 - [static methods](https://www.typescriptlang.org/docs/handbook/2/classes.html#static-members)
+- [Inheritance with "Extends"](https://www.typescriptlang.org/docs/handbook/2/classes.html#extends-clauses)
