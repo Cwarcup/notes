@@ -1,20 +1,26 @@
-# Online Courses Notes
+## Online Courses Notes
+- [The Complete 2022 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
+- [JavaScript Algorithms and Data Structures Masterclass](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/11382102?start=1#notes)
 - [JavaScript Advanced Concepts](https://github.com/Cwarcup/notes/blob/b9050fa0b0e0c58d873db958083a637ec2e80d1a/root/JS/javascript-advanced-concepts)
-- 
 
 ## Languages
+- [HTML](palceholder)
+- CSS
+- JavaScript
 
-### Database
-
-### Programming
+## Programming
 - [JavaScript Advanced Concepts](https://github.com/Cwarcup/code-notes/blob/4f2efbacbbcdc5647096099caeeb5fd5d596ed97/javascript-advanced-concepts)
 - [Typescript ](https://github.com/Cwarcup/notes/tree/main/root/typescript)
-- [HTML](palceholder)
 
-### Frameworks
+## Frameworks
+- Node.js
+- React
+- Boostrap
 
-### Data Structures
-
+## Database
+- MongoDB
+  
+## Data Structures
 - [Algo and Data Structures Masterclass](https://github.com/Cwarcup/code-notes/blob/0d3d0c157ddb1d075469516325cf3340e81066a1/Algo-Data-Structures-Masterclass)
 - [Data Structures](https://github.com/Cwarcup/code-notes/blob/4476d44e7d32c886c9168b97e876e71123fe1d74/Data-Structures) 
 - [Singly Linked Lists](https://github.com/Cwarcup/notes/blob/7acc138be1e93232fb8a040125d41163be14d6c4/root/Data-Structures/2-singly-linked-lists.md#L1)
@@ -50,7 +56,12 @@
 - [Quick Sort](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/12-quick-sort.md#quick-sort)
 - [Radix Sort](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/13-Radix-sort.md#radix-sort)
 
-### Misc
+## Misc
 - [Huge list of Algorithms in JS](https://github.com/trekhleb/javascript-algorithms)
 - [Installing Faker-JS](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
-- REST conventions
+- [REST conventions](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#rest-conventions)
+
+### npm 
+- [Parcel](https://parceljs.org/docs/) or [personal notes](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#web-framework-notes)
+- [JSON-Server](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#adding-json-server)
+- [Axios](https://axios-http.com/docs/intro)
