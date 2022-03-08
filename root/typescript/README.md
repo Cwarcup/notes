@@ -1,5 +1,11 @@
 [Course](https://www.udemy.com/course/typescript-the-complete-developers-guide)
 
+## Projects
+- [Simple Map](https://github.com/Cwarcup/notes/blob/6b9eef46dad952e3d3fed4801f3427154c6bf93b/root/typescript/TS-Projects/maps)
+- [Sorting App w/ Node](https://github.com/Cwarcup/TS-Node-Sort-App)
+- [CSV Reader](https://github.com/Cwarcup/typescript-csv-reader)
+- [Web Framework App](https://github.com/Cwarcup/web-framework-typescript-app)
+
 ## Topics
 
 - [Getting started with Parcel](https://github.com/Cwarcup/notes/blob/main/root/typescript/topics/parcel-setup.md)
