@@ -36,10 +36,23 @@ Key: pilot
 
 A decorator gets called with a few arguments:
 1. The **prototype** of the object.
-   - in our case, we are talking about the prototype of **class** `Boat`.
+   + in our case, we are talking about the prototype of **class** `Boat`.
    - `target: any` is `Boat` and lists out all the different methods in class `Boat`
 2. Second argument is the key of the **property/method/accessor** that we applied our decorator to.
    - in our case, the key is `pilot`.
 3. the **property descriptor**.
 
 Decorators are applied when the code for this class is ran (**not when an instance is created**). When we define class Boat, decorators get executed. Again, because this note is important, a decorator only gets executed one single time when we define the class.
+
+Under the hood, this is what it looks like in js (stripped to its barebones):
+```javascript
+var __decorate = function(decorators, target, key, desc) {
+    var desc = Object.getOwnPropertyDescriptor(target, key)
+
+    for (var decorator of decorators) {
+        decorator(target, key, desc)
+    }
+}
+```
+
+## Property Descriptor
