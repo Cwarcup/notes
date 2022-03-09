@@ -29,7 +29,7 @@
 - [static methods](https://www.typescriptlang.org/docs/handbook/2/classes.html#static-members)
 - [Inheritance with "Extends"](https://www.typescriptlang.org/docs/handbook/2/classes.html#extends-clauses)
 - [TypeScript with Express](https://github.com/Cwarcup/typescript-express-server#typescript-express-server)
-- [Decorators](https://github.com/Cwarcup/notes/blob/main/root/typescript/topics/decorators.md#decorators)
+- [Decorators](https://github.com/Cwarcup/notes/blob/main/root/typescript/topics/decorators.md)
   
 # Reusable Code
 - [new TypeScript project](https://github.com/Cwarcup/notes/tree/main/root/typescript/Reusable-TS-Snippets/new-TS-project-template)

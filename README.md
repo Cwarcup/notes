@@ -6,11 +6,10 @@
 ## Languages
 - [HTML](palceholder)
 - CSS
-- JavaScript
+- [JavaScript](https://github.com/Cwarcup/notes/tree/main/root/JS)
 
 ## Programming
-- [JavaScript](https://github.com/Cwarcup/code-notes/blob/4f2efbacbbcdc5647096099caeeb5fd5d596ed97/javascript-advanced-concepts)
-- [Typescript ](https://github.com/Cwarcup/notes/blob/main/root/typescript/README.md)
+- [Typescript](https://github.com/Cwarcup/notes/blob/main/root/typescript/README.md)
 
 ## Frameworks
 - Node.js
