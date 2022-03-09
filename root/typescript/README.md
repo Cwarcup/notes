@@ -2,11 +2,12 @@
 
 ## Projects
 - [Simple Map](https://github.com/Cwarcup/notes/blob/6b9eef46dad952e3d3fed4801f3427154c6bf93b/root/typescript/TS-Projects/maps)
-- [Sorting App w/ Node](https://github.com/Cwarcup/TS-Node-Sort-App)
+- [Sorting App with Node](https://github.com/Cwarcup/TS-Node-Sort-App)
 - [CSV Reader](https://github.com/Cwarcup/typescript-csv-reader)
 - [Web Framework App](https://github.com/Cwarcup/web-framework-typescript-app)
+- TS & Express App
 
-## Topics
+## Sections
 
 - [Getting started with Parcel](https://github.com/Cwarcup/notes/blob/main/root/typescript/topics/parcel-setup.md)
 - [Create basic TypeScript app with Nodemon and Concurrently](https://github.com/Cwarcup/notes/blob/fd14a4f548214aefcc5525b32b3e08f8f27ba204/root/typescript/Reusable-TS-Snippets/basic-typescript-app-setup.md#L3)
@@ -27,3 +28,10 @@
 - composition and inheritance
 - [static methods](https://www.typescriptlang.org/docs/handbook/2/classes.html#static-members)
 - [Inheritance with "Extends"](https://www.typescriptlang.org/docs/handbook/2/classes.html#extends-clauses)
+- TypeScript with Express - link to final readme from app
+- Decorators (inside typescipt express server readme)
+  
+# Reusable Code
+- [new TypeScript project](https://github.com/Cwarcup/notes/tree/main/root/typescript/Reusable-TS-Snippets/new-TS-project-template)
+- [Csv File Reader](https://github.com/Cwarcup/notes/blob/main/root/typescript/Reusable-TS-Snippets/CsvFileReader.ts)
+- [addGoogleMapsMarker ](https://github.com/Cwarcup/notes/blob/main/root/typescript/Reusable-TS-Snippets/addGoogleMapsMarker.ts)
