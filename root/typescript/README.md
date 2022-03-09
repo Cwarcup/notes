@@ -5,7 +5,7 @@
 - [Sorting App with Node](https://github.com/Cwarcup/TS-Node-Sort-App)
 - [CSV Reader](https://github.com/Cwarcup/typescript-csv-reader)
 - [Web Framework App](https://github.com/Cwarcup/web-framework-typescript-app)
-- TS & Express App
+- [TS & Express App](https://github.com/Cwarcup/typescript-express-server#typescript-express-server)
 
 ## Sections
 
@@ -28,8 +28,8 @@
 - composition and inheritance
 - [static methods](https://www.typescriptlang.org/docs/handbook/2/classes.html#static-members)
 - [Inheritance with "Extends"](https://www.typescriptlang.org/docs/handbook/2/classes.html#extends-clauses)
-- TypeScript with Express - link to final readme from app
-- Decorators (inside typescipt express server readme)
+- [TypeScript with Express](https://github.com/Cwarcup/typescript-express-server#typescript-express-server)
+- [Decorators](https://github.com/Cwarcup/notes/blob/main/root/typescript/topics/decorators.md#decorators)
   
 # Reusable Code
 - [new TypeScript project](https://github.com/Cwarcup/notes/tree/main/root/typescript/Reusable-TS-Snippets/new-TS-project-template)
