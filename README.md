@@ -5,7 +5,7 @@
 
 ## Languages
 - [HTML](palceholder)
-- CSS
+- [CSS](https://github.com/Cwarcup/notes/root/css/Basic-css.md)
 - [JavaScript](https://github.com/Cwarcup/notes/tree/main/root/JS)
 
 ## Programming
@@ -59,6 +59,8 @@
 - [Huge list of Algorithms in JS](https://github.com/trekhleb/javascript-algorithms)
 - [Installing Faker-JS](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
 - [REST conventions](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#rest-conventions)
+- [vscode](https://github.com/Cwarcup/notes/root/vscode)
+- 
 
 ### npm 
 - [Parcel](https://parceljs.org/docs/) or [personal notes](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#web-framework-notes)
