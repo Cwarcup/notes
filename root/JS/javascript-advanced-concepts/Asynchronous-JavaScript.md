@@ -117,7 +117,7 @@ Promise.all(urls.map(url => {
 }).catch(() => console.log('error'))
 ```
 
-## ES8 - Asynch Await
+## ES8 - Async Await
 
 Is essentially a function that returns a **promise**, but async makes the code easier to read.
 
@@ -126,7 +126,7 @@ movePlayer(100, 'left')
   .this(() => movePlayer(400, 'left'))
   .this(() => movePlayer(10, 'right'))
 
-//with ASYNCH AWAIT
+//with ASYNC AWAIT
 
 async function playerStart() {
   await movePlayer(100, 'left'); //pause
@@ -199,13 +199,13 @@ const getData = async function() {
 
 Can now run `getData()` and will get the same results.
 
-But how do you catch errors with asyc? (add `.catch()`)
+But how do you catch errors with async? (add `.catch()`)
 Solved by using a **try catch block** which can have a `catch` at the end.
 
 ```
 const getData = async function() {
   try { // place everything in a try block
-    const [ users, posts, albums ] = await Promise.all(urls.map(url => // have descructured the urls
+    const [ users, posts, albums ] = await Promise.all(urls.map(url => // have destructured the urls
       fetch(url).then(resp => resp.json())
     ))
     console.log('users ', users)

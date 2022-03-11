@@ -6,6 +6,7 @@
 - [CSV Reader](https://github.com/Cwarcup/typescript-csv-reader)
 - [Web Framework App](https://github.com/Cwarcup/web-framework-typescript-app)
 - [TS & Express App](https://github.com/Cwarcup/typescript-express-server#typescript-express-server)
+- TS/React/Redux - not complete
 
 ## Sections
 
