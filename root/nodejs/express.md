@@ -362,3 +362,32 @@ app.get('/help', (req, res) => {
   });
 });
 ```
+
+# Query Strings
+If you get an error: "Cannot set headers after they are sent to the client" this is because you have tried to send two responses. Like so:
+```js
+// learning
+app.get('/products', (req, res) => {
+  // only run if no search term
+  if (!req.query.search) {
+    res.send({          // one response
+      error: 'You must provide a search term',
+    });
+  }
+  console.log(req.query.search);
+  res.send({          // second response
+    products: [],
+  });
+});
+```
+> fix this by adding return in the first response.
+```js
+  if (!req.query.search) {
+    return res.send({
+      error: 'You must provide a search term',
+    });
+  }
+  ```
+
+# Building JSON HTTP Endpoint
+-e js,hbs
