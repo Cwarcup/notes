@@ -12,7 +12,7 @@
 - [Typescript](https://github.com/Cwarcup/notes/blob/main/root/typescript/README.md)
 
 ## Frameworks
-- Node.js
+- [Node.js](https://github.com/Cwarcup/notes/root/nodejs/README.md)
 - React
 - Boostrap
 
@@ -60,10 +60,10 @@
 - [Installing Faker-JS](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
 - [REST conventions](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#rest-conventions)
 - [vscode](https://github.com/Cwarcup/notes/root/vscode)
-- 
+- Heroku (js topics)
 
 ### npm 
 - [Parcel](https://parceljs.org/docs/) or [personal notes](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#web-framework-notes)
 - [JSON-Server](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#adding-json-server)
 - [Axios](https://axios-http.com/docs/intro)
-- Express
+- Express (node js)
