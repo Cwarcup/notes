@@ -2,7 +2,7 @@
 
 ## Topics
 
-- Getting started - Generate App root/react/react-notes/Generating-React-Project.md
+- Getting started - Generate App 
 - React CSS - root/react/react-notes/react-css.md
 - JSX vs HTML - root/react/react-notes/JSX-vs-HTML.md
 - 
