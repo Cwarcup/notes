@@ -2,14 +2,14 @@
 
 ## Topics
 
-- Getting started - Generate App 
-- React CSS - root/react/react-notes/react-css.md
-- JSX vs HTML - root/react/react-notes/JSX-vs-HTML.md
-- 
+- [Getting started - Generate App](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Generating-React-Project.md) 
+- React CSS
+- [JSX vs HTML](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/JSX-vs-HTML.md#what-is-jsx)
+- [Props](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/props.md)
 
 ## misc
 
-- Snippets - root/react/react-notes/useful-snippets.md
+- [Snippets](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/useful-snippets.md)
 
 Links:
 Final Project Repo:

@@ -63,6 +63,7 @@
 - [REST conventions](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#rest-conventions)
 - [vscode](https://github.com/Cwarcup/notes/root/vscode)
 - Heroku (js topics)
+- [Semantic-UI - basic CSS generator ](https://semantic-ui.com/) and [CDN](https://cdnjs.com/libraries/semantic-ui) 
 
 ### npm 
 - [Parcel](https://parceljs.org/docs/) or [personal notes](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#web-framework-notes)
