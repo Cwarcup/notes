@@ -6,6 +6,11 @@
 - React CSS
 - [JSX vs HTML](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/JSX-vs-HTML.md#what-is-jsx)
 - [Props](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/props.md)
+- [Class based components](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/class-based-components.md)
+- [Function based components](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/functional-based-components) 
+- [state](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/state.md) 
+- [Constructor()](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/state.md#constructor)
+- [Class - data structure notes](https://github.com/Cwarcup/notes/blob/7acc138be1e93232fb8a040125d41163be14d6c4/root/Data-Structures/1-data-structures-overview.md#L11)
 
 ## misc
 

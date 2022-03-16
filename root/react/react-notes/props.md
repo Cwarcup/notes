@@ -82,3 +82,75 @@ const CommentDetail = (props) => {
 
 export default CommentDetail;
 ```
+
+# Showing Custom Children - reusable components
+
+You can pass a child into a prop like so:
+```js
+const ApprovalCard = (props) => {
+  return (
+    <div className="ui cards">
+      <div className="card">
+        <div className="content">
+          {props.children}           // add child
+          <div className="extra content">
+            <div className="ui two buttons">
+              <div className="ui basic green button">Approve</div>
+              <div className="ui basic red button">Reject</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+```
+Can then pass the desired child as an argument inside the parent:
+```js
+const App = () => {
+  return (
+    <div className="ui container comments">
+
+      <ApprovalCard>    // parent
+
+        <CommentDetail    // child 
+          avatarImg={faker.image.avatar()}
+          author={faker.name.findName()}
+          text={faker.lorem.sentence()}
+          timeAgo="Sun at 4:05PM"
+        />
+      </ApprovalCard>
+    </div>
+  );
+};
+```
+
+We take a **child**, wrap it in a **parent component**. The child component will show up on the ` {props.children}`. We can then reference that child anywhere in the parent component. 
+
+If we want to make our components re-usable, we **must** have `{props.children}` somewhere in the **parent component**. 
+```js
+<div className="content">{props.children}</div>
+```
+---
+One last basic props example:
+```js
+    const App = () => {
+        return (
+            <div>
+                <Message 
+                headerText="Changes in Service"
+                paraText="We just updated our privacy policy here to better service our customers."
+                />
+            </div>
+        );
+    }
+    
+    const Message = (props) => {
+        return (
+            <div className="ui message">
+                <div className="header">{props.headerText}</div>
+                <p>{props.paraText}</p>
+            </div>
+        );
+    }
+    ```
