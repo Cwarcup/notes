@@ -1,3 +1,5 @@
+[React Snippets](https://github.com/dsznajder/vscode-react-javascript-snippets/blob/master/docs/Snippets.md)
+
 imr→	import React from 'react'
 imrd→	import ReactDOM from 'react-dom'
 
