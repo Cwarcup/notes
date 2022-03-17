@@ -181,4 +181,53 @@ const SeasonDisplay = (props) => {
 };
 ```
 
+## Examples
 
+Goal here is to implement a clock that updates every second. 
+
+Starting code: Does not work:
+```js
+class Clock extends React.Component {
+  componentDidMount() {
+      setInterval(() => {
+          this.time = new Date().toLocaleTimeString()    
+      }, 1000)
+  }
+  
+  render() {
+      return (
+          <div className="time">
+              The time is: {this.time}
+          </div>
+      );
+  }
+}
+```
+
+Solution:
+```js
+class Clock extends React.Component {
+  constructor(props) {
+      super(props)
+      this.state ={
+          time: null,
+      };
+  }
+  componentDidMount() {
+      setInterval(() => {
+          this.setState({
+              time: new Date().toLocaleTimeString(),
+          });
+          }, 1000)
+  }
+            
+  
+  render() {
+      return (
+          <div className="time">
+              The time is: {this.state.time}
+          </div>
+      );
+  }
+}
+```

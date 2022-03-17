@@ -150,5 +150,9 @@ class App extends React.Component {
 ReactDOM.render(<App />, document.querySelector('#root'));
 ```
 
----
+# Component Lifecycle
+
+See detailed notes [here:](https://github.com/Cwarcup/notes/blob/cd89eddc41fda81e02639090527e6ad1ab045306/root/react/react-notes/lifecycle-component.md#L21)
+
+![Lifecycle](react-images/lifecycle2.png)
 
