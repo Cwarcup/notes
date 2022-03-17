@@ -1,5 +1,18 @@
 # Props
 
+Basic example of how to use props. For example, this code renders “Hello, Sara” on the page:
+```js
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+```
+
 Component Hierarchy
 - `App` is the **parent** to `CommentDetail`
 ```js
@@ -153,4 +166,58 @@ One last basic props example:
             </div>
         );
     }
-    ```
+```
+
+# Default Props
+
+```js
+// in app.js
+//set a specific message
+<Loader message={'Please approve location services'} />
+//loader.js
+export default class Loader extends Component {
+  render() {
+    return (
+      <div class="ui active dimmer">
+        <div class="ui massive text loader">
+          {this.props.message}
+        </div>
+      </div>
+    );
+  }
+}
+// 
+
+// no message specified
+// default message will be displayed
+//app.js
+return <Loader />;
+//loader.js
+export default class Loader extends Component {
+  render() {
+    return (
+      <div class="ui active dimmer">
+        <div class="ui massive text loader">
+          {this.props.message || 'Loading'}
+        </div>
+      </div>
+    );
+  }
+}
+
+//OR written as a functional component
+
+import React from 'react';
+
+const Loader = (props) => {
+  return (
+    <div class="ui active dimmer">
+      <div class="ui massive text loader">{props.message}</div>
+    </div>
+  );
+};
+
+Loader.defaultProps = { message: 'Loading...' };
+
+export default Loader;
+```

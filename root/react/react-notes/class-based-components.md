@@ -5,10 +5,20 @@ As of now, we have learnt that a **component** is either a **function or a class
 Previously, functional components and classes were very different. Functional components could ONLY produce JSX to show to the user. 
 
 Nowadays, functional components can use the **hooks system**.
-Function componenets can now...
+Function components can now...
 - Can produce JSX to show content to the user.
 - Can use **Hooks** to run code at a specific point in time 
 - Can use **Hooks** to access **state system** and **update content** on screen.
+
+You can also use an **ES6 class** to define a component:
+
+```js
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
 
 ## Rules of Class Components
 1. Must be a JavaScript Class
@@ -33,6 +43,12 @@ class App extends React.Component {   // class and extends
 
 ReactDOM.render(<App />, document.querySelector('#root'));
 ```
+
+## Benefits of Class Components
+
+![](react-images/benefitsClass.png)
+
+[Notes on state here:](https://github.com/Cwarcup/notes/blob/ef513cb3e99be669cb19d69202fb465019fe6bbb/root/react/react-notes/state.md)
 
 **React.Component** allows you to pull a bunch of functionality into our app class. 
 
@@ -99,4 +115,40 @@ this.state.lat = position.coords.latitude
 ```
 > This BAD! We do not want to do this. 
 > The only time you would EVER want to use direct assignment to state is in the initial default state.
+
+---
+
+So far, this is our code:
+```js
+class App extends React.Component {
+
+  // constructor is used when we want to create some initial setup when our component is created. It is optional. 
+  constructor(props) {
+    //must call super()
+    super(props);
+
+      // this is the only place we do direct assignment
+      // to this.state
+    this.state = { lat: null }; 
+
+    window.navigator.geolocation.getCurrentPosition(
+      (position) => {
+        console.log(position);
+        // setState() to change state
+        this.setState({ lat: position.coords.latitude });
+      },
+      (err) => console.log(err)
+    );
+  }
+
+  render() {
+     // returns some JSX
+    return <div> Latitude: {this.state.lat}</div>;
+  }
+}
+
+ReactDOM.render(<App />, document.querySelector('#root'));
+```
+
+---
 
