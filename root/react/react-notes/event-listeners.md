@@ -106,10 +106,12 @@ onChange={(e) => console.log(e.target.value)}
 We want a **controlled component**! Much better!
 - Allows you to look directly at the react component by using state to determine a value. 
 - We no longer look into the DOM to retrieve the current value.
+- Allows you to easily set default values by setting them up in `state`.
+- Can also easily change target values like setting them `toUpperCase()`. See below.
 ```js
 class SearchBar extends React.Component {
 
-  state = { term: '' };   // create default state
+  state = { term: '', placeholder: 'Search' };   // create default state
 
   render() {
     return (
@@ -120,7 +122,8 @@ class SearchBar extends React.Component {
             <input
               type="text"
               value={this.state.term} //sets teh value when user types
-              onChange={(e) => this.setState({ term: e.target.value })} //changes state when user types
+              onChange={(e) => this.setState({ term: e.target.value.toUpperCase() })} //changes state when user types
+              placeholder={this.state.placeholder}
             ></input>
           </div>
         </form>

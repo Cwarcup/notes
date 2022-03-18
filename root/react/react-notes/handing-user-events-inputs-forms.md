@@ -14,7 +14,9 @@ Components
 
 ## Event Handlers
 
-[See notes on event handlers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/event-listeners.md).
+- [See notes on event handlers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/event-listeners.md).
+- Handling Form submission
+  - 'this' keyword
 
 # How do we fetch data from an outside API or Server?
 

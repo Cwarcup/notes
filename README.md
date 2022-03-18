@@ -15,7 +15,7 @@
 
 ## Frameworks
 - [Node.js](https://github.com/Cwarcup/notes/root/nodejs/README.md)
-- React
+- [React](https://github.com/Cwarcup/notes/tree/main/root/react#react)
 - Boostrap
 
 ## Database

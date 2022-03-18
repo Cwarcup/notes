@@ -3,7 +3,7 @@
 ## Topics
 
 - [Getting started - Generate App](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Generating-React-Project.md) 
-- React CSS
+- [React CSS](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/JSX-vs-HTML.md#react-css)
 - [JSX vs HTML](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/JSX-vs-HTML.md#what-is-jsx)
 - [Props](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/props.md)
 - [Class based components](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/class-based-components.md)
@@ -11,58 +11,21 @@
 - [state](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/state.md) 
 - [Constructor()](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/state.md#constructor)
 - [Class - data structure notes](https://github.com/Cwarcup/notes/blob/7acc138be1e93232fb8a040125d41163be14d6c4/root/Data-Structures/1-data-structures-overview.md#L11)
-- Component Lifecycle method
+- [Component Lifecycle method](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/lifecycle-component.md#lifecycle-methods)
 - [Event Listeners](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/event-listeners.md)
-- Controlled Components/Elements
+- [Controlled Components/Elements](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/event-listeners.md#controlled-vs-uncontrolled-components)
+- forms
 
 ## misc
 
 - [Snippets](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/useful-snippets.md)
 
-Links:
-Final Project Repo:
-https://github.com/bradtraversy/proshop_mern
+### Links:
 
-Download VSCode:
-https://code.visualstudio.com/
+- [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+- [React Bootstrap:](https://react-bootstrap.github.io/)
+- [Bootswatch:](https://bootswatch.com/)
 
-Download Node.js
-https://nodejs.org/en/
-
-Download Git:
-https://git-scm.com/
-
-Download Postman:
-https://www.postman.com/
-
-React Docs:
-https://reactjs.org/
-
-Redux Docs:
-https://redux.js.org/
-
-MongoDB Website:
-https://www.mongodb.com/
-
-Heroku Website & CLI Docs:
-https://www.heroku.com/
-https://devcenter.heroku.com/articles/heroku-cli
-
-Redux DevTools:
-https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en
-
-React Bootstrap:
-https://react-bootstrap.github.io/
-
-Bootswatch:
-https://bootswatch.com/
-
-JWT.io
-https://jwt.io/
-
-Basir YouTube Channel & Website
-https://www.youtube.com/channel/UC2xRE4hUCQ3xO3ymEtMh1Hw
-https://codingwithbasir.com/
 
 ### NPM Packages:
 https://www.npmjs.com/package/express
