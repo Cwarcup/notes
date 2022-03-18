@@ -64,6 +64,11 @@
 - [vscode](https://github.com/Cwarcup/notes/root/vscode)
 - Heroku (js topics)
 - [Semantic-UI - basic CSS generator ](https://semantic-ui.com/) and [CDN](https://cdnjs.com/libraries/semantic-ui) 
+- API Requests
+  - [fetch](https://github.com/Cwarcup/notes/blob/136bf6db6ad38610e3c3e89c5ac9f8f22ddceb0a/root/JS/js-topics/fetch.md#L1)
+  - Axios
+    - `.this`
+    - async
 
 ### npm 
 - [Parcel](https://parceljs.org/docs/) or [personal notes](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#web-framework-notes)
