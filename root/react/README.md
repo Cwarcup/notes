@@ -11,7 +11,9 @@
 - [state](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/state.md) 
 - [Constructor()](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/state.md#constructor)
 - [Class - data structure notes](https://github.com/Cwarcup/notes/blob/7acc138be1e93232fb8a040125d41163be14d6c4/root/Data-Structures/1-data-structures-overview.md#L11)
-- Componenet Lifecycle method
+- Component Lifecycle method
+- [Event Listeners](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/event-listeners.md)
+- Controlled Components/Elements
 
 ## misc
 

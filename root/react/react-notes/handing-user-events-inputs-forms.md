@@ -12,6 +12,10 @@ Components
 
 # How do we get feedback from users?
 
+## Event Handlers
+
+[See notes on event handlers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/event-listeners.md).
+
 # How do we fetch data from an outside API or Server?
 
 # How do we show lists of records?
