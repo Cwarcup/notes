@@ -111,6 +111,38 @@ class SearchBar extends React.Component {
 }
 ```
 
+If you're using async await:
+```js
+class App extends React.Component {
+  state = { images: [] };
+
+  onSearchSubmit = async (term) => {
+    const response = await axios.get('https://api.unsplash.com/search/photos', {
+      params: { query: term },
+      headers: {
+        Authorization: 'Client-ID APIKEY',
+      },
+    });
+
+    this.setState({ images: response.data.results });
+  };
+
+// was previously 
+class App extends React.Component {
+  state = { images: [] };
+
+  onSearchSubmit = async (term) => {
+    const response = await axios.get('https://api.unsplash.com/search/photos', {
+      params: { query: term },
+      headers: {
+        Authorization: 'Client-ID API key',
+      },
+    });
+
+    this.setState({ images: response.data.results });
+  };
+```
+
 **3. use an arrow function on our props**
 
 ```js

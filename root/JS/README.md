@@ -8,6 +8,7 @@
 - Fetch API root/JS/js-topics/fetch.md
 - Promises
 - eventListeners
+- map() root/JS/js-topics/map.md
 
 # Courses
 - [Advanced JS Concepts](https://www.udemy.com/course/advanced-javascript-concepts/)

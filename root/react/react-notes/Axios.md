@@ -123,3 +123,23 @@ class App extends React.Component {
 
     console.log(response.data.results);
   }
+```
+
+# Create custom clients - axios.create()
+
+[axios docs on axios.create().](https://axios-http.com/docs/instance)
+
+Can use `axios.create()` to make a new instance of axios with custom configurations.
+
+```js
+// new file
+import axios from 'axios';
+
+export default axios.create({
+  baseURL: 'https://api.unsplash.com/',
+  headers: {
+    Authorization: 'Client-ID API KEY',
+  },
+});
+
+```
