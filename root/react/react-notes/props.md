@@ -221,3 +221,52 @@ Loader.defaultProps = { message: 'Loading...' };
 
 export default Loader;
 ```
+
+# Callbacks in Children
+
+Whenever we are invoking a `porp` within a class, we must refer to it using `this.props`.
+Like so:
+```js
+//in child
+class SearchBar extends React.Component {
+  state = { term: '', placeholder: 'Search' };
+
+  onFormSubmit = (event) => {
+    event.preventDefault();
+    this.props.onSubmit(this.state.term); //passing props to parent
+  };
+
+  render() {
+    return (
+      <div className="ui segment">
+        <form onSubmit={this.onFormSubmit} className="ui form">
+          <div className="field">
+            <label>Image Search</label>
+            <input
+              type="text"
+              value={this.state.term}
+              onChange={(e) => this.setState({ term: e.target.value })}
+              placeholder={this.state.placeholder}
+            ></input>
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
+
+//in parent
+class App extends React.Component {
+  onSearchSubmit(term) {
+    console.log(term);
+  }
+
+  render() {
+    return (
+      <div className="ui-container" style={{ marginTop: '10px' }}>
+        <SearchBar onSubmit={this.onSearchSubmit} /> // have our child component and send it props this way
+      </div>
+    );
+  }
+}
+```
