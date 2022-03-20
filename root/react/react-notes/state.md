@@ -231,3 +231,49 @@ class Clock extends React.Component {
   }
 }
 ```
+
+## Destructure props
+
+Instead of passing props.video, we can destructure this to just provide `videos`.
+
+```js
+//app.js
+export default class App extends Component {
+  state = { videos: [] };
+  onTermSubmit = async (term) => {
+    const response = await youtube.get('/search', {
+      params: {
+        q: term,
+      },
+    });
+    this.setState({ videos: response.data.items });
+  };
+  render() {
+    return (
+      <div className="ui container">
+        <SearchBar onFormSubmit={this.onTermSubmit} />
+        <VideoList videos={this.state.videos} /> // passing props to child
+      </div>
+    );
+  }
+}
+
+// NO DESTRUCTURING
+//VideoList.js
+import React from 'react';
+
+const VideoList = (props) => {
+  return <div>{props.videos.length}</div>;
+};
+
+export default VideoList;
+
+// WITH DESTRUCTURING
+import React from 'react';
+
+const VideoList = ({ videos }) => {
+  return <div>{videos.length}</div>;
+};
+
+export default VideoList;
+```

@@ -39,7 +39,7 @@ There is no limit on the amount of information we can pass through props.
 - a child can NOT pass data through the props system directly. 
   - generally about parent communicating to the child.
 
-**Providing a prop to a child**
+### Providing a prop to a child
 ![](react-images/passing%20props.png)
 
 Can also reference some javascript variable.
@@ -95,6 +95,75 @@ const CommentDetail = (props) => {
 
 export default CommentDetail;
 ```
+
+# Communicating from Child to Parent
+
+Typically done by passing a callback from the parent to desired child. Then using an event within the child to trigger the callback, in tern, passing that information back to the child. 
+
+1. create method in App to pass on the callback to child first
+```js
+export default class App extends Component {
+  state = { videos: [], selectedVideo: null };   //add new property to the state
+//... 
+  onVideoSelect = (video) => {     // create method, passing the video prop
+    console.log('From the App!', video);
+  };
+  render() {
+    return (
+      <div className="ui container">
+        <SearchBar onFormSubmit={this.onTermSubmit} />
+        <VideoList
+          onVideoSelect={this.onVideoSelect} // pass method as a prop to child
+          videos={this.state.videos}
+        />
+      </div>
+    );
+  }
+}
+```
+
+2. In the child, in our example 'VideoList.js', **Pass the prop** to the next child
+```js
+const VideoList = ({ videos, onVideoSelect }) => { // need to reference our destructured prop, onVideoSelect
+
+  const renderedList = videos.map((video) => {
+    return <VideoItem video={video} onVideoSelect={onVideoSelect} />; // pass the prop to the next child, VideoItem
+  });
+
+  return <div className="ui relaxed divided list">{renderedList}</div>;
+};
+
+export default VideoList;
+```
+
+3. Need to create a callback using `onClick` on the final child.
+```js
+const VideoItem = ({ video, onVideoSelect }) => {
+  return (
+    // pass in the callback as an arrow function so we can pass the video
+    <div onClick={() => onVideoSelect(video)} className="video-item item">
+      <img
+        className="ui image"
+        src={video.snippet.thumbnails.medium.url}
+        alt={video.snippet.chanelTitle}
+      />
+      <div className="content">
+        <div className="header">{video.snippet.title}</div>
+        <div class="description">{video.snippet.description}</div>
+      </div>
+    </div>
+  );
+};
+```
+
+> Now if we search and click on the div, we can see a console.log() of the video being clicked. This means we are successfully communicating to the parent, App.js!
+
+Summary:
+1. parent defined a new callback method. 
+2. method from parent gets passed to child as a prop
+3. child in tern passes that prop to another child
+   1. now whenever a user clicked, it triggered the method, passing that information back to the original parent. 
+
 
 # Showing Custom Children - reusable components
 
