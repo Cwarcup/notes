@@ -11,7 +11,7 @@
 - [map() root/JS/js-topics/map.md](https://github.com/Cwarcup/notes/blob/main/root/JS/js-topics/map.md#map-method)
 - [Embedded Videos - iframe](https://github.com/Cwarcup/notes/blob/e9873fa1cf1c7624a09d8fe9faf7872bcc13385e/root/JS/js-topics/iframe-tag.md#L31)
 - [Destructuring - Arrays and Object](https://www.freecodecamp.org/news/array-destructuring-in-es6-30e398f21d10/)
-- setTimer
+- [setTimeout](https://github.com/Cwarcup/notes/blob/0ce8154c6abe6620749eebef9949833446e4635d/root/JS/js-topics/setTimeout.md#L27)
 
 # Courses
 - [Advanced JS Concepts](https://www.udemy.com/course/advanced-javascript-concepts/)

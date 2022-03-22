@@ -217,5 +217,3 @@ Option 2: Use normal promises.
 `<span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>`
 
 Take a string from a 3rd party (API in our case) and execute it as HTML. Can slo do
-
-# useEffect Cleanup Function
