@@ -18,7 +18,7 @@ Is VERY difficult because..
 5. ...time goes on...
 6. we finally get the data from our function....
 
-We have already rendered our app component! We don't really have any good way of waiting for our function to return something before we render our componenet. 
+We have already rendered our app component! We don't really have any good way of waiting for our function to return something before we render our component. 
 
 Solution?
 

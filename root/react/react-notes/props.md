@@ -96,6 +96,48 @@ const CommentDetail = (props) => {
 export default CommentDetail;
 ```
 
+Can also pass desconstructed props:
+```js
+//in parent, App.js
+import React from 'react';
+import Accordion from './components/Accordion';
+
+const items = [
+  {
+    title: 'What is React?',
+    content: 'React is a front end javascript framework',
+  },
+  {
+    title: 'Why use react?',
+    content: 'React is a favorite JS library among engineers',
+  },
+  {
+    title: 'How do you use React?',
+    content: 'You use React by creating components',
+  },
+];
+
+const App = () => {
+  return (
+    <div>
+      <Accordion items={items} />
+    </div>
+  );
+};
+
+export default App;
+
+
+// in child, Accordion.js
+import React from 'react';
+
+const Accordion = ({ items }) => { // desconstructed 
+  return <div>{items.length}</div>; //passings the prop
+};
+
+export default Accordion;
+```
+
 # Communicating from Child to Parent
 
 Typically done by passing a callback from the parent to desired child. Then using an event within the child to trigger the callback, in tern, passing that information back to the child. 
