@@ -15,7 +15,10 @@
 - [Event Listeners](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/event-listeners.md)
 - [Controlled Components/Elements](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/event-listeners.md#controlled-vs-uncontrolled-components)
 - [forms](https://github.com/Cwarcup/notes/blob/21664f9925ce432cd3ae580ee267b750a0b03f2c/root/react/react-notes/forms.md#L62)
-- Hooks
+- [Hooks](https://github.com/Cwarcup/notes/blob/8658a0c1ffd7e81a4816d9daa9626de9b53843d3/root/react/react-notes/hooks.md)
+  - setState
+  - useEffect
+    - useEffect with async requests
 
 ## misc
 

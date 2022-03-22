@@ -143,3 +143,10 @@ export default axios.create({
 });
 
 ```
+
+# Throttling API Requests
+
+![](react-images/throttleSearch.png)
+
+Solution:
+![](react-images/throttle.png)
