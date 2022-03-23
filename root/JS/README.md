@@ -12,7 +12,7 @@
 - [Embedded Videos - iframe](https://github.com/Cwarcup/notes/blob/e9873fa1cf1c7624a09d8fe9faf7872bcc13385e/root/JS/js-topics/iframe-tag.md#L31)
 - [Destructuring - Arrays and Object](https://www.freecodecamp.org/news/array-destructuring-in-es6-30e398f21d10/)
 - [setTimeout](https://github.com/Cwarcup/notes/blob/0ce8154c6abe6620749eebef9949833446e4635d/root/JS/js-topics/setTimeout.md#L27)
-- window.history.pushState() 
+- [window.history.pushState() ](https://github.com/Cwarcup/notes/blob/1c96b54b8886da7cf98583ba8b0b743d6b1acd84/root/JS/js-topics/window.history.pushState.md)
 
 # Courses
 - [Advanced JS Concepts](https://www.udemy.com/course/advanced-javascript-concepts/)
