@@ -212,6 +212,26 @@ Option 2: Use normal promises.
   }, [term]);
   ```
 
+  Option 3: Define a new function inside of `useEffect`, mark it as async, then call it manually. 
+  ```js
+  const App = () => {
+    const [users, setUsers] = useState([]);
+    
+    useEffect(() => {
+      // define new function as async
+        const getData = async () => {
+            const { data } = await axios.get(URL); //add await to make it async
+            setUsers(data)
+        };
+
+        // call async function manually
+        getData();
+        
+        
+        
+    }, []);
+```
+
 ## dangerouslySetInnerHTML - XSS Attack
 
 `<span dangerouslySetInnerHTML={{ __html: result.snippet }}></span>`
