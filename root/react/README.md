@@ -21,7 +21,8 @@
     - [useEffect with async requests](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md#async-with-useeffect)
     - [debounce](https://github.com/Cwarcup/notes/blob/bc32994246d792607c6272ac48af537675b79caa/root/react/react-notes/debounce.md#L45)
     - [useRef](https://github.com/Cwarcup/notes/blob/3444601c3efe1e867f9355f605323c6cae270ca0/root/react/react-notes/useRef.md#L26)
-- Navigation: routes
+- Navigation: [routes](https://github.com/Cwarcup/notes/blob/2af7f1e157490d8fd6ea6c4b8666c28f3b32afb0/root/react/react-notes/navigation.md#L73)
+- [headers](https://github.com/Cwarcup/notes/blob/2af7f1e157490d8fd6ea6c4b8666c28f3b32afb0/root/react/react-notes/headers.md#L26)
 
 ## misc
 
