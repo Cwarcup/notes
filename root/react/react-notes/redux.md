@@ -6,6 +6,19 @@ What is Redux?
 - **Not** required to create a React app.
 - **Not explicitly** designed to be used with React.
 
+# Redux Project Setup
+
+Need to install: 
+- [`React-Redux`](https://www.npmjs.com/package/react-redux) and [`Redux`](https://www.npmjs.com/package/redux)
+
+```
+npm install --save react-redux redux
+```
+
+# React-Redux
+ 
+ See notes here:
+
 ### Redux Cycle:
 Action Creator → Action → Dispatch → Reducer → State
 
@@ -151,3 +164,35 @@ console.log(numbers); // [1, 2, 3] still have access to old array
 - Creates an **action**, which gets fed into the **[dispatch function](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#dispatch-is-part-of-the-redux-library-itself-so-we-dont-need-to-write-it)**.
 - Dispatcher makes 'copies' of the action, and sends them off to our different **[reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#reducers-are-like-our-departments)**
 - **[Reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#reducers-are-like-our-departments)** take in an action and make changes to the state if they need to.
+
+# combineReducers
+
+```js
+const ourDepartments = combineReducers({
+  accounting: accounting,
+  claimsHistory: claimsHistory,
+  policyList: policyList,
+});
+```
+
+- Purpose is to bring together all the reducers into one place. 
+- is a built in method in the redux library.
+- We have different keys:
+  - we do not need to add the same names to our reducers.
+- will pass in an object. The keys of our object will be the keys that show up in our state object.
+```js
+const ourDepartments = combineReducers({
+  moneyWeHave: accounting,
+  claimsHistory: claimsHistory,
+  policyList: policyList,
+});
+```
+
+# Dispatch
+```js
+store.dispatch(createPolicy('Alex', 20))
+```
+- Each dispatch is running an entire cycle of the redux library.
+- We can print out each state after each dispatch.
+
+- You can **only** modify the state through the dispatch function. You cannot access the state directly. It must be changed by an action.
