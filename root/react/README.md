@@ -21,7 +21,8 @@
     - [useEffect with async requests](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md#async-with-useeffect)
     - [debounce](https://github.com/Cwarcup/notes/blob/bc32994246d792607c6272ac48af537675b79caa/root/react/react-notes/debounce.md#L45)
   - [useRef](https://github.com/Cwarcup/notes/blob/3444601c3efe1e867f9355f605323c6cae270ca0/root/react/react-notes/useRef.md#L26)
-- Navigation: [routes](https://github.com/Cwarcup/notes/blob/2af7f1e157490d8fd6ea6c4b8666c28f3b32afb0/root/react/react-notes/navigation.md#L73)
+- Navigation: 
+  - [routes](https://github.com/Cwarcup/notes/blob/2af7f1e157490d8fd6ea6c4b8666c28f3b32afb0/root/react/react-notes/navigation.md#L73)
 - [headers](https://github.com/Cwarcup/notes/blob/2af7f1e157490d8fd6ea6c4b8666c28f3b32afb0/root/react/react-notes/headers.md#L26)
 - [Custom Hooks](https://github.com/Cwarcup/notes/blob/d83223a185e193d3180b60fae201c05e098448eb/root/react/react-notes/custom-hooks.md#L142)
 
@@ -29,9 +30,9 @@
 ## misc
 
 - [Snippets](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/useful-snippets.md)
-- Deployment 
-  - Vercel
-  - Netlify
+- [Deployment](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/deployment.md#deployment-with-react) 
+  - [Vercel](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/deployment.md#deployment-with-vercel)
+  - [Netlify](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/deployment.md#deployment-with-vercel)
 
 ### Links:
 
