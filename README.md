@@ -72,6 +72,9 @@
     - [`.this`](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Axios.md#return-object-with-then)
     - [async](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Axios.md#return-object-with-async)
 
+## Misc APIs
+- [jsonplaceholder](https://jsonplaceholder.typicode.com/)
+
 ### npm 
 - [Parcel](https://parceljs.org/docs/) or [personal notes](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#web-framework-notes)
 - [JSON-Server](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#adding-json-server)

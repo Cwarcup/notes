@@ -33,6 +33,10 @@
 
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
 - [React-Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#L74)
+- api request with redux:
+    - how to fetch data in a redux app
+    - Middleware in Redux
+      - redux-thunk
 
 
 

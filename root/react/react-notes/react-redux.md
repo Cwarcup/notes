@@ -1,5 +1,9 @@
 # React-Redux
 
+```
+npm install --save react-redux redux
+```
+
 ### Sections:
 - [How Redux works](https://github.com/Cwarcup/notes/blob/main/root/typescript/README.md#projects)
 - [App Structure](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#app-structure)

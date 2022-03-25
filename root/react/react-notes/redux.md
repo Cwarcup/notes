@@ -27,7 +27,7 @@ npm install --save react-redux redux
  
  See notes here:
 
-### Redux Cycle:
+# Redux Cycle:
 Action Creator → Action → Dispatch → Reducer → State
 
 1. **Action Creator:**
@@ -53,7 +53,9 @@ Action Creator → Action → Dispatch → Reducer → State
   - Is the central repository of all data that has been created by our Reducer.
   - **All information gets stored** in this property.
 
-## **Action Creator**: People dropping off a form:
+# Action Creator:
+
+People dropping off a form:
 ```js
 // need to create an action for each type of action
 // every Action creator has a type property and a payload property
@@ -87,9 +89,11 @@ const createClaim = (name, amountOfMoneyToCollect) => {
   };
 };
 ```
-## **Dispatch**: is part of the redux library itself, so we don't need to write it
+# Dispatch 
+- is part of the redux library itself, so we don't need to write it
 
-## **Reducers**: are like our departments
+# Reducers
+- are like our departments
 > Need to add `oldListOfClaims = []` in the case we are running this function for the first time.
 > If we don't do this, the reducer will be undefined
 ```js
@@ -125,7 +129,7 @@ const policyList = (listOfPolicies = [], action) => {
 };
 ```
 
-**Testing our reducers**:
+**Testing our reducers:**
 ```js
 const { createStore, combineReducers } = Redux;
 
@@ -153,6 +157,18 @@ store.dispatch(deletePolicy('Bob'))
 console.log(store.getState());
 ```
 
+
+# More on Reducers
+
+Setup a dummy reducer so we can make errors go away in our initial setup. 
+```js
+import { combineReducers } from 'redux';
+
+export default combineReducers({
+  replaceMe: () => 'replaceMe',
+});
+
+```
 
 #### Side note on Spread (...) operator:
 ```js
