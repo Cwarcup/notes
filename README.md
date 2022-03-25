@@ -2,8 +2,8 @@
 - [The Complete 2022 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
 - [JavaScript Algorithms and Data Structures Masterclass](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/11382102?start=1#notes)
 - [JavaScript Advanced Concepts](https://github.com/Cwarcup/notes/blob/b9050fa0b0e0c58d873db958083a637ec2e80d1a/root/JS/javascript-advanced-concepts)
-- TypeScript
-- React - root/react/README.md
+- [TypeScript](https://github.com/Cwarcup/notes/blob/main/root/typescript/README.md#projects)
+- [React](https://github.com/Cwarcup/react-with-redux#react-with-redux)
 
 ## Languages
 - [HTML](palceholder)

@@ -1,6 +1,14 @@
 # Redux
 
-What is Redux?
+### Sections:
+- [Action Creator](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#action-creator-people-dropping-off-a-form)
+- [Reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#reducers-are-like-our-departments)
+- [Side note on spread(...) operator](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#side-note-on-spread--operator)
+- [How Redux Works](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#how-redux-works)
+- [combineReducers()](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#combinereducers)
+- [dispatch()](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#dispatch)
+
+# What is Redux?
 - A state management library for JavaScript apps.
 - Makes creating **complex** applications easier. 
 - **Not** required to create a React app.

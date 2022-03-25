@@ -15,18 +15,24 @@
 - [Event Listeners](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/event-listeners.md)
 - [Controlled Components/Elements](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/event-listeners.md#controlled-vs-uncontrolled-components)
 - [forms](https://github.com/Cwarcup/notes/blob/21664f9925ce432cd3ae580ee267b750a0b03f2c/root/react/react-notes/forms.md#L62)
+
+
 - [Hooks](https://github.com/Cwarcup/notes/blob/8658a0c1ffd7e81a4816d9daa9626de9b53843d3/root/react/react-notes/hooks.md)
   - [setState](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md#usestate)
   - [useEffect](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md#useeffect---how-to-detect-that-a-state-has-changed)
     - [useEffect with async requests](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md#async-with-useeffect)
     - [debounce](https://github.com/Cwarcup/notes/blob/bc32994246d792607c6272ac48af537675b79caa/root/react/react-notes/debounce.md#L45)
   - [useRef](https://github.com/Cwarcup/notes/blob/3444601c3efe1e867f9355f605323c6cae270ca0/root/react/react-notes/useRef.md#L26)
+- [Custom Hooks](https://github.com/Cwarcup/notes/blob/d83223a185e193d3180b60fae201c05e098448eb/root/react/react-notes/custom-hooks.md#L142)
+
+
 - Navigation: 
   - [routes](https://github.com/Cwarcup/notes/blob/2af7f1e157490d8fd6ea6c4b8666c28f3b32afb0/root/react/react-notes/navigation.md#L73)
 - [headers](https://github.com/Cwarcup/notes/blob/2af7f1e157490d8fd6ea6c4b8666c28f3b32afb0/root/react/react-notes/headers.md#L26)
-- [Custom Hooks](https://github.com/Cwarcup/notes/blob/d83223a185e193d3180b60fae201c05e098448eb/root/react/react-notes/custom-hooks.md#L142)
+
+
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
-  - [React-Redux](https://github.com/Cwarcup/notes/blob/f91f8a7f427d3c5d71a3351ff9c702479472ddc8/root/react/react-notes/react-redux.md#L74)
+- [React-Redux](https://github.com/Cwarcup/notes/blob/f91f8a7f427d3c5d71a3351ff9c702479472ddc8/root/react/react-notes/react-redux.md#L74)
 
 
 

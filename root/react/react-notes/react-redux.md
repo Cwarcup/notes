@@ -1,5 +1,13 @@
 # React-Redux
 
+### Sections:
+- [How Redux works](https://github.com/Cwarcup/notes/blob/main/root/typescript/README.md#projects)
+- [App Structure](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#app-structure)
+- [Providers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#wire-up-our-provider)
+- [Connect Component](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#connect-component)
+- [mapStateToProps](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#mapstatetoprops)
+- [Summary](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#take-away)
+
 npm docs on react-redux: [here](https://www.npmjs.com/package/react-redux)
 
 # How React-Redux Works
