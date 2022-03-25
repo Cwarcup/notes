@@ -26,7 +26,8 @@
 - [headers](https://github.com/Cwarcup/notes/blob/2af7f1e157490d8fd6ea6c4b8666c28f3b32afb0/root/react/react-notes/headers.md#L26)
 - [Custom Hooks](https://github.com/Cwarcup/notes/blob/d83223a185e193d3180b60fae201c05e098448eb/root/react/react-notes/custom-hooks.md#L142)
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
-  - React-Redux
+  - [React-Redux](https://github.com/Cwarcup/notes/blob/f91f8a7f427d3c5d71a3351ff9c702479472ddc8/root/react/react-notes/react-redux.md#L74)
+
 
 
 ## misc

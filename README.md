@@ -13,7 +13,7 @@
 ## Programming
 - [Typescript](https://github.com/Cwarcup/notes/blob/main/root/typescript/README.md)
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
-  - React-Redux
+  - [React-Redux](https://github.com/Cwarcup/notes/blob/f91f8a7f427d3c5d71a3351ff9c702479472ddc8/root/react/react-notes/react-redux.md#L74)
 
 ## Frameworks
 - [Node.js](https://github.com/Cwarcup/notes/root/nodejs/README.md)

@@ -72,3 +72,120 @@ export default combineReducers({
   selectedSong: selectedSongReducer,
 });
 ```
+
+## Wire up our Provider
+Within main `index.js`:
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+import App from './components/App';
+import reducers from './reducers';
+
+ReactDOM.render(
+  <Provider store={createStore(reducers)}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);
+```
+
+## Connect Component
+
+Will only need to be created in our various **components** because it needs to reach up into the Provider to get the store.
+
+```js
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+class SongList extends Component {
+  render() {
+    return <div>SongList</div>;
+  }
+}
+
+export default connect()(SongList);
+```
+
+**Connect() Syntax**
+
+```js
+function connect() {
+  return function() {
+  	return 'Hi there!'
+  }
+}
+
+connect() // nothing returned
+
+connect()() // 'Hi there!'
+```
+
+### mapStateToProps
+
+Is saying we are going to take our state object, essentially all of the data that's inside our reduce store, and then we are going to map it to our props.
+
+This could be called anything, but we will call it `mapStateToProps` by convention. 
+
+```js
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+class SongList extends Component {
+  render() {
+    return <div>SongList</div>;
+  }
+}
+
+const mapStateToProps = (state) => {
+  console.log(state);
+  return state;
+};
+
+export default connect(mapStateToProps)(SongList);
+```
+
+the state returns:
+```
+selectedSong: null
+songs: Array(4)
+0: {title: 'No Scrubs', duration: '4:05'}
+1: {title: 'Macarena', duration: '2:30'}
+2: {title: 'All Star', duration: '3:15'}
+3: {title: 'I Want it That Way', duration: '1:45'}
+```
+
+We are only interested in the songs array, so we can just return the songs array.
+```js
+const mapStateToProps = (state) => {
+  return { songs: state.songs };
+};
+```
+
+If wanted to now use this array of songs, it will be found in `this.props`.
+
+For the **connect component**, we will always:
+- import the connect function from react-redux 
+```js
+import { connect } from 'react-redux';
+```
+- call `connect` and pass in the mapStateToProps as the first argument, and our component as the second argument.
+```js
+export default connect(mapStateToProps)(SongList);
+```
+- define the mapStateToProps function with the first argument being the state object, and return an **object**  that will be passed as props to our component.
+```js
+const mapStateToProps = (state) => {
+  return { songs: state.songs }; // will be passed as props in our component
+};
+```
+
+# Take Away
+
+We are still going to create components like we usually do in react. 
+
+If we need to make changes to our state or receive information, we are going to **import the connect function** from react-redux.
+
+At the bottom of our component, we can define a **`mapStateToProps`** function that will return an object that will be passed as props to our component. Th
