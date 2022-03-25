@@ -184,8 +184,67 @@ const mapStateToProps = (state) => {
 
 # Take Away
 
-We are still going to create components like we usually do in react. 
+1. We are still going to create components like we usually do in react. 
 
-If we need to make changes to our state or receive information, we are going to **import the connect function** from react-redux.
+2. If we need to make changes to our state or receive information, we are going to **import the connect function** from react-redux.
 
-At the bottom of our component, we can define a **`mapStateToProps`** function that will return an object that will be passed as props to our component. Th
+3. At the bottom of our component, we can define a **`mapStateToProps`** function that will return an object that will be passed as props to our component.
+    - first argument is `mapStateToProps`
+    - second function call is the **component** you want to **receive the props**.
+    - `export default connect(mapStateToProps)(SongDetail);`
+    - Can also accept **action creators** as the first argument.
+      - `export default connect(mapStateToProps, { selectSong: selectSong })(SongList);`
+
+Example Exercise:
+
+![reduxExerciseGoals](react-images/reduxExerciseGoals.png)
+```js
+// Action Creators
+const increment = () => ({ type: 'increment' });
+const decrement = () => ({ type: 'decrement' });
+
+
+// component: accepts `props` created by the mapStateToProps function
+const Counter = (props) => {
+   return (
+       <div>
+           <button className="increment" onClick={props.increment}>Increment</button>
+           <button className="decrement" onClick={props.decrement}>Decrement</button>
+           Current Count: <span>{props.count}</span>
+       </div>
+   );
+};
+
+// create mapStateToProps function so we can return a prop to the counter component
+
+const mapStateToProps = (state) => {
+   return { count: state.count };
+};
+
+// connect() with args mapStateToProps, and the actionCreators (increment, decrement)
+
+const WrappedCounter = ReactRedux.connect(mapStateToProps, { increment, decrement})(Counter);
+
+// Only change code *before* me!
+// -----------
+
+const store = Redux.createStore(Redux.combineReducers({
+   count: (count = 0, action) => {
+       if (action.type === 'increment') {
+           return count + 1;
+       } else if (action.type === 'decrement') {
+           return count - 1;
+       } else {
+           return count;
+       }
+   }
+}));
+
+ReactDOM.render(
+   <ReactRedux.Provider store={store}>
+       <WrappedCounter />
+   </ReactRedux.Provider>, 
+   document.querySelector('#root')
+);
+
+```
