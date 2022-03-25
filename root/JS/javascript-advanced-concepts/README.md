@@ -1,6 +1,6 @@
 [Course](https://www.udemy.com/course/advanced-javascript-concepts/)
 
-- [Asynchronous JavaScript](https://github.com/Cwarcup/notes/blob/main/javascript-advanced-concepts/Asynchronous-JavaScript.md#asynchronous-javascript)
+- [Asynchronous JavaScript](https://github.com/Cwarcup/notes/blob/main/root/javascript-advanced-concepts/Asynchronous-JavaScript.md#asynchronous-javascript)
 - [Closures and Prototypal Inheritance](https://github.com/Cwarcup/notes/blob/main/javascript-advanced-concepts/closures-and-prototypal-inheritance.md#create-your-own-prototypes)
 - [Error handling](https://github.com/Cwarcup/notes/blob/main/javascript-advanced-concepts/Error-Handling.md#error-handling)
 - [Function Programming](https://github.com/Cwarcup/notes/blob/main/javascript-advanced-concepts/Functional-Priogramming.md#idempotence)
