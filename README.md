@@ -1,7 +1,7 @@
 ## Online Courses Notes
 - [The Complete 2022 Web Development Bootcamp](https://www.udemy.com/course/the-complete-web-development-bootcamp/)
 - [JavaScript Algorithms and Data Structures Masterclass](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/11382102?start=1#notes)
-- [JavaScript Advanced Concepts](https://github.com/Cwarcup/notes/blob/b9050fa0b0e0c58d873db958083a637ec2e80d1a/root/JS/javascript-advanced-concepts)
+- [JavaScript Advanced Concepts](https://github.com/Cwarcup/notes/blob/main/root/JS/javascript-advanced-concepts)
 - [TypeScript](https://github.com/Cwarcup/notes/blob/main/root/typescript/README.md#projects)
 - [React](https://github.com/Cwarcup/react-with-redux#react-with-redux)
 
@@ -13,7 +13,7 @@
 ## Programming
 - [Typescript](https://github.com/Cwarcup/notes/blob/main/root/typescript/README.md)
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
-  - [React-Redux](https://github.com/Cwarcup/notes/blob/1a511af3fdad08ae20d8f3e71618585536699e06/root/react/react-notes/react-redux.md#L9)
+  - [React-Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#L9)
 
 ## Frameworks
 - [Node.js](https://github.com/Cwarcup/notes/root/nodejs/README.md)
