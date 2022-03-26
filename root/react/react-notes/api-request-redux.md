@@ -130,3 +130,30 @@ export default (state, action) => {
 # Safe State Updates in Reducers
 
 ![safestateupdates](react-images/safestateupdates.png)
+
+Good video on this: [link](https://www.udemy.com/course/react-redux/learn/lecture/12586898#content)
+
+# Switch Statements in Reducers
+
+Rather than having an `if` statement like so:
+```js
+export default (state = [], action) => {
+  if (action.type === 'FETCH_POSTS') {
+    return action.payload;
+  }
+  return state;
+};
+```
+
+We can use a switch statement instead:
+```js
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case 'FETCH_POSTS':
+      return action.payload;
+
+    default:
+      return state;
+  }
+};
+```

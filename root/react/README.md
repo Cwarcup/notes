@@ -37,6 +37,8 @@
     - how to fetch data in a redux app
     - Middleware in Redux
       - redux-thunk
+- Safe State Updates in Reducers (in api request with redux)
+- Switch Statements in Reducers (in api request with redux)
 
 
 
