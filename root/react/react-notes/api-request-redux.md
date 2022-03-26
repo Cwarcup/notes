@@ -157,3 +157,134 @@ export default (state = initialState, action) => {
   }
 };
 ```
+
+# action creators - example API async await fetch
+
+```js
+import jsonPlaceholder from '../apis/jsonPlaceholder';
+
+// fetch multiple posts from jsonPlaceholder
+export const fetchPosts = () => async (dispatch) => {
+  const response = await jsonPlaceholder.get('/posts');
+
+  dispatch({ type: 'FETCH_POSTS', payload: response.data });
+};
+
+// fetch one individual user at a time from jsonPlaceholder
+export const fetchUser = (id) => async (dispatch) => {
+  const response = await jsonPlaceholder.get(`/users/${id}`);
+
+  dispatch({ type: 'FETCH_USER', payload: response.data });
+};
+```
+
+# Steps for setting up new action creators, reducer, and new component
+
+1. Create a new action creator.
+    - async await
+    - dispatch function
+
+```js
+import jsonPlaceholder from '../apis/jsonPlaceholder';
+
+// fetch multiple posts from jsonPlaceholder
+export const fetchPosts = () => async (dispatch) => {
+  const response = await jsonPlaceholder.get('/posts');
+
+  dispatch({ type: 'FETCH_POSTS', payload: response.data });
+};
+```
+
+2. Create new component
+
+```js
+// attempts to fetcher the user data from jsonPlaceholder with respective userId
+// accepts prop `userId` from PostList component
+
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchUser } from '../actions';
+
+class UserHeader extends Component {
+  componentDidMount() {
+    this.props.fetchUser(this.props.userId);
+  }
+  render() {
+    // find the user we care about
+    const user = this.props.users.find((user) => user.id === this.props.userId);
+
+    if (!user) {
+      return null;
+    }
+
+    return <div className="header">{user.name}</div>;
+  }
+}
+
+const mapStateToProps = (state) => {
+  return { users: state.users };
+};
+
+export default connect(mapStateToProps, { fetchUser })(UserHeader);
+```
+
+3. New reducer: catch the new action creator and make the data available to the component.
+
+```js
+export default (state = [], action) => {
+  switch (action.type) {
+    case 'FETCH_USER':
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+}
+```
+
+4. Add new reducer to the `combinedReducers` in the `index.js` file.
+
+```js
+import { combineReducers } from 'redux';
+import postReducer from './postReducer';
+import usersReducer from './usersReducer';
+
+export default combineReducers({
+  posts: postReducer,
+  users: usersReducer,
+});
+```
+
+# ownProps
+
+- is a second copy of the props object that is passed to the component.
+- idea is that we can extract anything that is going to computation on our state to the mapStateToProps function.
+
+```js
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchUser } from '../actions';
+
+class UserHeader extends Component {
+  componentDidMount() {
+    this.props.fetchUser(this.props.userId);
+  }
+
+  render() {
+
+    const { user } = this.props;
+    
+    if (!user) {
+      return null;
+    }
+
+    return <div className="header">{user.name}</div>;
+  }
+}
+
+// find the user we care about here instead
+const mapStateToProps = (state, ownProps) => {
+  return { user: state.users.find((user) => user.id === ownProps.userId) };
+};
+
+export default connect(mapStateToProps, { fetchUser })(UserHeader);
+```

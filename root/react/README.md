@@ -39,6 +39,7 @@
       - redux-thunk
 - Safe State Updates in Reducers (in api request with redux)
 - Switch Statements in Reducers (in api request with redux)
+- Steps for setting up new action creators, reducer, and new component
 
 
 
