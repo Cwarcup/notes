@@ -8,16 +8,17 @@
 ## Languages
 - [HTML](palceholder)
 - [CSS](https://github.com/Cwarcup/notes/root/css/Basic-css.md)
-- [JavaScript](https://github.com/Cwarcup/notes/tree/main/root/JS)
+- [JavaScript](https://github.com/Cwarcup/notes/tree/main/root/JS#topics)
 
 ## Programming
-- [Typescript](https://github.com/Cwarcup/notes/blob/main/root/typescript/README.md)
+- [Typescript](https://github.com/Cwarcup/notes/tree/main/root/typescript#projects)
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
   - [React-Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#L9)
-- Lodash - add personal notes
+
+- [Lodash](https://github.com/Cwarcup/notes/blob/main/root/Library/Lodash.md)
 
 ## Frameworks
-- [Node.js](https://github.com/Cwarcup/notes/root/nodejs/README.md)
+- [Node.js](https://github.com/Cwarcup/notes/tree/main/root/nodejs)
 - [React](https://github.com/Cwarcup/notes/tree/main/root/react#react)
 - Boostrap
 
@@ -25,8 +26,8 @@
 - MongoDB
   
 ## Data Structures
-- [Algo and Data Structures Masterclass](https://github.com/Cwarcup/code-notes/blob/main/Algo-Data-Structures-Masterclass)
-- [Data Structures](https://github.com/Cwarcup/code-notes/blob/main/Data-Structures) 
+- [Algo and Data Structures Masterclass](https://github.com/Cwarcup/notes/tree/main/root/Algorithms-Masterclass)
+- [Data Structures](https://github.com/Cwarcup/notes/tree/main/root/Data-Structures) 
 - [Singly Linked Lists](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/2-singly-linked-lists.md#L1)
 - [Doubly Linked Lists](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/3-doubly-linked-lists.md)
 - [Stacks and Queues](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/4-stacks-queues.md)
