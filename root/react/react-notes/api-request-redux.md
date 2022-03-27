@@ -288,3 +288,84 @@ const mapStateToProps = (state, ownProps) => {
 
 export default connect(mapStateToProps, { fetchUser })(UserHeader);
 ```
+
+# Action Creators referencing other action creators
+
+In some cases, you may want to have one large action creator that utilizes other action creators. For example, if you have a fetchUser and fetchPosts action creator. You could combine both of these into one action creator, fetchPostsAndUsers().
+
+fetchPostsAndUsers() will...
+  - call `fetchPosts`
+  - get a list of posts
+  - find all unique `userId`s from the posts
+  - iterate over unique `usrId`s and call `fetchUser` for each userId
+
+Calling fetchPosts:
+```js
+export const fetchPostsAndUsers = () => async (dispatch) => {
+  console.log('About to fetchPostsAndUsers');
+  await dispatch(fetchPosts());
+  console.log('fetchPostsAndUsers');
+};
+
+// fetch multiple posts from jsonPlaceholder
+export const fetchPosts = () => async (dispatch) => {
+  const response = await jsonPlaceholder.get('/posts');
+
+  dispatch({ type: 'FETCH_POSTS', payload: response.data });
+};
+
+// fetch one individual user at a time from jsonPlaceholder
+
+export const fetchUser = (id) => async (dispatch) => {
+  const response = await jsonPlaceholder.get(`/users/${id}`);
+
+  dispatch({ type: 'FETCH_USER', payload: response.data });
+};
+```
+
+Getting our lists of posts:
+Remember, a thunk function is a function that accepts two arguments: the Redux store `dispatch` method, and the Redux store `getState` method.
+
+`getState()` returns the current state of the store.
+```js
+export const fetchPostsAndUsers = () => async (dispatch, getState) => {
+  await dispatch(fetchPosts());
+  console.log(getState().posts); // returns all the list posts
+};
+```
+
+Finding the unique userIds: Can use lodash for this. Lodash has a built in map function that will iterate over an array and return a new array with only userIds, then we can use `uniq` to get the unique userIds.
+```js
+export const fetchPostsAndUsers = () => async (dispatch, getState) => {
+  await dispatch(fetchPosts());
+  const userIds = _.uniq(_.map(getState().posts, 'userId'));
+  console.log(userIds);
+};
+```
+
+Iterating over the unique userIds, calling `fetchUser` for each userId:
+```js
+export const fetchPostsAndUsers = () => async (dispatch, getState) => {
+  await dispatch(fetchPosts()); // call `fetchPosts`, need await to wait for `fetchPosts` to finish
+  const userIds = _.uniq(_.map(getState().posts, 'userId')); // get list of unique userIds from posts using lodash
+  userIds.forEach((id) => dispatch(fetchUser(id))); // iterate over userIds and call `fetchUser` for each userId
+};
+
+// fetch multiple posts from jsonPlaceholder
+export const fetchPosts = () => async (dispatch) => {
+  const response = await jsonPlaceholder.get('/posts');
+
+  dispatch({ type: 'FETCH_POSTS', payload: response.data });
+};
+
+// fetch one individual user at a time from jsonPlaceholder
+
+export const fetchUser = (id) => async (dispatch) => {
+  const response = await jsonPlaceholder.get(`/users/${id}`);
+
+  dispatch({ type: 'FETCH_USER', payload: response.data });
+};
+```
+
+> With this, we can still fetch a single suer with `fetchUser`, or all posts with `fetchPosts`. But we can now also do both at the same time, once, with `fetchPostsAndUsers`.`
+
