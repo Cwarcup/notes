@@ -27,6 +27,7 @@
   
 ## Data Structures
 - [Algo and Data Structures Masterclass](https://github.com/Cwarcup/notes/tree/main/root/Algorithms-Masterclass)
+
 - [Data Structures](https://github.com/Cwarcup/notes/tree/main/root/Data-Structures) 
 - [Singly Linked Lists](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/2-singly-linked-lists.md#L1)
 - [Doubly Linked Lists](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/3-doubly-linked-lists.md)
