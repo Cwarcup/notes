@@ -16,6 +16,7 @@
 - [Controlled Components/Elements](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/event-listeners.md#controlled-vs-uncontrolled-components)
 - [forms](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/forms.md#L62)
 
+---
 
 - [Hooks](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md)
   - [setState](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md#usestate)
@@ -25,11 +26,13 @@
   - [useRef](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/useRef.md#L26)
 - [Custom Hooks](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/custom-hooks.md#L142)
 
+---
 
 - Navigation: 
   - [routes](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#L73)
 - [headers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/headers.md#L26)
 
+---
 
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
 - [React-Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#L74)
@@ -41,7 +44,10 @@
   - [Switch Statements in Reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#switch-statements-in-reducers)
 - [Steps for setting up new action creators, reducer, and new component](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#steps-for-setting-up-new-action-creators-reducer-and-new-component)
 
+---
 
+- [React Router](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-router.md#react-router)
+- React Router DOM
 
 ## misc
 

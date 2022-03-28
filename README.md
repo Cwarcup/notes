@@ -51,6 +51,8 @@
 ## Misc APIs
 - [jsonplaceholder](https://jsonplaceholder.typicode.com/)
 - [Installing Faker-JS](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
+- CRUD Operations
+- OAuth
 
 ### npm 
 - [Parcel](https://parceljs.org/docs/) or [personal notes](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#web-framework-notes)

@@ -13,3 +13,4 @@ Path = what route
 component = what component do you want to display at this
 
 A React component to render only when the location matches. It will be rendered with route props.
+
