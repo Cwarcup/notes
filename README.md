@@ -28,18 +28,7 @@
 ## Data Structures
 - [Algo and Data Structures Masterclass](https://github.com/Cwarcup/notes/tree/main/root/Algorithms-Masterclass)
 
-- [Data Structures](https://github.com/Cwarcup/notes/tree/main/root/Data-Structures) 
-- [Singly Linked Lists](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/2-singly-linked-lists.md#L1)
-- [Doubly Linked Lists](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/3-doubly-linked-lists.md)
-- [Stacks and Queues](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/4-stacks-queues.md)
-- [Trees](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/5-Trees.md)
-- [Tree Traversal](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/6-tree-traversal.md)
-- [Heaps](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/7-heaps.md)
-- [Hash Tables 1](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/8-hash-tables.md)
-- [Hash Tables 2](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/hash-tables.md)
-- [Graphs](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/9-graphs.md)
-- [Graph Traversal](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/10-graph-traversal.md)
-- [Arrays](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/arrays.md)
+- [Data Structures](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/README.md#data-structures) 
 
 
 ### Algorithms
