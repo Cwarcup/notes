@@ -32,31 +32,15 @@
 
 
 ### Algorithms
+- [Intro to Algorithms (Search, Recursion, Sorting)](https://github.com/Cwarcup/notes/tree/main/root/Algorithms-Masterclass#algorithms)
 - [Problem Solving Technique](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/3-Problem-Solving.md)
-- [Dijkstras Algorithm (shortest distance)](https://github.com/Cwarcup/code-notes/blob/main/javascript-advanced-concepts)
-- [JS Algorithms GitHub](https://github.com/trekhleb/javascript-algorithms)
-- [TypeScript Algorithms GitHub](https://github.com/sb-js/typescript-algorithms)
-- [Types of Patterns](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/4-Problem-Solving-Patterns.md#L1)
-- [Big O](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/1-BigO.md)
-- [Analyzing Performance](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/2-Analyzing-Performance-Arrays-Objects.md)
-- [Recursion](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/4-Problem-Solving-Patterns.md)
-- [Linear Search](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/6-searching-algo.md#linear-search)
-- [Binary Search](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/6-searching-algo.md#binary-search)
-- [Divide and Conquer](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/6-searching-algo.md#binary-search)
-- [String Search](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/6-searching-algo.md#binary-search-pseudocode)
-- [Bubble Sort](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/7-sorting-algorithms-bubble.md#bubble-sort)
-- [Selection Sort](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/8-Selection-Sort.md#selection-sort)
-- [Insertion Sort](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/9-insertion-sort.md#insertion-sort)
-- [Merge Sort](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/11-Merge-Sort.md#merge-sort)
-- [Quick Sort](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/12-quick-sort.md#quick-sort)
-- [Radix Sort](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/13-Radix-sort.md#radix-sort)
+- [Dijkstras Algorithm (shortest distance)](https://github.com/Cwarcup/notes/blob/main/root/Dijkstas-Algo/Dijkstas.md#dijkstras-algorithm)
+- [JavaScript Algorithms List - trekhleb](https://github.com/trekhleb/javascript-algorithms)
+
 
 ## Misc
-- [Huge list of Algorithms in JS](https://github.com/trekhleb/javascript-algorithms)
-- [Installing Faker-JS](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
 - [REST conventions](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#rest-conventions)
-- [vscode](https://github.com/Cwarcup/notes/root/vscode)
-- Heroku (js topics)
+- [Heroku](https://github.com/Cwarcup/notes/blob/main/root/JS/js-topics/heroku.md)
 - [Semantic-UI - basic CSS generator ](https://semantic-ui.com/) and [CDN](https://cdnjs.com/libraries/semantic-ui) 
 - API Requests
   - [fetch](https://github.com/Cwarcup/notes/blob/main/root/JS/js-topics/fetch.md#L1)
@@ -66,6 +50,7 @@
 
 ## Misc APIs
 - [jsonplaceholder](https://jsonplaceholder.typicode.com/)
+- [Installing Faker-JS](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
 
 ### npm 
 - [Parcel](https://parceljs.org/docs/) or [personal notes](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#web-framework-notes)
