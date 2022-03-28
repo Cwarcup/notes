@@ -17,6 +17,8 @@
 
 - [Lodash](https://github.com/Cwarcup/notes/blob/main/root/Library/Lodash.md)
 
+- OAuth Based Authentication
+
 ## Frameworks
 - [Node.js](https://github.com/Cwarcup/notes/tree/main/root/nodejs)
 - [React](https://github.com/Cwarcup/notes/tree/main/root/react#react)
