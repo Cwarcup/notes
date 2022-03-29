@@ -164,3 +164,123 @@ Add `connect` from react-redux to the top of the component.
 
 Add connect method at bottom of page `export default connect(null, { signIn, signOut })(GoogleAuth);`
 
+Can change `onAuthChange()` to account for if user is logged in or not:
+```js
+  onAuthChange = (isSignedIn) => {
+    if (isSignedIn) {
+      this.props.signIn();
+    } else {
+      this.props.signOut();
+    }
+  };
+```
+
+Import and setup **store** and **provider** in main index.js file:
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+import App from './components/App';
+import reducers from './reducers';
+
+const store = createStore(reducers);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.querySelector('#root')
+);
+```
+
+## Refactor for actions
+
+Can create a separate file for the types of actions we want to dispatch. The benefit of this is if we made a typo in our actions index.js file, we can easily see the issue in console. 
+
+```js
+// in new `types.js` file:
+
+// can create variables to represent the different types of actions.
+// no longer using strings in our actual actions to represent the type of action.
+
+export const SIGN_IN = 'SIGN_IN';
+export const SIGN_OUT = 'SIGN_OUT';
+
+// in main action index.js file:
+// contains all action creators
+import { SIGN_IN, SIGN_OUT } from './types';
+
+export const signIn = () => {
+  return {
+    type: SIGN_IN,
+  };
+};
+
+export const signOut = () => {
+  return {
+    type: SIGN_OUT,
+  };
+};
+```
+
+# Recording a users ID
+
+With the google API, you can obtain a specific user's ID, unique to the user logged in. Can be helpful in the future for custom pages for the user. 
+
+Can see this ID by being signed in and typing `gapi.auth2.getAuthInstance().currentUser.get().getId()` in the console. 
+
+Can call this as a parameter in the GoogleAuth.js component `onAuthChange()` function:
+```js
+  onAuthChange = (isSignedIn) => {
+    if (isSignedIn) {
+      this.props.signIn(this.auth.currentUser.get().getId());
+    } else {
+      this.props.signOut();
+    }
+  };
+```
+
+Need to update our main index.js file to include the new payload property, userId:
+```js
+//index.js
+// contains all action creators
+import { SIGN_IN, SIGN_OUT } from './types';
+
+export const signIn = (userId) => {
+  return {
+    type: SIGN_IN,
+    payload: userId, // can add userId to payload
+  };
+};
+
+export const signOut = () => {
+  return {
+    type: SIGN_OUT,
+  };
+};
+```
+
+And also update our `authReducer` to update our new property (`userId: action.payload`) in the state:
+```js
+const INITIAL_STATE = {
+  isSignedIn: null,
+  userId: null, // initial state is null, we do not know userId until user logs in.
+};
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case 'SIGN_IN':
+      return { ...state, isSignedIn: true, userId: action.payload };
+
+    case 'SIGN_OUT':
+      return { ...state, isSignedIn: false, userId: null  };
+
+    default:
+      return state;
+  }
+};
+
+```
