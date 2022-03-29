@@ -400,8 +400,6 @@ Can also get fancy with semantic UI and have the entire field turn red when the 
   //...
 ```
 
-
-
 # Useful redux form examples
 
 [Example docs page:](https://redux-form.com/8.2.1/examples/)
