@@ -17,7 +17,7 @@
 - [forms](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/forms.md#L62)
 
 ---
-
+ 
 - [Hooks](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md)
   - [setState](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md#usestate)
   - [useEffect](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md#useeffect---how-to-detect-that-a-state-has-changed)
@@ -48,6 +48,8 @@
 
 - [React Router](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-router.md#react-router)
 - [React Router DOM](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-router-dom.md#react-router-dom)
+- [React-Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#L74)
+- Redux Form 
 
 ---
 

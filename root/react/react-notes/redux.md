@@ -7,7 +7,7 @@
 - [How Redux Works](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#how-redux-works)
 - [combineReducers()](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#combinereducers)
 - [dispatch()](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#dispatch)
-- Redux Dev Tools to inspect store
+- [Redux Dev Tools to inspect store](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux-dev-tools)
 
 # What is Redux?
 - A state management library for JavaScript apps.
@@ -238,3 +238,11 @@ const store = createStore(reducers, composeEnhancers(applyMiddleware()));
 > Will eventually add `redux-thunk` to the middleware, add change code to `createStore(reducers, composeEnhancers(applyMiddleware(thunk)))`.
 
 Can now navigate to your react app in the browser and refresh the page. The Redux Dev Tools will show up and be colored in. Can now see the state of the store.
+
+## Debugging with Redux Dev Tools
+
+In the browser, go to [http://localhost:3000/?debug_session= RANDOM STRING OF LETTERS ](http://localhost:3000/?debug_session=asdasd).
+
+This tells react dev tools you are starting a debug session. It will save all data in the Redux Store between refreshes of the page. 
+
+Can still jump bak to a previous state, even after refreshing the page.
