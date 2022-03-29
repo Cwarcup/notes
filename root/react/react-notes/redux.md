@@ -7,6 +7,7 @@
 - [How Redux Works](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#how-redux-works)
 - [combineReducers()](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#combinereducers)
 - [dispatch()](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#dispatch)
+- Redux Dev Tools to inspect store
 
 # What is Redux?
 - A state management library for JavaScript apps.
@@ -220,3 +221,20 @@ store.dispatch(createPolicy('Alex', 20))
 - We can print out each state after each dispatch.
 
 - You can **only** modify the state through the dispatch function. You cannot access the state directly. It must be changed by an action.
+
+# Redux Dev Tools
+
+[Download and Docs:](https://github.com/reduxjs/redux-devtools/tree/main/extension#redux-devtools-extension)
+
+Setup your store with [middleware](http://redux.js.org/docs/api/applyMiddleware.html) and enhancers: [link](https://github.com/reduxjs/redux-devtools/tree/main/extension#12-advanced-store-setup)
+
+Go into root index.js file and add the following lines of code:
+```js
+import { createStore, applyMiddleware, compose  } from 'redux';
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, composeEnhancers(applyMiddleware()));
+```
+> Will eventually add `redux-thunk` to the middleware, add change code to `createStore(reducers, composeEnhancers(applyMiddleware(thunk)))`.
+
+Can now navigate to your react app in the browser and refresh the page. The Redux Dev Tools will show up and be colored in. Can now see the state of the store.
