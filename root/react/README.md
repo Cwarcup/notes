@@ -30,11 +30,11 @@
 
 - [Navigation:](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md) 
   - [routes](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#L73)
-  - History References
-  - Creating a Browser History Object
-  - Implementing Browser History Object and Programmatic Navigation
+  - [History References](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#history-references)
+  - [Creating a Browser History Object](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#creating-a-browser-history-object)
+  - [Implementing Browser History Object and Programmatic Navigation](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#implementing-browser-history-object-and-programmatic-navigation)
 - [headers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/headers.md#L26)
-- 
+
 ---
 
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
