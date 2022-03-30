@@ -15,7 +15,7 @@
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
   - [React-Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#L9)
 
-- [Lodash](https://github.com/Cwarcup/notes/blob/main/root/Library/Lodash.md)
+- [Lodash](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/Lodash.md)
 
 - [OAuth Based Authentication](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/oauth.md#oauth-authentication)
 
@@ -53,10 +53,11 @@
 ## Misc APIs
 - [jsonplaceholder](https://jsonplaceholder.typicode.com/)
 - [Installing Faker-JS](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
+- REST-ful Conventions 
 - CRUD Operations
 - OAuth
 
 ### npm 
 - [Parcel](https://parceljs.org/docs/) or [personal notes](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#web-framework-notes)
-- [JSON-Server](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#adding-json-server)
+- [JSON-Server typescript](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#adding-json-server)
 - [Axios](https://axios-http.com/docs/intro)

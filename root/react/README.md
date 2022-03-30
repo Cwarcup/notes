@@ -35,11 +35,14 @@
 ---
 
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
+  - actions, reducers
 - [React-Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#L74)
 - [api request with redux:](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md)
+    - [Rules for reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#rules-of-reducers)
+  
     - [how to fetch data in a redux app](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#how-to-fetch-data-in-a-redux-app)
     - [Middleware in Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#middleware-in-redux)
-      - [redux-thunk](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux-thunk.md)
+      - [Redux-Thunk: make network requests with async await](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux-thunk.md)
     - [Safe State Updates in Reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#safe-state-updates-in-reducers) 
   - [Switch Statements in Reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#switch-statements-in-reducers)
 - [Steps for setting up new action creators, reducer, and new component](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#steps-for-setting-up-new-action-creators-reducer-and-new-component)
@@ -53,7 +56,7 @@
 
 ---
 
-- OAuth Based Authentication
+- [OAuth Based Authentication](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/oauth.md#oauth-authentication)
 
 ## misc
 
@@ -61,6 +64,11 @@
 - [Deployment](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/deployment.md#deployment-with-react) 
   - [Vercel](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/deployment.md#deployment-with-vercel)
   - [Netlify](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/deployment.md#deployment-with-vercel)
+
+- REST-ful Conventions (lib/misc)
+- Make a request with Action Creators (Axios and Redux Thunk)
+- Setting Up an API Server ((lib/misc/restful conventions))
+- 
 
 ### Links:
 

@@ -9,6 +9,8 @@
 - [dispatch()](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#dispatch)
 - [Redux Dev Tools to inspect store](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux-dev-tools)
 
+[Additional notes on reducers:](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#setup-reducers)
+
 # What is Redux?
 - A state management library for JavaScript apps.
 - Makes creating **complex** applications easier. 
@@ -23,6 +25,15 @@ Need to install:
 ```
 npm install --save react-redux redux
 ```
+# How Redux Works
+
+![](react-images/ReduxCycle.png)
+
+- Anytime we want to **change state**, we need to **dispatch an [action](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#action-creator-people-dropping-off-a-form)**.
+  - uses **action creator**
+- Creates an **action**, which gets fed into the **[dispatch function](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#dispatch-is-part-of-the-redux-library-itself-so-we-dont-need-to-write-it)**.
+- Dispatcher makes 'copies' of the action, and sends them off to our different **[reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#reducers-are-like-our-departments)**
+- **[Reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#reducers-are-like-our-departments)** take in an action and make changes to the state if they need to.
 
 # React-Redux
  
@@ -168,8 +179,64 @@ import { combineReducers } from 'redux';
 export default combineReducers({
   replaceMe: () => 'replaceMe',
 });
-
 ```
+
+# Object based Reducers
+
+Have a few option in how we want to represent the return values from our reducer.
+
+Option 1: Could have a reducer return an **array** of objects:
+
+`streamsReducer -> [{id: 1, name: 'stream1', description: ''}, {id: 2, name: 'stream2', description: ''}]`
+
+Option 2: Could have a reducer return an **object**:
+
+```js
+streamsReducer -> {
+  1: {id: 1, name: 'stream1', description: ''},
+  2: {id: 2, name: 'stream2', description: ''},
+  22: {id: 22, name: 'stream22', description: ''},
+  37: {id: 37, name: 'stream22', description: ''},
+}
+```
+
+The **key** represents the **id** of the object.
+
+In order to access any given stream within this object, we need to access the object by the **key**.
+
+### Key Interpolation Syntax
+
+Basic example:
+```js
+const animalSounds = { cat: 'meow', dog: 'bark'};
+
+const animal = 'lion'
+
+const sound = 'roar'
+
+console.log({ ...animalSounds, [animal]: sound });
+// { cat: 'meow', dog: 'bark', lion: 'roar' }
+```
+
+Still part of object based reducers:
+```js
+const streamReducer = (state={}, action) => {
+  switch (action.type) {
+    case EDIT_STREAM:
+      // const newState = { ...state };           // old way
+      // newState[action.payload.id] = action.payload;
+      // return newState;
+
+      return { ...state, [action.payload.id]: action.payload }; // ES6 way, this is known as key interpolation
+    default:
+      return state;
+  }
+}
+```
+
+> The important thing to note here is that the key is surrounded by square brackets ([ ]). Setting the key up this way tells JavaScript that what's inside needs to be interpolated as its value.
+
+
 
 #### Side note on Spread (...) operator:
 ```js
@@ -179,16 +246,6 @@ console.log(addFour); // [ 1, 2, 3, 4 ]
 
 console.log(numbers); // [1, 2, 3] still have access to old array
 ```
-
-# How Redux Works
-
-![](react-images/ReduxCycle.png)
-
-- Anytime we want to **change state**, we need to **dispatch an [action](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#action-creator-people-dropping-off-a-form)**.
-  - uses **action creator**
-- Creates an **action**, which gets fed into the **[dispatch function](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#dispatch-is-part-of-the-redux-library-itself-so-we-dont-need-to-write-it)**.
-- Dispatcher makes 'copies' of the action, and sends them off to our different **[reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#reducers-are-like-our-departments)**
-- **[Reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#reducers-are-like-our-departments)** take in an action and make changes to the state if they need to.
 
 # combineReducers
 

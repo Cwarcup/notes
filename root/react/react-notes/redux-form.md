@@ -2,6 +2,8 @@
 
 [Official site](https://redux-form.com/8.3.0/) and [github page](https://github.com/redux-form/redux-form):
 
+[Useful redux-form examples:](https://redux-form.com/8.2.1/examples/)
+
 Can refactor to use [React Final](https://final-form.org/react/) Form with [these notes](https://www.udemy.com/course/react-redux/learn/lecture/26637172#questions):
 
 Install redux-form:
@@ -400,6 +402,25 @@ Can also get fancy with semantic UI and have the entire field turn red when the 
   //...
 ```
 
-# Useful redux form examples
+# Using Redux Form with Redux - connect() and reduxForm()
 
-[Example docs page:](https://redux-form.com/8.2.1/examples/)
+May run into an issue where we have a component that utilizes redux-form, but we need to wire up an action creator. 
+
+For example, here we have a component that exports reduxForm, but we also need to use the connect() function to communicate with our provider. 
+
+```js
+export default reduxForm({
+  form: 'streamCreateForm', // a unique name for the form
+  validate: validate, // validate function
+})(StreamCreate);
+```
+
+Can wrap our `reduxForm` in a separate function called `formWrapped`, and then export `connect()` with `formWrapped`:
+```js
+const formWrapped = reduxForm({
+  form: 'streamCreateForm', // a unique name for the form
+  validate: validate, // validate function
+})(StreamCreate);
+
+export default connect(null, { createStream })(formWrapped);
+```

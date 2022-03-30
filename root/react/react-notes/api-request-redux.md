@@ -145,6 +145,27 @@ export default (state = [], action) => {
 };
 ```
 
+# Object based Reducers
+
+Have a few option in how we want to represent the return values from our reducer.
+
+Option 1: Could have a reducer return an **array** of objects:
+
+`streamsReducer -> [{id: 1, name: 'stream1', description: ''}, {id: 2, name: 'stream2', description: ''}]`
+
+Option 2: Could have a reducer return an **object**:
+
+```js
+streamsReducer -> {
+  1: {id: 1, name: 'stream1', description: ''},
+  2: {id: 2, name: 'stream2', description: ''},
+  22: {id: 22, name: 'stream22', description: ''},
+  37: {id: 37, name: 'stream22', description: ''},
+}
+```
+
+Now if wanted to UPDATE our records, it is much easier using an object. `{...state, ...newState}`
+
 We can use a switch statement instead:
 ```js
 export default (state = initialState, action) => {
