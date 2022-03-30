@@ -113,3 +113,91 @@ const App = () => {
   );
 };
 ```
+
+# When to navigate users
+
+Intentional Navigation: *user clicks on a `Link` component.*
+Programmatic Navigation: *we run code to forcibly navigate the user through our app.*
+
+Best Practice:
+- User submits a form
+- We make a request to backend API to create the stream
+- some time passes...
+- **API responds with success or error.**
+- We wither show error to the user or navigate them back to list of streams.
+
+# History References
+
+[react-router-dom v5 docs on history:](https://v5.reactrouter.com/web/api/Router/history-object)
+
+![](react-images/history.png)
+
+It can be difficult to get access to this history object, because the **BrowserRouter** creates it. 
+
+Instead, we will create our **own [history object](https://v5.reactrouter.com/web/api/Router/history-object)**.
+
+![](react-images/browserhistory.png)
+
+Will use a plain [**route** component.](https://v5.reactrouter.com/web/api/Route)
+
+Can see [react-router-dom notes](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-router-dom.md#router-types) for better understanding of types of routers.
+
+# Creating a Browser History Object
+
+```js
+import { createBrowserHistory } from 'history';   // gets installed with react-router-dom
+export default createBrowserHistory();
+```
+> Will get a history object deprecation warning. Use the code below in your `history.js` file.
+
+Inside you components App.js file, we need to import the history object, and update our [`Router`](https://v5.reactrouter.com/web/api/Router) component to use it.
+
+```js
+import React from 'react';
+import { Router, Route } from 'react-router-dom';
+import StreamCreate from './streams/StreamCreate';
+import StreamEdit from './streams/StreamEdit';
+import StreamDelete from './streams/StreamDelete';
+import StreamList from './streams/StreamList';
+import StreamShow from './streams/StreamShow';
+import Header from './Header';
+import history from '../history';    // <-- import history object
+
+const App = () => {
+  return (
+    <div className="ui container">
+      <Router history={history}>   // <-- change `BrowserRouter` to `Router` and pass in history object
+        <div>
+          <Header />
+          <Route path="/" exact component={StreamList} />
+          <Route path="/streams/new" exact component={StreamCreate} />
+          <Route path="/streams/edit" exact component={StreamEdit} />
+          <Route path="/streams/delete" exact component={StreamDelete} />
+          <Route path="/streams/show" exact component={StreamShow} />
+        </div>
+      </Router>
+    </div>
+  );
+};
+
+export default App;
+```
+
+# Implementing Browser History Object and Programmatic Navigation
+
+After creating the history object and changing the `BrowserRoute` to a plain [`Route`](https://v5.reactrouter.com/web/api/Router), we can use it to navigate the user.
+
+In the arc/actions/index.js (where all the action creators are), we import the history object `import history from '../history';` and add the following line:
+```js
+export const createStream = (formValues) => async (dispatch, getState) => {
+  const { userId } = getState().auth;
+  const response = await streams.post('/streams', { ...formValues, userId }); 
+  dispatch({ type: CREATE_STREAM, payload: response.data });
+
+  // Do some programmatic navigation to get back to the root route
+  history.push('/');     // <- call push() to navigate to a new URL to navigate the user
+};
+```
+
+use `history.push('ROUTE_YOU_WANT_TO_NAVIGATE_TO')` to navigate the user to a new route.
+

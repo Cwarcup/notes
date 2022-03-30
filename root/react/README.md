@@ -28,10 +28,13 @@
 
 ---
 
-- Navigation: 
+- [Navigation:](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md) 
   - [routes](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#L73)
+  - History References
+  - Creating a Browser History Object
+  - Implementing Browser History Object and Programmatic Navigation
 - [headers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/headers.md#L26)
-
+- 
 ---
 
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
@@ -51,6 +54,7 @@
 
 - [React Router](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-router.md#react-router)
 - [React Router DOM](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-router-dom.md#react-router-dom)
+    - [v5 docs](https://v5.reactrouter.com/)
 - [React-Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#L74)
 - [Redux Form](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux-form.md#redux-form) 
 

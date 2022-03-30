@@ -41,6 +41,7 @@
 
 
 ## Misc
+- [List of miscellaneous topics](https://github.com/Cwarcup/notes/tree/main/root/Library#miscellaneous-topics)
 - [REST conventions](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#rest-conventions)
 - [Heroku](https://github.com/Cwarcup/notes/blob/main/root/JS/js-topics/heroku.md)
 - [Semantic-UI - basic CSS generator ](https://semantic-ui.com/) and [CDN](https://cdnjs.com/libraries/semantic-ui) 
