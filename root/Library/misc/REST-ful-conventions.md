@@ -70,7 +70,7 @@ export default axios.create({
 });
 ```
 
-# Creating multiple action creators with REST-ful API
+# Actions: Creating multiple action creators with REST-ful API
 
 If you have been making use of a restful API, you can easily create action creators for each of the different requests.
 
@@ -107,6 +107,72 @@ export const editStream = (id, formValues) => async (dispatch) => {
 }
 ```
 
-# Handling fetching, creating, updating, and deleting
+# Reducer: Handling fetching, creating, updating
 
-Can refer back to object key interpolation notes: 
+[Can refer back to object key interpolation notes: ](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#object-based-reducers)
+
+```js
+const initialState = {}
+
+export default (state = initialState, action) => {
+  switch (action.type) {
+
+  case FETCH_STREAM:
+    return { ...state, [action.payload.id]: action.payload } //ES6 way of adding a new key to an object
+
+    case CREATE_STREAM:
+    return {...state, [action.payload.id]: action.payload}
+
+  case EDIT_STREAM:
+    return {...state, [action.payload.id]: action.payload}
+
+  default:
+    return state
+  }
+}
+```
+
+# Reducer: Handling deleting a record - Omit
+
+Can do `_.omit` to remove a key from an object.
+
+Syntax:
+```js
+_.omit(state, <key you want to delete>)
+```
+
+For our example in StreamHub:
+```js
+//...
+case DELETE_STREAM:
+    return _.omit(state, action.payload);
+//...
+```
+
+# Reducer: Merging list of records - _.mapKeys
+
+```js
+const colors = [
+  { hue: 'green'},
+  { hue: 'red'},
+  { hue: 'blue'},
+];
+
+_.mapKeys(colors, 'hue')
+
+// blue: {hue: 'blue'}
+// green: {hue: 'green'}
+// red: {hue: 'red'}
+```
+
+Can use [lodash method `_.mapKeys`](https://lodash.com/docs/4.17.15#mapKeys) to create a new object with the **keys being the id of the record**.
+
+```js
+_.mapKeys(action.payload, 'id')
+
+or 
+case FETCH_STREAMS:
+      return {...state, ..._.mapKeys(action.payload, 'id')};  // use lodash to map the payload into a new object with the id as the key
+
+```
+

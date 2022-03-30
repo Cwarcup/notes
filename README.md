@@ -53,7 +53,7 @@
 ## Misc APIs
 - [jsonplaceholder](https://jsonplaceholder.typicode.com/)
 - [Installing Faker-JS](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
-- REST-ful Conventions 
+- [REST-ful Conventions ](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/REST-ful-conventions.md)
 - CRUD Operations
 - OAuth
 
