@@ -110,3 +110,105 @@ const StreamDelete = () => {
 
 export default StreamDelete;
 ```
+
+## Hiding a Portal 
+
+Can setup an `onClick` handler to hide the modal. However, due to event bubbling, is the suer clicks **anywhere** outside the button, it returns them home. We can use `onClick={(e) => e.stopPropagation()}` on the next child div to prevent this.
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import history from '../history';
+
+// create a portal to render the modal in
+// need these divs to be rendered directly from the body element.
+
+const Modal = (props) => {
+  return ReactDOM.createPortal(
+    <div
+      onClick={() => history.push('/')}   // <-- direct user to home page
+      className="ui dimmer modals visible active"
+    >
+      <div 
+        onClick={(e) => e.stopPropagation()}  // <-- stop the click from bubbling up to the body
+        className="ui standard modal visible active">
+        <div className="header">Delete Stream</div>
+        <div className="content">
+          Are you sure you want to delete this stream?
+        </div>
+        <div className="actions">
+          <button className="ui primary button">Delete</button>
+          <button className="ui cancel button">Cancel</button>
+        </div>
+      </div>
+    </div>,
+    document.querySelector('#modal')
+  );
+};
+
+export default Modal;
+```
+
+## Making Re-usable Modals
+
+Need to make a modal that can be used in multiple places. We do not want any hardcoded actions (onClick) or text. 
+
+We should use props based on the parent component to pass in the text and actions.
+
+```js
+//parent component
+import React from 'react';
+import Modal from '../Modal';
+import history from '../history';
+
+const StreamDelete = () => {
+  const actions = (       // <-- helper to pass JSX
+    <React.Fragment>      // <-- React.Fragment is a wrapper for multiple children
+      <button className="ui negative button">Delete</button>
+      <button className="ui cancel button">Cancel</button>
+    </React.Fragment>
+  );
+
+  return (
+    <div>
+      <Modal
+        title="Delete Stream"               // <--- pass props to the child component
+        content="Are you sure you want to delete this stream?"
+        actions={actions}                   // <--- want to pass some JSX to the child
+        onDismiss={() => history.push('/')} // <-- config what to do when clicked
+      />
+    </div>
+  );
+};
+
+export default StreamDelete;
+
+
+// modal component
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+
+// create a portal to render the modal in
+// need these divs to be rendered directly from the body element.
+
+const Modal = (props) => {
+  return ReactDOM.createPortal(
+    <div
+      onClick={props.onDismiss}     // <------------- what do we want to do when clicked
+      className="ui dimmer modals visible active"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()} // <--- prevent bubbling up to the body
+        className="ui standard modal visible active"
+      >
+        <div className="header">{props.title}</div>  // <--- accepting props
+        <div className="content">{props.content}</div>
+        <div className="actions">{props.actions}</div>
+      </div>
+    </div>,
+    document.querySelector('#modal')
+  );
+};
+
+export default Modal;

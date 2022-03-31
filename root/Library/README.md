@@ -4,4 +4,7 @@
 
 [REST Conventions](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/REST-ful-conventions.md)
 
-[Lodash](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/Lodash.md)
+[Lodash](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/Lodash.m
+
+[Modal and Portal](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/Modals.md)
+

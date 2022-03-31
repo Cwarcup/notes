@@ -51,7 +51,7 @@
     - [`.this`](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Axios.md#return-object-with-then)
     - [async](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Axios.md#return-object-with-async)
     - [API Request With Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md)
-- Modals
+- [Modals](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/Modals.md)
 
 ## Misc APIs
 - [jsonplaceholder](https://jsonplaceholder.typicode.com/)
