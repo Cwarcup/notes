@@ -424,3 +424,99 @@ const formWrapped = reduxForm({
 
 export default connect(null, { createStream })(formWrapped);
 ```
+
+# Selecting Records from State
+
+Using [10-streams](https://github.com/Cwarcup/react-with-redux/tree/88bd99d2f5a107e183db28766b2cc71dac0c0e32/10-streams) as an example:
+
+Remember, we can see the props being passed down to each component in the console.
+
+```js
+import React from 'react';
+
+const StreamEdit = (props) => {
+  console.log(props);
+  return <div>StreamEdit</div>;
+};
+
+export default StreamEdit;
+
+// history: {length: 11, action: 'POP', location: {…}, createHref: ƒ, push: ƒ, …}
+// location: {pathname: '/streams/edit/3', search: '', hash: '', state: undefined, key: 'dzbpnu'}
+// match:
+//    isExact: true
+//    params:
+//      id: "3"
+// [[Prototype]]: Object
+// path: "/streams/edit/:id"
+// url: "/streams/edit/3"
+```
+
+We get access to a params with an id that matches our id in `path="/streams/edit/:id"`.
+
+You could even do something like `<Route path="/streams/edit/:anything/:somethingelse"`. If you then went to 'http://localhost:3000/streams/edit/dogs/australiandogs` you'd get back the following props.match.params:
+  
+  ```js
+  {
+    anything: 'dogs',
+    somethingelse: 'australiandogs'
+  }
+  ```
+
+We want access to the props object on the edit page, and the list of streams inside the state store. 
+
+### Get information from redux store
+In order to get information out of the **redux store,** we need to use the [`connect()` function.](https://react-redux.js.org/using-react-redux/connect-mapstate)
+
+1. import the `connect()` function from `react-redux`
+   ```js
+   import { connect } from 'react-redux';
+   ```
+2. setup `mapStateToProps` [function](https://react-redux.js.org/using-react-redux/connect-mapstate#defining-mapstatetoprops)
+   ```js
+   mapStateToProps(state, ownProps) {
+     return {
+       stream: state.streams[ownProps.match.params.id]
+     };
+   }
+   ```
+3. dispatch - add connect() at the bottom, and pass in the `mapStateToProps` function. Include your component as the second argument.
+  ```js
+   export default connect(mapStateToProps)(StreamEdit);
+  ```
+
+Basic syntax:
+```js
+import { connect } from 'react-redux';  // import statement
+
+const myComponent = (props) => {
+  return <div>Component JSX</div>;
+};
+
+const mapStateToProps = (state, ownProps) => {  
+  return {} // return object
+};
+// state is the redux store, passed to component as props
+// ownProps is optional, 
+// return a plain object containing the data that the connected component needs
+
+export default connect(mapStateToProps)(myComponent);
+
+```
+> [about the arguments state and ownProps:](https://react-redux.js.org/using-react-redux/connect-mapstate#arguments)
+
+For our example:
+```js
+import React from 'react';
+import { connect } from 'react-redux';
+
+const StreamEdit = (props) => {
+  console.log('props', props);
+  return <div>StreamEdit</div>;
+};
+
+const mapStateToProps = (state, ownProps) => {
+  return { stream: state.streams[ownProps.match.params.id] }; // props will now contain a stream property, with the stream we want to edit.
+};
+export default connect(mapStateToProps)(StreamEdit);
+```

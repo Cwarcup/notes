@@ -53,6 +53,8 @@
     - [Safe State Updates in Reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#safe-state-updates-in-reducers) 
   - [Switch Statements in Reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#switch-statements-in-reducers)
 - [Steps for setting up new action creators, reducer, and new component](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#steps-for-setting-up-new-action-creators-reducer-and-new-component)
+- Selecting Records from State
+- Get information from redux store
 
 ---
 
