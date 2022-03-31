@@ -18,6 +18,4 @@ A React component to render only when the location matches. It will be rendered 
 
 # Modals and Portals
 
-A modal is a dialog box/popup window that is displayed on top of the current page.
-
-Are challenging to implement in React. We can use a Portal.
+[See notes here:](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/Modals.md#modals)

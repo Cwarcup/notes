@@ -236,3 +236,37 @@ render() {
     );
   }
 ```
+
+# Switches with React-Router
+
+For the given routes, when we go to the path "/streams/new", we also render the StreamForm component.
+
+```js
+  <Router history={history}>
+    <div>
+      <Header />
+      <Route path="/" exact component={StreamList} />
+      <Route path="/streams/new" exact component={StreamCreate} />
+      <Route path="/streams/edit/:id" exact component={StreamEdit} />
+      <Route path="/streams/delete/:id" exact component={StreamDelete} />
+      <Route path="/streams/:id" exact component={StreamShow} />
+    </div>
+  </Router>
+```
+
+The issue is that the colon (:) in the path is used to indicate that the path is dynamic. Therefore, it could be anything, even 'new', which is why it gets rendered when we go to the path "/streams/new".
+
+Can import `Switch` from react-router-dom to help us render the correct component.
+
+A `Switch` looks through its children `Route`s and renders the **first one** that matches the **current URL**.
+
+```js
+  <Switch>
+    <Route path="/" exact component={StreamList} />
+    <Route path="/streams/new" exact component={StreamCreate} />
+    <Route path="/streams/edit/:id" exact component={StreamEdit} />
+    <Route path="/streams/delete/:id" exact component={StreamDelete} />
+    <Route path="/streams/:id" exact component={StreamShow} />
+  </Switch>
+```
+
