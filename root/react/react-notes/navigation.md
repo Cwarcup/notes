@@ -201,3 +201,127 @@ export const createStream = (formValues) => async (dispatch, getState) => {
 
 use `history.push('ROUTE_YOU_WANT_TO_NAVIGATE_TO')` to navigate the user to a new route.
 
+# URL-based Selection
+
+For example, user clicks a button, new route is rendered. But we need this new route to communicate information about the previous page. 
+
+Example from StreamHub: When the logged in user clicks the 'edit' button to modify their stream, we need to communicate to the 'streams/edit' route which stream was clicked on.
+
+We have two options:
+1. **Selection Reducer**: When a user clicks on a stream to edit it, use a `selectionReducer` to record what stream is being edited.
+2. **URL-based Selection**: Put the ID of the stream being edited in the URL.
+
+If we want to use **URL-based selection**, we need to change our url paths to include the ID of the stream/edit path.
+
+| Path                | Component    |
+| ------------------- | ------------ |
+| /                   | StreamList   |
+| /streams/new        | StreamCreate |
+| /streams/edit/:id   | StreamEdit   |
+| /streams/delete/:id | StreamDelete |
+| /streams/:id        | StreamShow   |
+
+The `:id` is a placeholder for the ID of the stream. There is a dedicated path for each stream.
+
+# Implementing URL-based Selection
+
+1. Need to make sure when the 'edit' button is clicked, it updates the URL to the correct path with the correct stream ID.
+2. Update routing information in components/App.js to ensure that whatever a user goes to '/streams/edit/:id' they see the correct stream.
+
+For step 1: Within components/streams/StreamsList.js, we need to change the edit button.
+
+  Current: using buttons.
+```js
+  renderAdmin(stream) {
+    if (stream.userId === this.props.currentUserId) {
+      return (
+        <div className="right floated content">
+          <button className="ui button primary">Edit</button>
+          <button className="ui button negative">Delete</button>
+        </div>
+      );
+    }
+  }
+```
+
+We will want to use `Link` tags from react-router-dom to navigate user to a different page. Pass in the `stream/id` with a template literal. 
+```js
+  renderAdmin(stream) {
+    if (stream.userId === this.props.currentUserId) {
+      return (
+        <div className="right floated content">
+          <Link to={`/streams/edit/${stream.id}`} className="ui button primary">
+            Edit
+          </Link>
+          <Link
+            to={`/streams/delete/${stream.id}`}
+            className="ui button negative"
+          >
+            Delete
+          </Link>
+        </div>
+      );
+    }
+  }
+```
+
+Over in components/App.js, need to change our path so it understands that the id is being passed in.
+[Docs on Route paths:](https://v5.reactrouter.com/web/api/Route/path-string-string)
+
+```js
+  const App = () => {
+  return (
+    <div className="ui container">
+      <Router history={history}>
+        <div>
+          <Header />
+          <Route path="/" exact component={StreamList} />
+          <Route path="/streams/new" exact component={StreamCreate} />
+          <Route path="/streams/edit/:id" exact component={StreamEdit} />  // <-- add :id to path
+          <Route path="/streams/delete" exact component={StreamDelete} />
+          <Route path="/streams/show" exact component={StreamShow} />
+        </div>
+      </Router>
+    </div>
+  );
+};
+```
+
+## Route Params
+For step 2: Communicate the ID in the URL to our component.
+
+We can see the props being passed down to each component in the console.
+
+```js
+import React from 'react';
+
+const StreamEdit = (props) => {
+  console.log(props);
+  return <div>StreamEdit</div>;
+};
+
+export default StreamEdit;
+
+// history: {length: 11, action: 'POP', location: {…}, createHref: ƒ, push: ƒ, …}
+// location: {pathname: '/streams/edit/3', search: '', hash: '', state: undefined, key: 'dzbpnu'}
+// match:
+//    isExact: true
+//    params:
+//      id: "3"
+// [[Prototype]]: Object
+// path: "/streams/edit/:id"
+// url: "/streams/edit/3"
+```
+
+We get access to a params with an id that matches our id in `path="/streams/edit/:id"`.
+
+You could even do something like `<Route path="/streams/edit/:anything/:somethingelse"`. If you then went to 'http://localhost:3000/streams/edit/dogs/australiandogs` you'd get back the following props.match.params:
+  
+  ```js
+  {
+    anything: 'dogs',
+    somethingelse: 'australiandogs'
+  }
+  ```
+
+# Selecting records from state

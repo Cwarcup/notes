@@ -50,11 +50,12 @@
   - [Axios](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Axios.md#axios)
     - [`.this`](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Axios.md#return-object-with-then)
     - [async](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Axios.md#return-object-with-async)
+    - [API Request With Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md)
 
 ## Misc APIs
 - [jsonplaceholder](https://jsonplaceholder.typicode.com/)
 - [Installing Faker-JS](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
-- [REST-ful Conventions ](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/REST-ful-conventions.md)
+- [REST-ful Conventions (json-server) ](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/REST-ful-conventions.md)
 - [Authentication](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/Authentication.md)
 - CRUD Operations
 

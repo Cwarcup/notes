@@ -176,3 +176,6 @@ case FETCH_STREAMS:
 
 ```
 
+# Manually Changing API records
+
+Can go into the [db.json file](https://github.com/Cwarcup/react-with-redux/blob/main/10-streams/apis/db.json) and change the data.
