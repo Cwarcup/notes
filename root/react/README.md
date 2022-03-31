@@ -77,10 +77,10 @@
   - [Vercel](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/deployment.md#deployment-with-vercel)
   - [Netlify](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/deployment.md#deployment-with-vercel)
 
-- REST-ful Conventions (lib/misc)
-- Make a request with Action Creators (Axios and Redux Thunk)
-- Setting Up an API Server ((lib/misc/restful conventions))
-- 
+- [REST-ful Conventions](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/REST-ful-conventions.md)
+- [Make a request with Action Creators](https://github.com/Cwarcup/notes/tree/main/root/react/react-notes/requests-with-action-creators.md)
+- [Setting Up an API Server](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/REST-ful-conventions.md#setting-up-an-api-server)
+
 
 ### Links:
 

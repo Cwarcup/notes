@@ -178,3 +178,61 @@ const App = () => {
   );
 };
 ```
+
+# Component Isolation with React Router
+
+With React-router, each component needs to be designed to work in isolation (**fetch its own data!**). If this is not done, you may load a page, but the data will not be there because a different component was used to initially fetch that data. 
+
+For example, that StreamList components uses `componentDidMount() {this.props.fetchStreams();}` to fetch the data when it is first rendered, and updates Redux store. If you navigate from this page to the StreamEdit page, you get the data, because it is in the Redux store. However, if you did not initially go to the StreamsList page, you will not have the data for the StreamEdit page. The store was not updated, so the StreamEdit page will not have the data.
+
+## Component fetching own data
+
+Turn the function based component into a class based component so you can use `componentDidMount()` to fetch the data.
+
+```js
+class StreamEdit extends Component  {
+  componentDidMount() {
+    this.props.fetchStream(this.props.match.params.id);
+  }
+  render() {
+    return (
+      <div>
+        StreamEdit
+      </div>
+    );
+  }
+};
+
+//...
+
+export default connect(mapStateToProps, { fetchStream })(StreamEdit);
+```
+
+# Setting Initial Values
+
+uses Redux Form to set initial values for the form.
+
+use the `initialValues` prop to set the initial values of the form.
+
+syntax:
+
+
+```js
+render() {
+    if (!this.props.stream) {
+      return <div className="ui small inline active loader"></div>;
+    }
+    return (
+      <div>
+        <h3>Edit a Stream</h3>
+        <StreamForm
+          initialValues={{
+            title: this.props.stream.title,
+            description: this.props.stream.description,
+          }}
+          onSubmit={this.onSubmit}
+        />
+      </div>
+    );
+  }
+```

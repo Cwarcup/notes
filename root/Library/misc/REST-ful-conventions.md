@@ -2,19 +2,21 @@
 
 Are a predefined system of rules for how to structure your API.
 
-| action             | Method | Route        | Response from API |
-| ------------------ | ------ | ------------ | ----------------- |
-| List all records   | GET    | /streams     | array of records  |
-| Get a record by ID | GET    | /streams/:id | single record     |
-| Create a record    | POST   | /streams     | single record     |
-| Update a record    | PUT    | /streams/:id | single record     |
-| Delete a record    | DELETE | /streams/:id | nothing           |
+| action                             | Method | Route        | Response from API |
+| ---------------------------------- | ------ | ------------ | ----------------- |
+| List all records                   | GET    | /streams     | array of records  |
+| Get a record by ID                 | GET    | /streams/:id | single record     |
+| Create a record                    | POST   | /streams     | single record     |
+| Update ALL properties of a record  | PUT    | /streams/:id | single record     |
+| Update SOME properties of a record | PATCH  | /streams/:id | no content        |
+| Delete a record                    | DELETE | /streams/:id | nothing           |
 
 | methods | What it does                    |
 | ------- | ------------------------------- |
 | GET     | retrieves resources.            |
 | POST    | submits new data to the server. |
 | PUT     | updates existing data.          |
+| PATCH   | updates SOME existing data.     |
 | DELETE  | removes data.                   |
 
 Will use [JSON-Server](https://www.npmjs.com/package/json-server) as an example:

@@ -520,3 +520,95 @@ const mapStateToProps = (state, ownProps) => {
 };
 export default connect(mapStateToProps)(StreamEdit);
 ```
+
+# Setting Initial Values
+
+uses Redux Form to set initial values for the form.
+
+[official docs:](https://redux-form.com/8.2.1/examples/initializefromstate/)
+
+use the [`initialValues`](https://redd.gitbook.io/react-advanced-form/components/form/props/initial-values) prop to set the initial values of the form.
+
+syntax:
+```js
+initialValues={{ nameOfPropertyInField: 'value' }}
+```
+
+```js
+// within StreamEdit.js - parent component
+render() {
+    if (!this.props.stream) {
+      return <div className="ui small inline active loader"></div>;
+    }
+    return (
+      <div>
+        <h3>Edit a Stream</h3>
+        <StreamForm
+          initialValues={{
+            title: this.props.stream.title,
+            description: this.props.stream.description,
+          }}
+          onSubmit={this.onSubmit}
+        />
+      </div>
+    );
+  }
+```
+
+Within the `initialValues={{}}` object, need to ensure the property names match the name of the field in the form. Like so:
+```js 
+// within StreamForm.js - child component to StreamEdit.js
+  render() {
+    return (
+      <form
+        onSubmit={this.props.handleSubmit(this.onSubmit)}
+        className="ui form error"
+      >
+        <Field
+          name="title"   // <-- NEEDS to match the property name in initialValues
+          component={this.renderInput}
+          label="Enter Tittle "
+        />
+        <Field
+          name="description"    //<-- NEEDS to match the property name in initialValues
+          component={this.renderInput}
+          label="Enter Description "
+        />
+        <button className="ui button primary">Submit</button>
+      </form>
+    );
+  }
+}
+```
+
+Could also use [**lodash** _.pick](https://lodash.com/docs/4.17.15#pick) to pick the initial values we want to display in form.
+```
+_.pick(object, [paths])
+```
+
+```js
+class StreamEdit extends Component {
+  componentDidMount() {
+    this.props.fetchStream(this.props.match.params.id);
+  }
+  // is our callback for StreamForm
+  onSubmit = (formValues) => {
+    console.log(formValues);
+  };
+
+  render() {
+    if (!this.props.stream) {
+      return <div className="ui small inline active loader"></div>;
+    }
+    return (
+      <div>
+        <h3>Edit a Stream</h3>
+        <StreamForm
+          initialValues={_.pick(this.props.stream, 'title', 'description')}  // use lodash instead
+          onSubmit={this.onSubmit}
+        />
+      </div>
+    );
+  }
+}
+```

@@ -324,4 +324,3 @@ You could even do something like `<Route path="/streams/edit/:anything/:somethin
   }
   ```
 
-# Selecting records from state

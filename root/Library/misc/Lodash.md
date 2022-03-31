@@ -82,3 +82,25 @@ export const fetchPostsAndUsers = () => async (dispatch, getState) => {
     .value();
 };
 ```
+
+# _.pick
+
+[docs](https://lodash.com/docs/4.17.15#pick)
+
+Creates an object composed of the picked object properties.
+
+```js
+var object = { 
+  'a': 1, 
+  'b': '2', 
+  'c': 3 
+  };
+ 
+_.pick(object, ['a', 'c']);
+// => { 'a': 1, 'c': 3 }
+```
+
+# _.mapKeys
+
+[docs](https://lodash.com/docs/4.17.15#mapKeys)
+
