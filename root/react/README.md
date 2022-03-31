@@ -81,6 +81,7 @@
 - [Make a request with Action Creators](https://github.com/Cwarcup/notes/tree/main/root/react/react-notes/requests-with-action-creators.md)
 - [Setting Up an API Server](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/REST-ful-conventions.md#setting-up-an-api-server)
 
+- Modals and Portals (misc lib)
 
 ### Links:
 

@@ -16,4 +16,8 @@ component = what component do you want to display at this
 
 A React component to render only when the location matches. It will be rendered with route props.
 
+# Modals and Portals
 
+A modal is a dialog box/popup window that is displayed on top of the current page.
+
+Are challenging to implement in React. We can use a Portal.
