@@ -41,6 +41,8 @@
 
 ---
 
+## Redux 
+
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
   - actions, reducers
 - [React-Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#L74)
@@ -53,8 +55,8 @@
     - [Safe State Updates in Reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#safe-state-updates-in-reducers) 
   - [Switch Statements in Reducers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#switch-statements-in-reducers)
 - [Steps for setting up new action creators, reducer, and new component](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/api-request-redux.md#steps-for-setting-up-new-action-creators-reducer-and-new-component)
-- Selecting Records from State
-- Get information from redux store
+- [Selecting Records from State](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux-form.md#selecting-records-from-state)
+- [Get information from redux store](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux-form.md#get-information-from-redux-store)
 
 ---
 
