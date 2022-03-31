@@ -1,7 +1,8 @@
 # React Router DOM
 
 [also see notes from navigation:](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md)
-- 
+- [URl based selection](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#url-based-selection)
+- [Route Params](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#route-params)
 
 
 > Code below will be written with react-router v5.

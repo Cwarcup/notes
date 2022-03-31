@@ -33,9 +33,9 @@
   - [History References](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#history-references)
   - [Creating a Browser History Object](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#creating-a-browser-history-object)
   - [Implementing Browser History Object and Programmatic Navigation](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#implementing-browser-history-object-and-programmatic-navigation)
-  - URL-based Selection
-  - Wildcard Navigation
-  - more on route params
+  - [URL-based Selection](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#url-based-selection)
+  - [Wildcard Navigation](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#implementing-url-based-selection)
+  - [route params](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/navigation.md#route-params)
   - 
 - [headers](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/headers.md#L26)
 
