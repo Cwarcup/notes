@@ -612,3 +612,9 @@ class StreamEdit extends Component {
   }
 }
 ```
+
+# Migration from React-Form to React-Final-Form
+
+```
+npm install final-form react-final-form
+```
