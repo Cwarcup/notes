@@ -8,3 +8,7 @@
 
 [Modal and Portal](https://github.com/Cwarcup/notes/blob/main/root/Library/misc/Modals.md)
 
+RTMP NodeMediaServer: 
+  - Open Broadcast Software OBS
+
+FLV Player 

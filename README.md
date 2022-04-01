@@ -65,3 +65,7 @@
 - [Parcel](https://parceljs.org/docs/) or [personal notes](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#web-framework-notes)
 - [JSON-Server typescript](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#adding-json-server)
 - [Axios](https://axios-http.com/docs/intro)
+- RTMP NodeMediaServer
+- Open Broadcast Software (OBS)
+- FLV Player
+- 
