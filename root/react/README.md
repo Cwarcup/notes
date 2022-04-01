@@ -18,7 +18,7 @@
 
 ---
  
-- [Hooks](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md)
+- [Hooks System](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md)
   - [setState](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md#usestate)
   - [useEffect](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md#useeffect---how-to-detect-that-a-state-has-changed)
     - [useEffect with async requests](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/hooks.md#async-with-useeffect)
@@ -26,7 +26,12 @@
   - [useRef](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/useRef.md#L26)
 - [Custom Hooks](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/custom-hooks.md#L142)
 
-- Context System
+- [Context System](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#context-system-with-react)
+  - [createContext](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#createcontext---creating-a-context-object)
+  - [contextType ](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#contexttype---adding-context-to-a-component)
+    - [this.context (accessing single context)](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#thiscontext)
+  - [Provider and value class](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#context-provider-and-value-class)
+    - [Consumer Components (multiple context objects)](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#consumer-components---accessing-data-with-consumer-components)
 
 ---
 
