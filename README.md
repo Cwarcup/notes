@@ -24,16 +24,16 @@
 - [React](https://github.com/Cwarcup/notes/tree/main/root/react#react)
 - Boostrap
 
-## Database
+  ## Database
 - MongoDB
   
 ## Data Structures
-- [Algo and Data Structures Masterclass](https://github.com/Cwarcup/notes/tree/main/root/Algorithms-Masterclass)
 
 - [Data Structures](https://github.com/Cwarcup/notes/blob/main/root/Data-Structures/README.md#data-structures) 
 
 
 ### Algorithms
+- [Algorithms](https://github.com/Cwarcup/notes/tree/main/root/Algorithms-Masterclass#algorithms)
 - [Intro to Algorithms (Search, Recursion, Sorting)](https://github.com/Cwarcup/notes/tree/main/root/Algorithms-Masterclass#algorithms)
 - [Problem Solving Technique](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/3-Problem-Solving.md)
 - [Dijkstras Algorithm (shortest distance)](https://github.com/Cwarcup/notes/blob/main/root/Dijkstas-Algo/Dijkstas.md#dijkstras-algorithm)
