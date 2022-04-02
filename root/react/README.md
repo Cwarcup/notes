@@ -30,8 +30,11 @@
   - [createContext](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#createcontext---creating-a-context-object)
   - [contextType ](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#contexttype---adding-context-to-a-component)
     - [this.context (accessing single context)](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#thiscontext)
-  - [Provider and value class](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#context-provider-and-value-class)
+  - [Context Provider and Value class](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#context-provider-and-value-class)
     - [Consumer Components (multiple context objects)](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#consumer-components---accessing-data-with-consumer-components)
+  - [Redux Vs Context](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#replacing-redux-with-context)
+    - [Creating a 'store'](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#creating-a-store-component---context)
+    - [Connecting a Selector to the 'store'](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/Context-system-React.md#connecting-a-selector-to-the-store)
 
 ---
 
