@@ -286,3 +286,160 @@ class Button extends Component {
   }
 }
 ```
+
+# Replacing Redux with Context?
+
+| Redux                                               | Context                                     |
+| --------------------------------------------------- | ------------------------------------------- |
+| Distributes data to **various** components.         | Distributes data to **various** components. |
+| Centralizes data in a store.                        | n/a                                         |
+| Provides mechanisms for changing data in the store. | n/a                                         |
+
+
+---
+
+
+### Redux vs Context
+
+| Redux                                      | Context                                                                                                      |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| Excellent documentation                    | No need for an extra library.                                                                                |
+| Well-known design patterns                 | Hard to build a 'store' component. Sharing data between the store components becomes increasingly difficult. |
+| Tremendous amount of open source libraries | n/a                                                                                                          |
+
+Redux is much more powerful than Context.
+
+## Using Context instead of Redux
+
+If we want to use Context instead of Redux, we need to be able to...
+1. Get data to any component in our hierarchy.
+2. Separate our view logic from business logic.
+3. Split up business logic into smaller components (not have a single file with 10000 lines of code).
+
+> Number 2 and 3 are not an issue when we used Redux. We used actions and reducers to separate our business logic from our view logic.
+
+### Creating a Store Component - Context
+
+Would need to create a single **Store Component**. Would also need to implement a callback to change the state.
+
+In the context/LanguageContext.js file we need to...
+-  assign a variable named `Context` to the `createContext` function. (Must be a capital)
+-  set the **state** for the value we want to kee track of. 
+-  create a function to `setState` the value.
+-  a render() method which returns a `Provider` component.
+  - the value needs to pass the **state** `{...this.state}` and the previously created `setState` function.
+
+```js
+const Context = React.createContext('english'); // <--- create a context
+
+export class LanguageStore extends Component {
+  // set a value for some data
+  state = { language: 'english' };
+
+  // ability to change the data
+  onLanguageChange = (language) => {
+    this.setState({ language });
+  };
+
+  render() {
+    // setup a provider to pass the value to all children
+    return (
+      <Context.Provider value={{ ...this.state, onLanguageChange }}>
+        {this.props.children}
+      </Context.Provider>
+    );
+  }
+}
+
+export default Context
+```
+
+Inside of the main app.js file we need to...
+- import the 'store'
+- wrap the other components inside of the `<LanguageStore>` component.
+
+```js
+export class App extends Component {
+  render() {
+    return (
+      <div className="ui container">
+        <LanguageStore>
+          <LanguageSelector />
+          <ColorContext.Provider value="red">
+            <UserCreate />
+          </ColorContext.Provider>
+        </LanguageStore>
+      </div>
+    );
+  }
+}
+```
+
+### Connecting a Selector to the Store
+
+Import the component containing the store.
+
+Add the `contextType` to the component with `static`. `static contextType = LanguageContext;`
+
+Can now access the `value` of the context object with `this.context`
+
+```js
+export class LanguageSelector extends Component {
+  // connect to the context
+  static contextType = LanguageContext;
+
+  render() {
+    console.log(this.context);  // accesses the context object
+    return (
+      <div>
+        <div>
+          Select a language:
+          <i
+            className="flag ca"
+            onClick={() => this.context.onLanguageChange('english')}
+          ></i>
+          <i
+            className="flag nl"
+            onClick={() => this.context.onLanguageChange('dutch')}
+          ></i>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default LanguageSelector;
+```
+
+Need to also update any components using `this.props` to use the `context`.
+
+```js
+import React, { Component } from 'react';
+import LanguageContext from '../context/LanguageContext';
+import ColorContext from '../context/ColorContext';
+
+class Button extends Component {
+  renderSubmit(language) {
+    return language === 'english' ? 'Submit' : 'Voorleggen';
+  }
+  renderButton(color) {
+    return (
+      <button className={`ui button ${color}`}>
+        <LanguageContext.Consumer>
+          {(context) => this.renderSubmit(context.language)}  //<-- accesses the context object
+        </LanguageContext.Consumer>
+      </button>
+    );
+  }
+
+  render() {
+    return (
+      <ColorContext.Consumer>
+        {(color) => this.renderButton(color)}
+      </ColorContext.Consumer>
+    );
+  }
+}
+
+export default Button;
+```
