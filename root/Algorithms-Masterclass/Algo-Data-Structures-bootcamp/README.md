@@ -10,7 +10,7 @@ jest algoName/test.js --watch
 
 ## Algorithms
 
-String Reversal
+[String Reversal](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/reversestring/index.js)
 
 Palindromes
 

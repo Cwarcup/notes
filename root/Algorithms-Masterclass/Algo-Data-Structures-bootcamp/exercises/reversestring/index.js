@@ -6,12 +6,32 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-function reverse(str) {
-  return str.split('').reverse().join('');
-}
-
-module.exports = reverse;
+// solution 1 using reverse helper
+// function reverse(str) {
+//   return str.split('').reverse().join('');
+// }
 
 // A string can be converted to an array with the split() method
 // call reverse on the new array
 // join the array back into a string
+
+///////////////////////////////////
+
+// Solution 2: use a for-loop
+
+// function reverse(str) {
+//   let reversed = '';
+
+//   for (let character of str) {
+//     reversed = character + reversed;
+//   }
+//   return reversed;
+// }
+
+///////////////////////////////////
+
+function reverse(str) {
+  return str.split('').reduce((rev, char) => (rev = char + rev), '');
+}
+
+module.exports = reverse;
