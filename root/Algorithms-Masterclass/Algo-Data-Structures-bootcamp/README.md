@@ -4,6 +4,10 @@ Udemy Course: [here](https://www.udemy.com/course/coding-interview-bootcamp-algo
 
 Completed versions of examples: [here](https://github.com/StephenGrider/algocasts)
 
+```
+jest algoName/test.js --watch
+```
+
 ## Algorithms
 
 String Reversal
