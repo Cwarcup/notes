@@ -20,7 +20,7 @@ jest algoName/test.js --watch
 
 [MaxChars - most used character in a string](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/maxchar/maxchar.md#Max-Character)
 
-FizzBuzz
+[FizzBuzz](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/fizzbuzz/fizzbuzz.md#FizzBuzz)
 
 Array Chunking
 
