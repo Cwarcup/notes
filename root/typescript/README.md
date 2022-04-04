@@ -8,6 +8,21 @@
 - [TS & Express App](https://github.com/Cwarcup/typescript-express-server#typescript-express-server)
 - TS/React/Redux - not complete
 
+## Topics:
+
+[Environment setup:](https://github.com/Cwarcup/notes/blob/main/root/typescript/Intro/Typescript.md#environment-setup)
+
+[Interfaces](https://github.com/Cwarcup/notes/blob/main/root/typescript/Interface/interfaces.md#interfaces)
+[Classes](https://github.com/Cwarcup/notes/blob/main/root/typescript/Functionality-with-Classes/functionality-with-classes.md#classes)
+[Abstract Classes](https://github.com/Cwarcup/TS-Node-Sort-App/blob/main/app-notes.md#abstract-classes)
+  - [Interfaces vs Abstract Classes](https://github.com/Cwarcup/TS-Node-Sort-App/blob/main/app-notes.md#interfaces-vs-abstract-classes)
+[Inheritance](https://github.com/Cwarcup/notes/blob/main/root/typescript/Functionality-with-Classes/functionality-with-classes.md#inheritance)
+- [Inheritance vs Composition](https://github.com/Cwarcup/typescript-csv-reader#inheritance-vs-composition)
+[Instance Method Modifiers](https://github.com/Cwarcup/notes/blob/main/root/typescript/Functionality-with-Classes/functionality-with-classes.md#instance-method-modifiers)
+[Tuples](https://github.com/Cwarcup/notes/blob/main/root/typescript/Tuples/tuples.md#tuples)
+[Enums](https://github.com/Cwarcup/typescript-csv-reader#using-enums)
+[Important Rules in TS](https://github.com/Cwarcup/web-framework-typescript-app/blob/main/web-framework-app.md#important-rules-in-typescript)
+
 ## Sections
 
 - [Getting started with Parcel](https://github.com/Cwarcup/notes/blob/main/root/typescript/topics/parcel-setup.md)
@@ -18,7 +33,7 @@
 - [instanceof narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#instanceof-narrowing)
 - [Getter/Setter](https://www.typescriptlang.org/docs/handbook/2/classes.html#getters--setters)
 - [Abstract Classes](https://github.com/Cwarcup/TS-Node-Sort-App/blob/main/app-notes.md#abstract-classes)
-- Interfaces
+- [Interfaces](https://github.com/Cwarcup/notes/blob/main/root/typescript/Interface/interfaces.md)
 - [Interfaces vs Abstract Classes](https://github.com/Cwarcup/TS-Node-Sort-App/blob/main/app-notes.md#interfaces-vs-abstract-classes)
 - [Design Pattern](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#design-pattern)
 - [Export Statements](https://github.com/Cwarcup/notes/blob/main/root/typescript/design-pattern/design-pattern.md#export-statements)
