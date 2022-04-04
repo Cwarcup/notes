@@ -15,7 +15,7 @@
 // call reverse on the new array
 // join the array back into a string
 
-///////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 
 // Solution 2: use a for-loop
 
@@ -28,10 +28,12 @@
 //   return reversed;
 // }
 
-///////////////////////////////////
+//////////////////////////////////////////////////////////////////////
 
-function reverse(str) {
-  return str.split('').reduce((rev, char) => (rev = char + rev), '');
-}
+// function reverse(str) {
+//   return str.split('').reduce((rev, char) => (rev = char + rev), '');
+// }
+
+reverse('apple');
 
 module.exports = reverse;
