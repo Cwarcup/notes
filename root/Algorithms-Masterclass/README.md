@@ -6,6 +6,8 @@
 
 [Problem Solving](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/3-Problem-Solving.md)
 
+[Reverse String](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/reversestring/reverse-string.md#reverse-string)
+
 [Problem Solving Patterns](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/4-Problem-Solving-Patterns.md)
   - [Frequency Counter Pattern](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/4-Problem-Solving-Patterns.md#frequency-counter-pattern)
   - [Multiple Pointers Pattern](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/4-Problem-Solving-Patterns.md#multiple-pointers-pattern)
