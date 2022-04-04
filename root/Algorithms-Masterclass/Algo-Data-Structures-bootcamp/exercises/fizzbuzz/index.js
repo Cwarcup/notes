@@ -13,16 +13,15 @@
 //   buzz
 
 function fizzBuzz(n) {
-
-  for(let i = 1; i <= n; i++) {
+  for (let i = 1; i <= n; i++) {
     // is n multiple 3 and 5?
     if (i % 5 === 0 && i % 3 === 0) {
-      console.log("FizzBuzz")
-    // is n a multiple of 3?
-    }else if (i % 3 === 0) {
-      console.log("Fizz");
-    } else if (i % 5 === 0 ) {
-      console.log("Buzz");
+      console.log('fizzbuzz');
+      // is n a multiple of 3?
+    } else if (i % 3 === 0) {
+      console.log('fizz');
+    } else if (i % 5 === 0) {
+      console.log('buzz');
     } else {
       console.log(i);
     }
@@ -33,9 +32,8 @@ function fizzBuzz(n) {
   //   if (!n % 5) console.log("Buzz");
   //   if (!n % 5 && !n % 3) console.log("FzzBuzz");
   //   console.log(n);
-    
-  // }
 
+  // }
 }
 console.log(fizzBuzz(20));
 

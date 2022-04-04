@@ -22,7 +22,7 @@ jest algoName/test.js --watch
 
 [FizzBuzz](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/fizzbuzz/fizzbuzz.md#FizzBuzz)
 
-Array Chunking
+[Array Chunking](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/chunk/chunk.md#Chunk)
 
 Anagrams
 
