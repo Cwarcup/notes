@@ -24,5 +24,3 @@ function reverseInt(n) {
   return Math.sign(n) * newNum
 }
 ```
-
-root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/reverseint/reverseint.md

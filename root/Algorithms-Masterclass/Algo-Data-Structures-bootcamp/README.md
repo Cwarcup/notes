@@ -10,13 +10,15 @@ jest algoName/test.js --watch
 
 ## Algorithms
 
+[Common String Questions](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/maxchar/maxchar.md#common-string-questions)
+
 [String Reversal](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/reversestring/reverse-string.md#reverse-string)
 
 [Palindromes](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/palindrome/palindrome.md#Palindrome)
 
 [Integer Reversal](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/reverseint/reverseint.md#Reverse-Integer)
 
-MaxChars
+[MaxChars - most used character in a string](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/maxchar/maxchar.md#Max-Character)
 
 FizzBuzz
 
