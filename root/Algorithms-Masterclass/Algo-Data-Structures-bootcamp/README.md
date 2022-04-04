@@ -14,7 +14,7 @@ jest algoName/test.js --watch
 
 [Palindromes](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/palindrome/palindrome.md#Palindrome)
 
-Integer Reversal
+[Integer Reversal](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/reverseint/reverseint.md#Reverse-Integer)
 
 MaxChars
 
