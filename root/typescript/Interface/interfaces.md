@@ -3,6 +3,7 @@
 We get very strong code reuse in TS when we use **interfaces and classes** together. 
 
 **Definition**: Creates a new **type**, describing the **property** **names** and **values** **type** of an object. 
+Remember, an interface forces your class to have the same properties as the interface.
 
 ### Long Type Interfaces
 
