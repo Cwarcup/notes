@@ -72,11 +72,29 @@ If the 'stair' string has a **length === n** then we are at the end of a row.
 
 If the **length of the 'stair' string is less than or equal to the row number we are working on**, we add a `#`, otherwise we add a ` `.
 
-```js
-
 |     | column |     |     |
 | --- | ------ | --- | --- |
 | row | #      | -   | -   |
 |     | #      | #   | -   |
 |     | #      | #   | #   |
 
+
+```js
+function steps(n, row = 0, stair = '') {
+  if (n === row) {
+    return;
+  }
+
+  if (n === stair.length) {
+    console.log(stair);
+    return steps(n, row + 1);
+  }
+
+  if (stair.length <= row) {
+    stair += '#';
+  } else {
+    stair += ' ';
+  }
+  steps(n, row, stair);
+}
+```
