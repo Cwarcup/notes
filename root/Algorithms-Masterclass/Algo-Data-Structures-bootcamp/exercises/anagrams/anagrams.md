@@ -41,34 +41,33 @@ console.log(Object.keys(obj).length);
 - count the number of keys in our object and compare it to the number of keys in the other object. OR compare length of both strings. 
 
 ```js
-function anagrams(stringA, stringB) {
-  // use helper to create object of each string
-  const aCharMap = buildCharMap(stringA)
-  const bCharMap = buildCharMap(stringB)
+function anagram(str1, str2) {
+  // create objects of each string using helper function
+  const obj1 = createCharMap(str1);
+  const obj2 = createCharMap(str2);
 
-  // return false if they number of keys do not match
-  if(Object.keys(aCharMap).length !== Object.keys(bCharMap).length) {
+   // compare the number of keys in each object
+  if(Object.keys(obj1).length !== Object.keys(obj2).length){
     return false;
   }
 
-  for(let char in aCharMap) {
-    if(aCharMap[char] !== bCharMap[char]) {
+  //compare characters in each object
+  for(let char in obj1) {
+    if(obj1[char] !== obj2[char]){
       return false;
     }
-
   }
-  return true // if both strings pass the tests
+  return true;
 }
 
 // helper function to create character map
-function buildCharMap(str) {
-  const charMap = {};
-  
-  for(let char of str.replace(/[^\w]/g, '').toLowerCase()) {
-    charMap[char] = charMap[char] + 1 || 1;
-  }
+function createCharMap(str){
+  let obj = {}; 
 
-  return charMap;
+  for(let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+    obj[char] = obj[char] + 1 || 1;
+  }
+  return obj
 }
 
 console.log(anagrams('rail safety', 'fairy tales'));
