@@ -84,7 +84,7 @@ function steps(n, row = 0, stair = '') {
   if (n === row) {
     return;
   }
-
+  // at the end of a row
   if (n === stair.length) {
     console.log(stair);
     return steps(n, row + 1);
