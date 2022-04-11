@@ -71,16 +71,20 @@ function pyramid(n, row = 0, level = '') {
   }
 
   // when we reach the end of a level.
+  // max number of columns is  2 * n - 1
   if (level.length === 2 * n - 1) {
     console.log(level);
     return pyramid(n, row + 1);
   }
 
-  const midpoint = Math.floor((2 * n - 1) / 2); // get midpoint index
+  // get midpoint index
+  const midpoint = Math.floor((2 * n - 1) / 2); 
 
-  let add; // contains the character we are adding to our level string
+  // contains the character we are adding to our level string
+  let add; 
 
   // if looking at the right and left side of the midpoint
+  // we determine which column we are on by looking at the level string length
   if (midpoint - row <= level.length && midpoint + row >= level.length) {
     add = '#';
   } else {

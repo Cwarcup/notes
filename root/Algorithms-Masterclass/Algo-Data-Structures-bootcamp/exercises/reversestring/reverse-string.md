@@ -30,6 +30,8 @@ function reverse(str) {
 }
 ```
 
+Time complexity: O(n). Linear runtime. There is a direct relationship between the input size and the runtime. 
+
 ## Solution 3 with reduce() helper
 
 ```js

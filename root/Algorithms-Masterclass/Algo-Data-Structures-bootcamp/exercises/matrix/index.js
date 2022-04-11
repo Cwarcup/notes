@@ -16,23 +16,56 @@
 //     [10,  9,  8, 7]]
 
 function matrix(n) {
+  // create empty array
   const results = [];
+  // push the number of sub-arrays into results
   for (let i = 0; i < n; i++) {
-    results.push([])
-  };
+    results.push([]);
+  }
+  console.log(results);
 
+  // keep track of the number we are pushing into results
   let counter = 1;
+  // index of the columns
   let startColumn = 0;
-  let endColumn = n-1;
+  let endColumn = n - 1;
+  //index of rows
   let startRow = 0;
-  let endRow = n-1;
-  while(startColumn <= endColumn && startRow <= endRow) {
-    //Top row
-    for(let i = startColumn; i <= endColumn; i++) {
-      results[startRow][counter] = counter;
+  let endRow = n - 1;
+
+  while (startColumn <= endColumn && startRow <= endRow) {
+    //Top row 
+    for (let i = startColumn; i <= endColumn; i++) {
+      results[startRow][i] = counter;
       counter++;
     }
+    startRow++;
+    // we are now done row 1
+   
+    // right column
+    for (let i = startRow; i <= endRow; i++) {
+      results[i][endColumn] = counter;
+      counter++;
+    }
+    endColumn--;
+
+    // bottom row
+    for (let i = endColumn; i >= startColumn; i--) {
+      results[endRow][i] = counter;
+      counter++;
+    }
+    endRow--;
+
+    // start column
+    for (let i = endRow; i >= startRow; i--) {
+      results[i][startColumn] = counter;
+      counter++;
+    }
+    startColumn++;
   }
+  return results
 }
+
+console.log(matrix(5));
 
 module.exports = matrix;

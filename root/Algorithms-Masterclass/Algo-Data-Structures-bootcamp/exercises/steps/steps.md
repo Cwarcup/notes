@@ -52,6 +52,8 @@ function steps(n) {
 }
 ```
 
+Time Complexity: O(n^2). Qaudratic runtime. 
+
 ---
 
 Option 2: recursive solution

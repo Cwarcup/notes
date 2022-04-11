@@ -39,6 +39,7 @@ function pyramid(n, row = 0, level = '') {
   }
 
   // when we reach the end of a level.
+  // max number of columns is  2 * n - 1
   if (level.length === 2 * n - 1) {
     console.log(level);
     return pyramid(n, row + 1);
