@@ -44,14 +44,29 @@ Time Complexity: **O(n^2). Quadratic runtime**
 
 # Determining Runtime Complexity
 
-| Speed | Time             | Time Complexity | Reasoning                                                                                                                                                       |
-| ----- | ---------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Best  | Constant Time    | O(1)            | No matter how many elements we are working with, the algorithm will **always** take the same amount of time.                                                    |
-|       | Logarithmic Time | O(log n)        | You have this if doubling the number of elements you are iter does **not** double the amount of work. Always assume that `searching operations are log(n)`      |
-|       | Linear Time      | O(n)            | Iterating through all elements in a collection of data. If you see a `for loop spanning from "0" to "array.length"`, you probably have `n` or **Linear runtime**. |
-|       | Quasilinear Time | O(n log n)      | You have this if doubling the # of elements does NOT double the amount of work. Always assume that `sorting operations is n*log(n)`                             |
-|       | Quadratic Time   | O(n^2)          | **Every element** in a collection has to be **compared to every other element.** 'The handshake problem'.                                                         |
-| Worst | Exponential Time | O(2^n)          | If you add a **single** element to the collection, the processing power required doubles.                                                                       |
+| Speed | Time Complexity  | BigO       | Reasoning                                                                                                                                                         |
+| ----- | ---------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Best  | Constant Time    | O(1)       | No matter how many elements we are working with, the algorithm will **always** take the same amount of time.                                                      |
+|       | Logarithmic Time | O(log n)   | You have this if doubling the number of elements you are iter does **not** double the amount of work. Always assume that `searching operations are log(n)`        |
+|       | Linear Time      | O(n)       | Iterating through all elements in a collection of data. If you see a `for loop spanning from "0" to "array.length"`, you probably have `n` or **Linear runtime**. |
+|       | Quasilinear Time | O(n log n) | You have this if doubling the # of elements does NOT double the amount of work. Always assume that `sorting operations is n*log(n)`                               |
+|       | Quadratic Time   | O(n^2)     | **Every element** in a collection has to be **compared to every other element.** 'The handshake problem'.                                                         |
+| Worst | Exponential Time | O(2^n)     | If you add a **single** element to the collection, the processing power required doubles.                                                                         |
 
 
 <img src="runtime.png" alt="drawing" style="width:500px;"/>
+
+# Identifying Runtime Complexity
+
+| Doing...                                                                     | Most likely Runtime Complexity                  |
+| ---------------------------------------------------------------------------- | ----------------------------------------------- |
+| A simple **'for loop'**                                                      | probably **O(n)** Linear                        |
+| Iterating through **half a collection**?                                     | O(n). Linear. There is no constants in runtime. |
+| Iterating through **two different collections** in **separate** 'for loops'? | O(n + m)                                        |
+| Two **nested for loops** iterating through the **same** collection?          | O(n^2) Quadratic. Big red flag.                 |
+| Two **nested for loops** iterating through **different** collections?        | O(n * m) Quadratic. Almost same as above.       |
+| Sorting?                                                                     | O(n * log(n))                                   |
+| Searching a **sorted array?**                                                | O(log(n))                                       |
+
+
+
