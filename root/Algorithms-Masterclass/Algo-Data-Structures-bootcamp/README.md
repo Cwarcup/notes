@@ -66,3 +66,9 @@ Bubble Sort
 Sort by Selection
 
 Merge Sort
+
+# Other Notes
+
+BigO Notation
+
+Memoization

@@ -10,21 +10,51 @@
 
 // iterative solution
 // function fib(n) {
-//   let fib = [0, 1]
-//   for(let i = 2; i <= n; i++) {
-//     fib.push(fib[i] = fib[i-1] + fib[i-2])
+//   let fib = [0, 1];
+//   for (let i = 2; i <= n; i++) {
+//     fib.push((fib[i] = fib[i - 1] + fib[i - 2]));
 //   }
-//   return fib[n]
+//   return fib[n];
 // }
+// console.log(fib(40));
 
 //recursive solution
+// function slowFib(n) {
+//   if (n < 2) {
+//     return n;
+//   }
+//   return fib(n - 1) + fib(n - 2);
+// }
+
+// console.log(slowFib(40));
+
+//memoized
+
+function memoize(fn) {
+  // object to store all our calls
+  const cache = {};
+
+  return function (...args) {
+    // if we have called the function with these arguments...
+    if (cache[args]) {
+      return cache[args];
+    }
+
+    //if we have NOT called the function before...
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  };
+}
+
 function fib(n) {
   if (n < 2) {
     return n;
   }
   return fib(n - 1) + fib(n - 2);
 }
-
-console.log(fib(4));
+fib = memoize(fib);
+console.log(fib(5));
 
 module.exports = fib;
