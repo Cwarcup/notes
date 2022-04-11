@@ -69,4 +69,9 @@ Time Complexity: **O(n^2). Quadratic runtime**
 | Searching a **sorted array?**                                                | O(log(n))                                       |
 
 
+# Space Complexity
+
+Very similar to time complexity, but the difference is that space complexity is more about how much memory is used.
+
+In general, same rules apply.
 
