@@ -22,8 +22,45 @@
 //    q.remove() // 2
 //    q.remove() // 'There'
 
-const Queue = require('./queue');
+// const Queue = require('./queue');
+class Queue {
+  constructor() {
+    this.data = [];
+  }
 
-function weave(sourceOne, sourceTwo) {}
+  add(record) {
+    this.data.unshift(record);
+  }
+
+  remove() {
+    return this.data.pop();
+  }
+
+  peek() {
+    return this.data[this.data.length - 1];
+  }
+}
+
+function weave(sourceOne, sourceTwo) {
+  const q = new Queue();
+
+  // as long as our next element is NOT undefined...
+  while(sourceOne.peek() || sourceTwo.peek()) {
+    if(sourceOne.peek()) {
+      q.add(sourceOne.remove())
+    }
+    if(sourceTwo.peek()) {
+      q.add(sourceTwo.remove())
+    }
+  }
+  return q;
+}
+
+
+console.log(q);
 
 module.exports = weave;
+
+
+// cd into exercise folder and run
+// jest weave/test.js --watch

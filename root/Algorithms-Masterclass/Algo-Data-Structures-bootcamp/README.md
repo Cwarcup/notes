@@ -44,11 +44,9 @@ Runtime Complexity
 
 ## Data Structures
 
-The Queue
-
-Weaving
-
-Creating Queue from Stacks
+The Queue:
+- Weaving
+- Creating Queue from Stacks
 
 Linked Lists
   - Find Midpoint of Linked List
