@@ -69,3 +69,245 @@ console.log(list); // LinkedList { head: '10' }
 
 ## Linked List Class - insertFirst
 
+```js
+  insertFirst(data) {
+    this.head = new Node(data, this.head);
+  }
+```
+
+Example:
+```js
+const list = new LinkedList();
+list.insertFirst('Hi There'); // List has one node
+```
+
+## Linked List Class - size
+
+```js
+  size() {
+    let counter = 0;
+    let node = this.head;
+    while (node) {
+      counter++;
+      node = node.next;
+    }
+    return counter;
+  }
+```
+> `node` is assigned to the head property of the list. If a node exists, the counter is incremented and the next node is assigned to `node`.
+
+Example:
+```js
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.insertFirst('c');
+list.size(); // returns 3
+```
+
+## Linked List Class - getFirst
+
+```js
+  getFirst() {
+    return this.head;
+  }
+```
+
+Example:
+```js
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.getFirst(); // returns Node instance with data 'a'
+```
+
+## Linked List Class - getLast
+
+```js
+getLast() {
+    if (!this.head) {
+      return null;
+    }
+    let node = this.head;
+    while (node) {
+      if (!node.next) {
+        return node;
+      }
+      node = node.next;
+    }
+  }
+```
+
+Example:
+```js
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.getLast(); // returns node with data 'a'
+```
+
+## Linked List Class - clear
+
+Empties the linked list of any nodes.
+
+```js
+  clear() {
+    this.head = null;
+  }
+```
+
+Example:
+```js
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.clear();
+list.size(); // returns 0
+```
+
+## Linked List Class - removeFirst
+
+Removes only the first node of the linked list. The list's head should now be the second element.
+
+```js
+  removeFirst() {
+    if (!this.head) {
+      return null;
+    }
+    this.head = this.head.next;
+  }
+```
+
+Example:
+```js
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.removeFirst();
+list.getFirst(); // returns node with data 'a'
+```
+
+## Linked List Class - removeLast
+
+Removes the last node of the chain.
+
+One way to approach problem is to create two variables to keep track of the previous node and the current node. Iterate through the linked list and as soon as we find a next value of null, this means we are at the end of our chain. Therefore, we set the previous nodes next property to null. 
+
+```js
+removeLast() {
+  //if the list is empty
+  if (!this.head) {
+    return null;
+  }
+  //if there is only one node
+  if (!this.head.next) {
+    this.head = null;
+    return;
+  }
+  let previous = this.head;
+  let node = this.head.next;
+  while (node.next) {
+    previous = node;
+    node = node.next;
+  }
+  previous.next = null;
+}
+```
+
+Example:
+```js
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.removeLast();
+list.size(); // returns 1
+list.getLast(); // returns node with data of 'b'
+```
+
+## Linked List Class - insertLast
+
+Inserts a new node with provided data at the end of the chain.
+
+Need to set the current last node's next property to the new node.
+
+```js
+  getLast() {
+    if (!this.head) {
+      return null;
+    }
+    let node = this.head;
+    while (node) {
+      if (!node.next) {
+        return node;
+      }
+      node = node.next;
+    }
+      //...
+insertLast(data) {
+    const last = this.getLast();
+
+    if (last) {
+      // there are some existing nodes in our chain
+      last.next = new Node(data);
+    } else {
+      // the chain is empty
+      this.head = new Node(data);
+    }
+  }
+```
+
+Example:
+```js
+const list = new LinkedList();
+list.insertFirst('a');
+list.insertFirst('b');
+list.insertLast('c');
+list.getLast(); // returns node with data 'C'
+```
+
+## Linked List Class - getAt
+
+Returns the node at the provided index.
+
+- create a temp variable to keep track of the current node.
+- create a counter variable to keep track of the index.
+- set up the while loop to iterate through the linked list until the counter is equal to the index.
+
+```js
+  getAt(index) {
+    let counter = 0;
+    let node = this.head;
+    while (node) {
+      if (counter === index) {
+        return node;
+      }
+      counter++;
+      node = node.next;
+    }
+    return null;
+  }
+```
+
+## Linked List Class - removeAt
+
+  Removes the node at the provided index.
+
+```js
+  removeAt(index) {
+    if (!this.head) {
+      return null;
+    }
+    // if the index is 0, remove the head
+    if (index === 0) {
+      this.head = this.head.next;
+      return;
+    }
+    // set up the temp variable to keep track of the previous node
+    const previous = this.getAt(index - 1);
+    // the index is outside of the chain
+    if (!previous || !previous.next) {
+      return;
+    }
+    previous.next = previous.next.next;
+  }
+```
