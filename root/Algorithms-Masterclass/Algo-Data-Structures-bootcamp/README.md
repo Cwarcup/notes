@@ -46,6 +46,8 @@ Runtime Complexity
 
 The Queue:
 - Weaving
+
+Stacks:
 - Creating Queue from Stacks
 
 Linked Lists
