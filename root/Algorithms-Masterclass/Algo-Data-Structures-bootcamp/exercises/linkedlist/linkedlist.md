@@ -361,9 +361,9 @@ We have written a lot of methods, however, many of these methods could have been
 
 If an interviewer asks you to write a method like `removeFirst()`, you should ask if additional methods will be asked of you. If so, you should write `removeAt()` and `getAt()` methods.
 
-## forEach() - List Traversal through ForEach
+## for..of Loop - List Traversal through ForEach
 
-Calls the provided function with every node of the chain.
+Linked list should be compatible as the subject of a 'for...of' loop
 
 example:
 ```js
@@ -374,10 +374,21 @@ list.insertLast(2);
 list.insertLast(3);
 list.insertLast(4);
 
-list.forEach(node => {
+for (let node of list) {
 node.data += 10;
-});
-list.getAt(0); // Returns node with data '11'
+}
+
+node.getAt(1); // returns node with data 11
 ```
 
+**SEE GENERATOR NOTES!**
 
+```js
+  *[Symbol.iterator]() {
+    let node = this.head;
+    while (node) {
+      yield node;
+      node = node.next;
+    }
+  }
+```
