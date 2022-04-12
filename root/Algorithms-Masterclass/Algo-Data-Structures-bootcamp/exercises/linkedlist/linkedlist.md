@@ -311,3 +311,73 @@ Returns the node at the provided index.
     previous.next = previous.next.next;
   }
 ```
+
+## Linked List Class - insertAt
+
+Create an insert a new node at provided index. If index is out of bounds, add the node to the end of the list.
+
+Example:
+```js
+const list = new List();
+list.insertFirst('a');
+list.insertFirst('b');
+list.insertFirst('c');
+list.insertAt('Hi', 1)
+list.getAt(1); // returns node with data 'Hi'
+```
+
+```js
+  insertAt(data, index) {
+    if (!this.head) {
+      this.head = new Node(data);
+      return;
+    }
+    if (index === 0) {
+      this.head = new Node(data, this.head);
+      return;
+    }
+    // if this.getAt(index - 1) is true, then previous equals this.
+    // if false, previous will equal the last node.
+    const previous = this.getAt(index - 1) || this.getLast();
+    const node = new Node(data, previous.next);
+    previous.next = node;
+  }
+  ```
+
+## Code Re-use in Linked Lists
+
+We have written a lot of methods, however, many of these methods could have been combined. 
+
+| Single Method     | Multiple Methods                |
+| ----------------- | ------------------------------- |
+| insertFirst(data) | insertAt(data, 0)               |
+| insertLast(data)  | insertAt(data. this.size() - 1) |
+| removeFirst()     | removeAt(0)                     |
+| removeLast()      | removeAt(this.size() - 1)       |
+| getFirst()        | getAt(0)                        |
+| getLast()         | getAt(this.size() - 1)          |
+
+> We only really need to write `insertAt()`, `removeAt()`, and `getAt()` and `size()` methods.
+
+If an interviewer asks you to write a method like `removeFirst()`, you should ask if additional methods will be asked of you. If so, you should write `removeAt()` and `getAt()` methods.
+
+## forEach() - List Traversal through ForEach
+
+Calls the provided function with every node of the chain.
+
+example:
+```js
+const list = new List();
+
+list.insertLast(1);
+list.insertLast(2);
+list.insertLast(3);
+list.insertLast(4);
+
+list.forEach(node => {
+node.data += 10;
+});
+list.getAt(0); // Returns node with data '11'
+```
+
+

@@ -51,6 +51,8 @@ Stacks:
 - Creating Queue from Stacks
 
 Linked Lists
+  - methods
+  - Code Re-use in Linked Lists
   - Find Midpoint of Linked List
   - Circular Lists
   
@@ -72,3 +74,5 @@ Merge Sort
 BigO Notation
 
 Memoization
+
+Generators

@@ -112,6 +112,24 @@ class LinkedList {
     }
     previous.next = previous.next.next;
   }
+
+  insertAt(data, index) {
+    if (!this.head) {
+      this.head = new Node(data);
+      return;
+    }
+    if (index === 0) {
+      this.head = new Node(data, this.head);
+      return;
+    }
+    // if this.getAt(index - 1) is true, then previous equals this.
+    // if false, previous will equal the last node.
+    const previous = this.getAt(index - 1) || this.getLast();
+    const node = new Node(data, previous.next);
+    previous.next = node;
+  }
+
+  forEach()
 }
 
 module.exports = { Node, LinkedList };
