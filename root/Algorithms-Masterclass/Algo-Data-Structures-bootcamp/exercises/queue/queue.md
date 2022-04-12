@@ -22,7 +22,6 @@ Description: Create a queue data structure.  The queue should be a class with me
 | Add an element to the end of the queue         | `queue.add(1);`              |
 | Remove the element from the front of the queue | `queue.remove();`            |
 
-
 Examples:
 ```js
     const q = new Queue();

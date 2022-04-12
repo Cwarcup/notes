@@ -1,18 +1,11 @@
-// --- Directions
-// Implement a Queue datastructure using two stacks.
-// *Do not* create an array inside of the 'Queue' class.
-// Queue should implement the methods 'add', 'remove', and 'peek'.
-// For a reminder on what each method does, look back
-// at the Queue exercise.
-// --- Examples
-//     const q = new Queue();
-//     q.add(1);
-//     q.add(2);
-//     q.peek();  // returns 1
-//     q.remove(); // returns 1
-//     q.remove(); // returns 2
+# Creating Queue from Stacks
 
-// const Stack = require('./stack');
+Recall that a **queue** is a data structure that follows the **FIFO (first in, first out)** principle. 
+
+And a **stack** is a data structure that follows the **LIFO (last in, first out)** principle.
+
+Create your stack:
+```js
 class Stack {
   constructor() {
     this.data = [];
@@ -27,7 +20,10 @@ class Stack {
     return this.data[this.data.length - 1];
   }
 }
+```
 
+Create the queue using the stack:
+```js
 class Queue {
   constructor() {
     this.first = new Stack();
@@ -57,13 +53,11 @@ class Queue {
     while (this.first.peek()) {
       this.second.push(this.first.pop());
     }
-    const peekedRec = this.second.peek(); // provides reference to the record
-
+    const peekedRec = this.second.peek();
     while (this.second.peek()) {
       this.first.push(this.second.pop());
     }
     return peekedRec;
   }
 }
-
-module.exports = Queue;
+```
