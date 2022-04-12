@@ -2,8 +2,21 @@
 // Implement classes Node and Linked Lists
 // See 'directions' document
 
-class Node {}
+class Node {
+  constructor(data, next = null) {
+    this.data = data;
+    this.next = next;
+  }
+}
 
-class LinkedList {}
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+}
+
+const list = new LinkedList();
+list.head = '10';
+console.log(list);
 
 module.exports = { Node, LinkedList };
