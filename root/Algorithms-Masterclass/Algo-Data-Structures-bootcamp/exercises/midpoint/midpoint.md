@@ -48,3 +48,21 @@ What about if the list has an even number of elements?
 
 > use the same strategy as above. When
 <img src="evenNum.png" alt="drawing" style="width:500px;"/>
+
+## Midpoint Solution
+
+```js
+
+function midpoint(list) {
+  let slow = list.getFirst();
+  let fast = list.getFirst();
+
+  // run until fast does not have a two nodes ahead of it. 
+  while (fast.next && fast.next.next) {
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  // when loop ends, we know that slow must be pointing to the middle node.
+  return slow;
+}
+```
