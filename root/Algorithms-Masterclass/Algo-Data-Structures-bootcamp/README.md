@@ -26,36 +26,41 @@ jest algoName/test.js --watch
 
 [Anagrams](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/anagrams/anagrams.md)
 
-Sentence Capitalization
+[Sentence Capitalization](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/capitalize/capitalize.md)
 
-Printing Steps
+[Printing Steps](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/steps/steps.md)
 
-Two Sided Steps-Pyramids
+[Two Sided Steps-Pyramids](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/pyramid/pyramid.md)
 
-Find the Vowel
+[Find the Vowel](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/vowels/vowels.md)
 
-End of Matrix Spiral
+[Matrix Spiral](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/matrix/matrix.md)
 
-Runtime Complexity
-  - Fibonacci
+[Runtime Complexity](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/runtime-complexity/runtime-complexity.md)
+
+[Fibonacci](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/fib/fib.md)
 
 
 ---
 
 ## Data Structures
 
-The Queue:
-- Weaving
+[The Queue](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/queue/queue.md)
 
-Stacks:
-- Creating Queue from Stacks
+[Weaving queues together](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/weave/weave.md)
 
-Linked Lists:
-  - Methods
-  - Code Re-use in Linked Lists
-  - Midpoint of Linked List
-  - Circular Lists: Detecting Linked List Loops
-  - From Last: return the node 'n' from the end of the linked list
+[Stacks](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/stack/stack.md)
+
+[Creating Queue from Stacks](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/qfroms/qfroms.md)
+
+| [Linked Lists - Singly](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/linkedlist/linkedlist.md#linked-list)                          |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Creating a node](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/linkedlist/linkedlist.md#creating-node-class)                        |
+| [Methods of Singly Linked List](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/linkedlist/linkedlist.md#linkedlist-class-api)         |
+| [Code Re-use in Linked Lists](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/linkedlist/linkedlist.md#code-re-use-in-linked-lists)    |
+| [Midpoint of Linked List](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/midpoint/midpoint.md)                                        |
+| [Circular Lists: Detecting Linked List Loops](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/circular/circular.md)                    |
+| [From Last: return the node 'n' from the end of the linked list](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/fromlast/fromlast.md) |
   
 Trees
   - Binary Search Tree (BST)
