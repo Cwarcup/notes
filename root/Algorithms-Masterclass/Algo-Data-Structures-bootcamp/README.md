@@ -55,6 +55,7 @@ Linked Lists:
   - Code Re-use in Linked Lists
   - Midpoint of Linked List
   - Circular Lists: Detecting Linked List Loops
+  - From Last: return the node 'n' from the end of the linked list
   
 Trees
   - Binary Search Tree (BST)
