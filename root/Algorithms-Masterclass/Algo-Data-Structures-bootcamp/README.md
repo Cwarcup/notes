@@ -50,11 +50,11 @@ The Queue:
 Stacks:
 - Creating Queue from Stacks
 
-Linked Lists
-  - methods
+Linked Lists:
+  - Methods
   - Code Re-use in Linked Lists
-  - Find Midpoint of Linked List
-  - Circular Lists
+  - Midpoint of Linked List
+  - Circular Lists: Detecting Linked List Loops
   
 Trees
   - Binary Search Tree (BST)
