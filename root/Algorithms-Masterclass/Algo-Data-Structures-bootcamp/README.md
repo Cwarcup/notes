@@ -77,8 +77,8 @@ Merge Sort
 
 # Other Notes
 
-BigO Notation
+[BigO Notation and Runtime Complexity](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/runtime-complexity/runtime-complexity.md#runtime-complexity)
 
-Memoization
+[Memoization](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/Memoization/memoization.md#memoization)
 
-Generators
+[Generators](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/generators/generators.md#generators)
