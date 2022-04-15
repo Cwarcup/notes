@@ -19,7 +19,7 @@ Examples:
       '#####'
 ```
 
-![](pryamid.png)
+<img src="pyramid.png" alt="drawing" style="width:500px;"/>
 
 Solution 1: iterative solution
 
