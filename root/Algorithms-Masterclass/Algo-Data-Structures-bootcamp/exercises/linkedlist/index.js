@@ -73,27 +73,41 @@ class LinkedList {
     previous.next = null;
   }
 
-  insertLast(data) {
-    const last = this.getLast();
+  // insertLast(data) {
+  //   const last = this.getLast();
 
-    if (last) {
-      // there are some existing nodes in our chain
-      last.next = new Node(data);
-    } else {
-      // the chain is empty
-      this.head = new Node(data);
+  //   if (last) {
+  //     // there are some existing nodes in our chain
+  //     last.next = new Node(data);
+  //   } else {
+  //     // the chain is empty
+  //     this.head = new Node(data);
+  //   }
+  // }
+
+  insertLast(val) {
+    let node = this.head;
+
+    if (!node) {
+      this.head = new Node(val);
+      return;
     }
+    while (node.next) {
+      node = node.next;
+    }
+    node.next = new Node(val);
   }
 
   getAt(index) {
     let counter = 0;
     let node = this.head;
+
     while (node) {
       if (counter === index) {
         return node;
       }
-      counter++;
       node = node.next;
+      counter++;
     }
     return null;
   }
@@ -104,30 +118,45 @@ class LinkedList {
     }
     if (index === 0) {
       this.head = this.head.next;
-      return;
     }
-    const previous = this.getAt(index - 1);
+    let previous = this.getAt(index - 1);
     if (!previous || !previous.next) {
-      return null;
+      return;
     }
     previous.next = previous.next.next;
   }
-
+  // method without suing getAt() method
   insertAt(data, index) {
-    if (!this.head) {
-      this.head = new Node(data);
-      return;
-    }
     if (index === 0) {
       this.head = new Node(data, this.head);
       return;
     }
-    // if this.getAt(index - 1) is true, then previous equals this.
-    // if false, previous will equal the last node.
-    const previous = this.getAt(index - 1) || this.getLast();
-    const node = new Node(data, previous.next);
-    previous.next = node;
+    let counter = 0;
+    let node = this.head;
+    while (node) {
+      if (counter === index - 1) {
+        node.next = new Node(data, node.next);
+        return;
+      }
+      node = node.next;
+      counter++;
+    }
   }
+
+  // insert() using getAt()
+  // insertAt(val, index) {
+  //   if (!this.head) {
+  //     this.head = new Node(val);
+  //     return;
+  //   }
+  //   if (index === 0) {
+  //     this.head = new Node(val, this.head);
+  //     return;
+  //   }
+  //   let previous = this.getAt(index - 1) || this.getLast();
+  //   let node = new Node(val, previous.next);
+  //   previous.next = node;
+  // }
 
   *[Symbol.iterator]() {
     let node = this.head;
@@ -137,5 +166,12 @@ class LinkedList {
     }
   }
 }
+
+// const list = new LinkedList();
+// list.insertFirst('a');
+// list.insertFirst('b');
+// list.insertFirst('c');
+// list.insertLast('fuck');
+// console.log(list.getAt(3));
 
 module.exports = { Node, LinkedList };
