@@ -62,9 +62,14 @@ jest algoName/test.js --watch
 | [Circular Lists: Detecting Linked List Loops](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/circular/circular.md)                    |
 | [From Last: return the node 'n' from the end of the linked list](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/fromlast/fromlast.md) |
   
-Trees
-  - Binary Search Tree (BST)
-  - Validity on BST
+| Trees                                          |                            |                          |
+| ---------------------------------------------- | -------------------------- | ------------------------ |
+| Tree Nodes                                     |                            |                          |
+| Tree Implementation                            | constructor, add, remove |                          |
+| Tree Traversal:                                | Breadth First Search (BFS) | Depth First Search (DFS) |
+| Return number of nodes in each level of a tree | levelWidth()               |                          |
+| Binary Search Tree (BST)                       |                            |                          |
+| Validity on BST                                |                            |                          |
 
 
 ## Sorting

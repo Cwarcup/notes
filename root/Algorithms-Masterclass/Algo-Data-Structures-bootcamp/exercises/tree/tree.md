@@ -6,7 +6,7 @@ Properties of trees:
     - contains reference to **children[]**.
 
 
-<img src="tree.png" alt="drawing" style="width:500px;"/>
+<img src="Tree.png" alt="drawing" style="width:500px;"/>
 
 **Iterating** through a tree is known as **traversing**. 
 
@@ -159,16 +159,16 @@ You go from the very top, to the very bottom of the tree. You span the DEPTH of 
   traverseDF(fn) {
     const arr = [this.root]
     while(arr.length) {
-      const node = arr.shift()
+      const node = arr.shift()  // take the first element out of the array
+      arr.unshift(...node.children) // take that node's children and put them at the beginning of the array
       fn(node)
-      arr.unshift(...node.children)
     }
   }
 ```
-
+# Difference between BFS and DFS
 The difference between in breadth-first and depth-first is that...
-- Breadth-first adds elements to the end of the array using `push()`.
-- Depth-first adds elements to the beginning of the array using `unshift()`.
+- Breadth-first adds elements to the **end of the array** using `push()`.
+- Depth-first adds elements to the **beginning of the array** using `unshift()`.
 
 ```js
 class Tree {
