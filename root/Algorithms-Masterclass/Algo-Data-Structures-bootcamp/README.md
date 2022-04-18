@@ -65,11 +65,14 @@ jest algoName/test.js --watch
 | Trees                                          |                            |                          |
 | ---------------------------------------------- | -------------------------- | ------------------------ |
 | Tree Nodes                                     |                            |                          |
-| Tree Implementation                            | constructor, add, remove |                          |
+| Tree Implementation                            | constructor, add, remove   |                          |
 | Tree Traversal:                                | Breadth First Search (BFS) | Depth First Search (DFS) |
 | Return number of nodes in each level of a tree | levelWidth()               |                          |
-| Binary Search Tree (BST)                       |                            |                          |
-| Validity on BST                                |                            |                          |
+
+| Binary Search Tree (BST)  |     |     |
+| ------------------------- | --- | --- |
+| Insert new Nodes into BST |     |     |
+| Validity on BST           |     |     |
 
 
 ## Sorting
