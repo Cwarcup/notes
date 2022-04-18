@@ -32,7 +32,7 @@ class Node {
 }
 ```
 
-## Insert() method for Node class
+## Insert() method for BST Node class
 
 Often uses recursion. 
 
@@ -48,3 +48,53 @@ Often uses recursion.
       this.right = new Node(data);
     }
 ```
+
+## Contains() method for BST Node class
+
+```js
+  contains(data) {
+    if (data === this.data) {
+      return this;
+    } else if (data < this.data && this.left) {
+      // data is smaller than node data, and we have a left node
+      return this.left.contains(data);
+    } else if (data > this.data && this.right) {
+      // data larger than current node value as we have a right node
+      return this.right.contains(data);
+    } else {
+      // if the data is not found in the tree
+      return null;
+    }
+  }
+```
+
+## Validity of a BST - valid()
+
+Directions:
+Given a node, validate the binary search tree, ensuring that every node's left hand child is less than the parent node's value, and that every node's right hand child is greater than the parent.
+
+When we move to the left, we update max to be the current node's value.
+
+When we move to the right, we update min to be the current node's value.
+
+```js
+function validate(node, min = null, max = null) {
+  // case in which we move to the left
+  if (max !== null && node.data > max) {
+    return false;
+  }
+
+  if (min !== null && node.data < min) {
+    return false;
+  }
+  
+  if (node.left && !validate(node.left, min, node.data)) {
+    return false;
+  }
+  if (node.right && !validate(node.right, node.data, max)) {
+    return false;
+  }
+  return true;
+}
+```
+> If the recursive function returns false, then the tree is not valid.
