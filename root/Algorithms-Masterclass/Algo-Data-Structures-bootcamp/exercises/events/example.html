@@ -10,10 +10,15 @@
   <button>Me!</button>
   <script>
     $('button').on('click', () => {
+      // triggers an event when the button is clicked, callback function is executed
       console.log('hello');
     });
+    $('button').on('click', () => {
+      // triggers an event when the button is clicked, callback function is executed
+      console.log('there');
+    });
 
-    $('button'.trigger('click')); // can also be used to trigger events\
+    $('button').trigger('click'); // can also be used to manually trigger events
 
     $('button').off('click'); // remove event listener
   </script>
