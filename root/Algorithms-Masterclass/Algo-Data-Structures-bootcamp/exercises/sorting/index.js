@@ -36,17 +36,17 @@ function selectionSort(arr) {
 
 function mergeSort(arr) {
   // base case
-  if(arr.length === 1) {
+  if (arr.length === 1) {
     return arr;
   }
 
   // divide array into two equal halves
-  const center = Math.floor(arr.length / 2);     // returns center index
+  const center = Math.floor(arr.length / 2); // returns center index
 
-  const left = arr.slice(0, center)
-  const right = arr.slice(center)
+  const left = arr.slice(0, center);
+  const right = arr.slice(center);
 
-  return merge(mergeSort(left), mergeSort(right))
+  return merge(mergeSort(left), mergeSort(right));
 }
 
 function merge(left, right) {
@@ -65,7 +65,6 @@ function merge(left, right) {
 // console.log(bubbleSort([100, -40, 500, -124, 0, 21, 7]));
 // console.log(selectionSort([100, -40, 500, -124, 0, 21, 7]));
 // console.log(merge([-30, 22], [0, 97]));
-console.log(mergeSort([100, -40, 500, -124, 0, 21, 7]));
+// console.log(mergeSort([100, -40, 500, -124, 0, 21, 7]));
 
-
-// module.exports = { bubbleSort, selectionSort, mergeSort, merge };
+module.exports = { bubbleSort, selectionSort, mergeSort, merge };
