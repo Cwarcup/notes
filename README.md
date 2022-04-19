@@ -12,6 +12,7 @@
 
 ## Programming
 - [Typescript](https://github.com/Cwarcup/notes/tree/main/root/typescript#projects)
+- [TypeScript + React](https://github.com/Cwarcup/notes/tree/main/root/TypeScript-and-React#typescript-and-react)
 - [Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/redux.md#redux)
   - [React-Redux](https://github.com/Cwarcup/notes/blob/main/root/react/react-notes/react-redux.md#L9)
 

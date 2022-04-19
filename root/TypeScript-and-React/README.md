@@ -14,6 +14,8 @@ npx create-react-app DIRNAME --template typescript
 
 ## TypeScript and React Topics
 
+See ['rts'](https://github.com/Cwarcup/rts) repo for the tsx files.
+
 Types + Props and State
 
 Types + Events and Refs
