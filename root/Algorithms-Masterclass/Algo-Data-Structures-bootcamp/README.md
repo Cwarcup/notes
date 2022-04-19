@@ -10,6 +10,8 @@ jest algoName/test.js --watch
 
 ## Algorithms
 
+[BigO - Runtime Complexity](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/runtime-complexity/runtime-complexity.md)
+
 [Common String Questions](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/maxchar/maxchar.md#common-string-questions)
 
 [String Reversal](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/reversestring/reverse-string.md#reverse-string)
@@ -35,8 +37,6 @@ jest algoName/test.js --watch
 [Find the Vowel](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/vowels/vowels.md)
 
 [Matrix Spiral](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/matrix/matrix.md)
-
-[Runtime Complexity](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/runtime-complexity/runtime-complexity.md)
 
 [Fibonacci](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/fib/fib.md)
 
@@ -78,13 +78,13 @@ jest algoName/test.js --watch
 
 ## Sorting
 
-Bubble Sort
+[Bubble Sort](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/sorting/sorting.md#complexity)
 
-Selection Sort 
+[Selection Sort](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/sorting/sorting.md#selection-sort) 
 
-Merge (merging two sorted arrays)
+[Merge](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/sorting/sorting.md#mergeleft-right) (merging two sorted arrays)
 
-Merge Sort
+[Merge Sort](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/sorting/sorting.md#mergesort)
 
 # Other Notes
 
@@ -94,6 +94,6 @@ Merge Sort
 
 [Generators](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/generators/generators.md#generators)
 
-Eventing
+[Eventing: ](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/events/events.md#eventing) Create an 'eventing' library out of the Events class.
 
-How would you design....Twitter? Uber? Facebook?
+[How would you design....Twitter? Uber? Facebook?](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/How-would-you-design/how-would-you.md#how-would-you-design-twitter-or-uber)
