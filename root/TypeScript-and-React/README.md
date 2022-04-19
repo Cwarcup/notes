@@ -16,13 +16,15 @@ npx create-react-app DIRNAME --template typescript
 
 See ['rts'](https://github.com/Cwarcup/rts) repo for the tsx files.
 
-Types + Props and State
+[Types + Props and State](https://github.com/Cwarcup/notes/blob/main/root/TypeScript-and-React/ts-and-react-notes/1-types-and-props-state.md)
 
-Types + Events and Refs
+[Types + Events](https://github.com/Cwarcup/notes/blob/main/root/TypeScript-and-React/ts-and-react-notes/1-types-and-props-state.md#types-around-event-handlers)
 
-TypeScript with Redux
+[Types + Refs](https://github.com/Cwarcup/notes/blob/main/root/TypeScript-and-React/ts-and-react-notes/3-applying-types-to-refs.md#apply-types-to-refs)
 
 # The Project Notes
+
+Project in this folder
 
 Code Transpilation in the Browser:
 
