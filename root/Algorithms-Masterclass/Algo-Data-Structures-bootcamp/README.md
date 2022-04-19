@@ -91,3 +91,5 @@ Merge Sort
 [Memoization](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/Memoization/memoization.md#memoization)
 
 [Generators](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/generators/generators.md#generators)
+
+Eventing
