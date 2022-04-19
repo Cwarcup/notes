@@ -80,7 +80,9 @@ jest algoName/test.js --watch
 
 Bubble Sort
 
-Sort by Selection
+Selection Sort 
+
+Merge (merging two sorted arrays)
 
 Merge Sort
 
@@ -93,3 +95,5 @@ Merge Sort
 [Generators](https://github.com/Cwarcup/notes/blob/main/root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/generators/generators.md#generators)
 
 Eventing
+
+How would you design....Twitter? Uber? Facebook?
