@@ -40,3 +40,19 @@ We are going to call NPM packages 'repositories' instead.
 - SEARCH_REPOSITORIES_ERROR
 
 ---
+
+**Folder Structure**
+
+- 'src'
+  - components
+    - App.tsx
+    - RepositoryList.tsx
+  - redux stuff
+    - reducers
+    - action creators
+    - middle-wares
+
+--- 
+
+# Redux Store Implementation
+
