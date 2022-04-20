@@ -22,6 +22,10 @@ See ['rts'](https://github.com/Cwarcup/rts) repo for the tsx files.
 
 [Types + Refs](https://github.com/Cwarcup/notes/blob/main/root/TypeScript-and-React/ts-and-react-notes/3-applying-types-to-refs.md#apply-types-to-refs)
 
+# TypeScript and Redux
+
+- redux store design
+
 # The Project Notes
 
 Project in this folder
