@@ -39,3 +39,32 @@ The code might have import statement for other JavaScript or CSS. We have to dea
 ---
  
 We will use a bundler to automatically find all the modules to user has imported from NPM. 
+
+## Bundling Options
+
+**Option 1**: React app sends code to the backend API server, which runs Webpack. Webpack will find the missing modules. We will use a plugin to automatically find the modules called [NpmInstallWebpackPlugin](https://v4.webpack.js.org/plugins/npm-install-webpack-plugin/). Once the modules are found, Webpack will bundle them together into a single file and send it back to the React app.
+
+**Issues**: We are using a backend API server to install modules over and over again. Eventually our server would be full of modules.
+
+---
+
+**Option 2**: Every similar to the option above, however, we will write our own custom plugin to intercept the import statements and fetch *individual files from npm* and take the source code and bundle it together.
+
+---
+
+**Option 3**: Same as above, but implement all the Webpack processing into our application. This eliminates the need to use a backend server, speeding up our application. In addition, the users machine reaches out to the NPM registry to fetch the modules. Bundling processes occurs on users machine. 
+
+### Which option is best?
+
+| Remote                                                                        | Local                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| We can cache downloaded NPM modules to bundle code faster                     | Removes an extra request to the API server, speeding up code execution. |
+| Will work better for users with slow devices or limited internet connections. | We do not have to maintain an API server                                |
+|                                                                               | Less complexity since we are not moving code back and forth.            |
+
+We will go with the local approach. 
+
+# Webpack Replacement
+
+The issue is that Webpack does not run in the browser. We will use a tool called [ESBuild](https://github.com/evanw/esbuild) which can transpile and bundle our code within the browser.
+
