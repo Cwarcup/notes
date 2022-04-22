@@ -48,3 +48,4 @@ function palindrome(str) {     // option 2: use every() method
 ```
 
 root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/palindrome/palindrome.md
+root/Algorithms-Masterclass/Algo-Data-Structures-bootcamp/exercises/palindrome/palindrome.md

@@ -73,17 +73,17 @@ class LinkedList {
     previous.next = null;
   }
 
-  // insertLast(data) {
-  //   const last = this.getLast();
+  insertLast(data) {
+    const last = this.getLast();
 
-  //   if (last) {
-  //     // there are some existing nodes in our chain
-  //     last.next = new Node(data);
-  //   } else {
-  //     // the chain is empty
-  //     this.head = new Node(data);
-  //   }
-  // }
+    if (last) {
+      // there are some existing nodes in our chain
+      last.next = new Node(data);
+    } else {
+      // the chain is empty
+      this.head = new Node(data);
+    }
+  }
 
   insertLast(val) {
     let node = this.head;
@@ -143,20 +143,19 @@ class LinkedList {
     }
   }
 
-  // insert() using getAt()
-  // insertAt(val, index) {
-  //   if (!this.head) {
-  //     this.head = new Node(val);
-  //     return;
-  //   }
-  //   if (index === 0) {
-  //     this.head = new Node(val, this.head);
-  //     return;
-  //   }
-  //   let previous = this.getAt(index - 1) || this.getLast();
-  //   let node = new Node(val, previous.next);
-  //   previous.next = node;
-  // }
+  insertAt(val, index) {
+    if (!this.head) {
+      this.head = new Node(val);
+      return;
+    }
+    if (index === 0) {
+      this.head = new Node(val, this.head);
+      return;
+    }
+    let previous = this.getAt(index - 1) || this.getLast();
+    let node = new Node(val, previous.next);
+    previous.next = node;
+  }
 
   *[Symbol.iterator]() {
     let node = this.head;
@@ -173,5 +172,18 @@ class LinkedList {
 // list.insertFirst('c');
 // list.insertLast('fuck');
 // console.log(list.getAt(3));
+
+const list = new LinkedList();
+
+list.insertLast(1);
+list.insertLast(2);
+list.insertLast(3);
+list.insertLast(4);
+
+for (let node of list) {
+  node.data += 10;
+}
+
+console.log(list.getAt(0));
 
 module.exports = { Node, LinkedList };
