@@ -166,6 +166,7 @@ export const unpkgPathPlugin = () => {
   return {
     name: 'unpkg-path-plugin',
     setup(build: esbuild.PluginBuild) {
+    // onResolve is called whenever ESBuild is trying to figure out a path to a particular module.
       build.onResolve({ filter: /.*/ }, async (args: any) => {
         console.log('onResole', args);
         return { path: args.path, namespace: 'a' };
