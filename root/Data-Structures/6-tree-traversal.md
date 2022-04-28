@@ -3,10 +3,11 @@
 The idea is, if we have a tree (binary tree, unsorted tree, etc.), how can we visit every node one time? There are many ways to print out the nodes of a tree. 
 
 Two main approaches to traversing a tree:
-| **Breadth-First Search (BFS)**                                          | **Depth-First Search (DFS)**                                    |              |               |
-| ----------------------------------------------------------------------- | --------------------------------------------------------------- | ------------ | ------------- |
-| Prints all the nodes at a given level, then move on to the level below. | Visit all nodes vertically, before moving on to a sibling node. |              |               |
-|                                                                         | DFS-InOrder                                                     | DFS-PreOrder | DFS-PostOrder |
+Two main approaches to traversing a tree:
+| **Breadth-First Search (BFS)**                                          | **Depth-First Search (DFS)**                                    |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Prints all the nodes at a given level, then move on to the level below. | Visit all nodes vertically, before moving on to a sibling node. |
+|                                                                         | DFS-InOrder, PreOrder, and PostOrder                            |
 
 # Breadth First Search - BFS
 

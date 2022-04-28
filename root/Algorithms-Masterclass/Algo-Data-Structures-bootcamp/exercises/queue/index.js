@@ -8,18 +8,35 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
+// class Queue {
+//   constructor() {
+//     //create new, empty array
+//     this.data = [];
+//   }
+
+//   add(record) {
+//     this.data.unshift(record);
+//   }
+
+//   remove() {
+//     return this.data.pop();
+//   }
+// }
 class Queue {
   constructor() {
-    //create new, empty array
     this.data = [];
   }
-
-  add(record) {
-    this.data.unshift(record);
+  add(item) {
+    this.data.push(item);
   }
-
-  remove() {
-    return this.data.pop();
+  remove(item) {
+    return this.data.shift();
+  }
+  peek() {
+    return this.data[0];
+  }
+  isEmpty() {
+    return this.data.length === 0;
   }
 }
 

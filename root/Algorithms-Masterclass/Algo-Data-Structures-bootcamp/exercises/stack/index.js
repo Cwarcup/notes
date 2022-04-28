@@ -30,13 +30,13 @@ class Stack {
   }
 }
 
-const s = new Stack();
-s.push(1);
-s.push(2);
-console.log(s.peek()); // returns 2
-console.log(s.pop());
-console.log(s.pop());
-console.log(s.isEmpty()); // returns 1
+// const s = new Stack();
+// s.push(1);
+// s.push(2);
+// console.log(s.peek()); // returns 2
+// console.log(s.pop());
+// console.log(s.pop());
+// console.log(s.isEmpty()); // returns 1
 
 // class Stack {
 //   constructor() {
@@ -55,4 +55,4 @@ console.log(s.isEmpty()); // returns 1
 //   }
 // }
 
-// module.exports = Stack;
+module.exports = Stack;
