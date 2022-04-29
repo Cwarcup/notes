@@ -13,13 +13,13 @@ Each node has a **data** and a **reference** property to the *next node* in the 
 
 <img src="linked.png" alt="drawing" style="width:500px;"/>
 
-## Node Class API
+## Node Class for a Linked List
 
 | Function         | Arguments    | Return | Description |
 | ---------------- | ------------ | ------ | ----------- |
 | Node.constructor | (Data, Node) | Node   |             |
 
-## LinkedList Class API
+## LinkedList Class
 
 | Function      | Arguments | Return     | Description                                                                                                                                                                                                                                                                  |
 | ------------- | --------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

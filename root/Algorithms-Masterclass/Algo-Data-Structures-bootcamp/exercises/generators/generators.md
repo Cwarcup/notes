@@ -143,4 +143,3 @@ for(let value of tree.printValues()) {
 
 values // [1, 2, 4, 3]
 ```
-```

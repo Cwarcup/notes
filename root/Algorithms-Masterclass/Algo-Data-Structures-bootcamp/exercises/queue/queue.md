@@ -24,9 +24,17 @@ Description: Create a queue data structure.  The queue should be a class with me
 
 Examples:
 ```js
-    const q = new Queue();
-    q.add(1);
-    q.remove(); // returns 1;
+const q = new Queue();
+q.enqueue(1);
+q.dequeue(); // returns 1;
+
+q.isEmpty(); // returns true;
+
+q.enqueue('A');
+q.enqueue('B');
+q.enqueue('C');
+
+q.peek(); // returns 'A';
 ```
 
 # Making a Queue
@@ -34,16 +42,23 @@ Examples:
 ```js
 class Queue {
   constructor() {
-    //create new, empty array
-    this.data = [];
+    this.items = [];
   }
 
-  add(record) {
-    this.data.unshift(record);
+  enqueue(item) {
+    this.items.push(item);
   }
 
-  remove() {
-    return this.data.pop();
+  dequeue(item) {
+    return this.items.shift();
+  }
+
+  peek(item) {
+    return this.items[0];
+  }
+
+  isEmpty() {
+    return this.items.length === 0;
   }
 }
 ```
