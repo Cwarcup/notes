@@ -11,16 +11,16 @@ chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 ```
 
-> For the first example, you have an array, and a chunk with a size of 2. Therefore, the array should be broken up into CHUNKS of 2 elements. 
+For the first example, you have an array, and a chunk with a size of 2. Therefore, the array should be broken up into CHUNKS of 2 elements. 
 
-## Option 1:
+## Solution 1:
 
-1. Create empty array to hold chunks called 'chunked'
+1. Create empty array to hold chunks called 'chunked'.
 2. For each element in the array...
-   1. retrieve the last element in the chunked array
-   2. **IF** last element does not exists, or if its length is equal to the chunk size
-      - push a new chunk into the chunked array
-   3. **Else** add the current element to the last element in the chunked array
+   1. retrieve the last element in the chunked array.
+   2. **IF** last element does not exists, or if its length is equal to the chunk size.
+      - push a new chunk into the chunked array.
+   3. **Else** add the current element to the last element in the chunked array.
 
 
 ```js
@@ -36,15 +36,14 @@ function chunk(array, size) {
       last.push(char);  // <----------------- push character into the last chunk
     }
   }
-
   return chunked;
 }
 
 ```
 
-## Option 2: using slice()
+## Solution 2: using slice()
 
-Syntax:
+Slice Syntax:
 ```
 slice()
 slice(start)

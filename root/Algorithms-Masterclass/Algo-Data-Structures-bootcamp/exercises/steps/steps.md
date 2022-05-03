@@ -52,7 +52,7 @@ function steps(n) {
 }
 ```
 
-Time Complexity: O(n^2). Qaudratic runtime. 
+Time Complexity: O(n^2). Quadratic runtime. 
 
 ---
 

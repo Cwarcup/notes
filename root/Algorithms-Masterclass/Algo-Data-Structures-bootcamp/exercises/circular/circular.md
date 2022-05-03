@@ -21,7 +21,6 @@ In a **circular linked list**, we do **NOT** have a **tail node**. The "last nod
 
 The current methods for iterating over a linked list such as `for...of` or `forEach` will not work with a circular linked list because these use a node that points to `null` to complete the loop. In a circular linked list, no node points to `null`.
 
-<img src="cicular.png" alt="drawing" style="width:500px;"/>
 
 ## Strategy - Circular Linked List
 
