@@ -4,7 +4,7 @@ Recall that a **queue** is a data structure that follows the **FIFO (first in, f
 
 And a **stack** is a data structure that follows the **LIFO (last in, first out)** principle.
 
-Create your stack:
+# Create a Queue
 ```js
 class Stack {
   constructor() {
@@ -19,45 +19,76 @@ class Stack {
   peek() {
     return this.data[this.data.length - 1];
   }
+
+  isEmpty() {
+    return this.data.length === 0
+  }
 }
 ```
 
-Create the queue using the stack:
+# Create Queue from a Stack
+
 ```js
-class Queue {
+class QueueFromStack {
   constructor() {
-    this.first = new Stack();
-    this.second = new Stack();
+    this.first = new Stack()
+    this.second = new Stack()
   }
 
-  add(record) {
-    this.first.push(record);
+  enqueue(item) {
+    this.first.push(item)
   }
 
-  remove() {
-    while (this.first.peek()) {
-      this.second.push(this.first.pop());
-      // remove record from first stack, and push it to second stack
-      // do this while first stack has a record. This is why we use peek()
+  dequeue() {
+    while(this.first.peek()) {
+      this.second.push(this.first.pop())
     }
-    const record = this.second.pop();
-    // want to keep this value so we can move all the records from second stack back to first stack.
-    while (this.second.peek()) {
-      this.first.push(this.second.pop());
-      // returns us back to original state
+
+    let val = this.second.pop()
+    
+    while(this.second.peek()) {
+      this.first.push(this.second.pop())
     }
-    return record;
+    return val
   }
 
   peek() {
-    while (this.first.peek()) {
-      this.second.push(this.first.pop());
+    while(this.first.peek()) {
+      this.second.push(this.first.pop())
     }
-    const peekedRec = this.second.peek();
-    while (this.second.peek()) {
-      this.first.push(this.second.pop());
+
+    let val = this.second.peek()
+    
+    while(this.second.peek()) {
+      this.first.push(this.second.pop())
     }
-    return peekedRec;
+    return val
+  }
+
+  isEmpty() {
+    return this.first.peek() === undefined
   }
 }
+
+const s = new Stack();
+s.push(1);
+s.push(2);
+console.log(s.peek()); // returns 2
+console.log(s.pop());
+console.log(s.pop());
+console.log(s.isEmpty()); // returns 1
+
+const qfs = new QueueFromStack();
+
+console.log(qfs.isEmpty()); // true
+qfs.enqueue('A');
+qfs.enqueue('B');
+qfs.enqueue('C');
+qfs.enqueue('D');
+console.log(qfs.peek());    // A
+console.log(qfs.dequeue()); // A
+console.log(qfs.dequeue()); // B
+console.log(qfs.dequeue()); // C
+console.log(qfs.dequeue()); // D
+console.log(qfs.isEmpty()); // true 
 ```

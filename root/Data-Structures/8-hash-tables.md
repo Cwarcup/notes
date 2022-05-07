@@ -1,28 +1,20 @@
 # Hash Tables
 
-[Slides](https://cs.slides.com/colt_steele/hash-tables) 
+# What is a hash table?
 
-#### What is a hash table?
+- They are used to store *key-value* pairs.
+- keys are **NOT** ordered (unlike in arrays).
+- Are **fast** for adding, finding, and removing values. Are very commonly used because of their speed.
 
-- They are used to store key-value pairs.
-- keys are **NOT** ordered. (unlike in arrays)
-- are **fast** for adding, finding, and removing values. 
-- are very commonly used because of their speed. 
+Hash tables can be found in many languages:
+- JS has Objects and Maps.
+- Python has Dictionaries.
+- Java, Go, and Scala have Maps.
+- Ruby has Hashes.
 
-Are all key-values data stores. 
-- JS has Objects and Maps 
-- Python has Dictionaries 
-- Java, Go, and Scala have Maps  
-- Ruby has Hashes  
- 
 Pretend these  built in hash tables do not exist...
 
-#### What makes a good hash?
-1. Fast (constant time)
-2. Does NOT cluster outputs at specific indicies, but distributes uniformly
-3. deterministic (same input results in same output)
-
-### Writing your first hash function
+## Writing your first hash function
 
 How would you convert a string into a number?
 - can use UTF characters
