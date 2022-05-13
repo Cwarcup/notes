@@ -7,16 +7,18 @@
 - Are **fast** for adding, finding, and removing values. Are very commonly used because of their speed.
 
 Hash tables can be found in many languages:
-- JS has Objects and Maps.
-- Python has Dictionaries.
-- Java, Go, and Scala have Maps.
-- Ruby has Hashes.
+- JavaScript uses Objects and Maps.
+- Python uses Dictionaries.
+- Java, Go, and Scala use Maps.
+- Ruby use Hashes.
 
 Pretend these  built in hash tables do not exist...
 
-## Writing your first hash function
+# Intro to Hash Functions
 
-How would you convert a string into a number?
+Is a function that takes in an input of any size, and outputs a value of a fixed size.
+
+Goal is to convert a string into a number.
 - can use UTF characters
 
 `"a".charCodeAt(0) // returns 97`
